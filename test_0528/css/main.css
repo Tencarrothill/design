@@ -1,0 +1,109 @@
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url(../fonts/Pretendard-ExtraBold.woff2) format('woff2'), url(../fonts/Pretendard-ExtraBold.woff) format('woff');
+}
+@font-face {
+	font-family: 'pt';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+/* 홈페이지 전체에 적용될 기본 글자 스타일 */
+body {
+    color: #3d3d3d;
+    font-family: "pt";
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1.4; /* 배수 */
+    font-size: 15px;
+    word-break: keep-all; /* 단어별로 줄바꿈 하라는 명령 */
+}
+/* 홈페이지의 넓이를 결정하고, 가운데 정렬하게 하는 요소 */
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+/* 모든 태그에 여백 삭제 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* 높이/넓이가 padding 때문에 늘어나는 현상을 막는 명령 */
+}
+/* 태그에 들어가는 기울임  스타일 삭제 명령 */
+em {
+    font-style: normal;
+}
+.intro {
+    text-align: center;
+    margin: 90px 0 90px 0;
+}
+.biz {
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 90px 0 90px 0;
+}
+.intro h1,
+.biz h1 {
+    color: #0091ff;
+    font-size: 20px;
+    font-weight: 400;
+}
+.intro p,
+.biz p {
+    color: #666;
+    font-size: 55px;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+}
+.intro p {
+    margin: 6px 0 0 0;
+}
+.intro p em,
+.biz p em {
+    color: #1d1d1d;
+}
+.intro p strong,
+.biz p strong {
+    color: #0091ff;
+}
+.company {
+    margin: 100px 0 115px 0;
+}
+.company h1 {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 800;
+    margin: 0 0 3px 0;
+
+}
+.company p strong {
+    color: #1d1d1d;
+    font-weight: 800;
+}
+.overview {
+    /* 배경에 아무리 커다란 이미지를 넣어도 그 영역이 존재하는 만큼만 보인다 - 즉, 영역이 작으면 이미지 잘림 */
+    background-image: url(../imges/overview_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background: url(../imges/overview_bg.png) no-repeat center center / cover;
+    height: 447px;
+    color: #fff;
+    /* 배경 때문에 글자의 색상이 변경되었다면, 배경과 글자 색상을 동시에 선언하기 */
+    text-align: right;
+    padding: 55px 55px 0 0;
+}
+.overview h1 {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 800;
+    margin: 0 0 3px 0;
+}
+.overview p strong {
+    font-weight: 800;
+    text-decoration: underline;
+}
