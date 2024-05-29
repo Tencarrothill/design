@@ -1,0 +1,23 @@
+@import url(default.css);
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+/* DM serif Display을 웹폰트로 선언하는 css 불러오기 */
+body {
+    color: #133e35;
+    font-family: "DM Serif Display", serif;;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    word-break: keep-all;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+.touch {
+    text-align: center;
+}
+h1 {
+    font-size: 100px;
+    line-height: 1;
+    margin: 90px 0 38px 0;
+}
