@@ -1,0 +1,85 @@
+@import url(default.css); /* default.css를 불러오는 명령 */
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url(../fonts/Pretendard-Black.woff2) format('woff2'), url(../fonts/Pretendard-Black.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url(../fonts/Pretendard-Light.woff2) format('woff2'), url(../fonts/Pretendard-Light.woff) format('woff');
+}
+html, body {
+    /* font-family에서 사용하는 서체명은 font-face에서 사용한 이름 그대로 사용함 */
+    color: #3d3d3d;
+    font-family: "Pretendard", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: .02em;
+    word-break: normal;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+.asset h1 {
+    color: #1d1d1d;
+    font-size: 65px;
+    font-weight: 900;
+    line-height: 1;
+    margin: 90px 0 6px 0;
+}
+.asset ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 110px 0 0 0;
+    /* 
+        ul태그에 flex를 주면 그 자식(바로 아래 있는 태그, 자손x)에만 좌우로 정렬되는 속성이 적용됨. 상속 아님.
+        <div>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ui>
+        </div>
+    */
+}
+.asset ul li {
+    width: 404px;
+    height: 191px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    padding: 50px 0 0 30px;
+    
+}
+.asset ul li h2 {
+
+}
+.asset ul li p {
+    color: #1d1d1d;
+    font-size: 55px;
+    font-weight: 900  
+}
+.core {
+    margin: 161px 0 100px 0;
+    display: flex;
+}
+.core .photo img {
+    border-radius: 20px;
+}
+.core .txt {
+    margin: 70px 0 0 77px;
+}
+.core .txt h1 {
+    color: #1f6ee5;
+    font-weight: 900;
+}
+.core .txt p {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 900
+}
