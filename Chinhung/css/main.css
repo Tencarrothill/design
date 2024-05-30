@@ -1,0 +1,84 @@
+@import url(default.css); /* default.css를 불러오는 명령 */
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url(../fonts/Pretendard-ExtraBold.woff2) format('woff2'), url(../fonts/Pretendard-ExtraBold.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+html, body {
+    /* font-family에서 사용하는 서체명은 font-face에서 사용한 이름 그대로 사용함 */
+    color: #3d3d3d;
+    font-family: "Pretendard", sans-serif;
+    font-size: 15px;
+    font-weight: 400; /* 글자 두께 */
+    line-height: 1.4; /* 행간 */
+    letter-spacing: -0.01em; /* 자간 */
+    word-break: normal; /* 단어별로 줄바꿈 */
+}
+.wrapper { /* 홈페이지 넓이 제한, 가운데 정렬 */
+    width: 1260px;
+    margin: 0 auto;
+}
+header {
+    height: 100px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 32px 0 0 0;
+}
+header .gnb ul {
+    display: flex;   
+}
+header .gnb ul li a {
+    color: #1d1d1d;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 100px; /* header의 height와 동일한 값을 행간으로 주기(접근성 부여) */
+    /* 행간 값 100px 이란? height 100px 안에 글자가 위아래 가운데로 정렬함. */
+    display: block; /* inline 요소인 a를 block요소로 변경하는 명령 */
+    padding: 0 27px; /* 위아래 0 좌우 55px */
+}
+header .gnb ul li a:hover { /* hover : 마우스 오버 */
+    color: #2f6ecb;
+}
+.visual {
+    background: url(../imges/visual_bg.png) no-repeat center center / cover;
+    height: 800px;
+    color: #fff;
+    text-align: center;
+}
+.visual h2 {
+    font-size: 70px;
+    font-weight: 800;
+    padding: 222px 0 0 0;
+}
+.visual p {
+    font-weight: 800;
+}
+.biz .tit {
+    text-align: center;
+    margin: 106px 0 67px 0;
+}
+.biz .tit h2 {
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 800;
+}
+.biz .tit p {
+    color: #1d1d1d;
+    font-weight: 800;
+    margin: -9px 0 0 0;
+}
+.biz .list h3 {
+    font-size: 30px;
+}
