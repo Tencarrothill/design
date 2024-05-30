@@ -1,0 +1,89 @@
+@import url(default.css); /* default.css를 불러오는 명령 */
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url(../fonts/Pretendard-Black.woff2) format('woff2'), url(../fonts/Pretendard-Black.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url(../fonts/Pretendard-Light.woff2) format('woff2'), url(../fonts/Pretendard-Light.woff) format('woff');
+}
+html, body {
+    /* font-family에서 사용하는 서체명은 font-face에서 사용한 이름 그대로 사용함 */
+    color: #3d3d3d;
+    font-family: "Pretendard", sans-serif;
+    font-size: 16px;
+    font-weight: 300; /* 글자 두께 */
+    line-height: 1.4;
+    word-break: normal; /* 단어별로 줄바꿈 */
+}
+.wrapper { /* 홈페이지 넓이 제한, 가운데 정렬 */
+    width: 1260px;
+    margin: 0 auto;
+}
+h1 {
+    color: #1d1d1d;
+    font-size: 75px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    text-align: center;
+    margin: 129px 0 40px 0;
+}
+.only {
+    background-image: url(../imges/only_bg2.png);
+    background-position: center center; /* 배경정렬 */
+    background-repeat: no-repeat; /* 반복 안함 */
+    background-size: cover; /* 영역 가득 채움 */
+    background: url(../imges/only_bg.png) no-repeat center center / cover;
+    /* 배경에 이미지를 넣을 때 한 번에 선언하는 방법임 */
+    height: 570px;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+}
+.only h2 {
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #fff;
+    padding: 145px 0 13px 0;
+}
+.cj .wrapper {
+    display: flex;
+    justify-content: space-between;
+
+}
+.cj .txt {
+    width: 562.05px;
+}
+.cj .txt strong {
+    color: #1b76ff;
+    font-size: 45px;
+    font-weight: 900;
+
+}
+.cj .txt h2 {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0 0 15px 0;
+}
+.cj .photo img {
+    border-radius: 25px;
+}
+.culture .photo {
+    margin: 89px 0 0 0;
+}
+.culture .txt {
+    margin: 200px 0 0 0;
+}
+.global .photo {
+    margin: 141px 0 0 0;
+}
+.global .txt {
+    margin: 260px 8px 0 0;
+}
