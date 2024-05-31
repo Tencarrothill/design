@@ -79,6 +79,85 @@ header .gnb ul li a:hover { /* hover : 마우스 오버 */
     font-weight: 800;
     margin: -9px 0 0 0;
 }
-.biz .list h3 {
+.biz .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.biz .list ul li {
+    width: 297px;
+    text-align: center;
+}
+.biz .list ul li a {
+    display: block;
+}
+.biz .list ul li a h3 {
+    color: #1d1d1d;
     font-size: 30px;
+    margin: 16px 0 10px 0;
+}
+.biz .list ul li a p {
+    margin: 0 26px 16px 26px ;
+}
+.biz .list ul li a .more {
+    width: 242.8px;
+    height: 40.8px;
+    line-height: 40.8px;
+    border: 1px solid #cccccc;
+    display: inline-block;
+}
+.brand {
+    background: url(../imges/brand_bg.png) no-repeat center center / cover;
+    color: #fff;
+    height: 823px;
+    margin: 108px 0 0 0;
+    text-align: right;
+    padding: 0 23px 0 0;
+}
+.brand h2 {
+    color: #2f6ecb;
+    font-weight: 800;
+    margin: 0 13px 0 0;
+    padding: 32px 0px 0 0;
+}
+.brand p {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 2px 0 23px 0;
+
+}
+.brand a {
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 10px 15px; /* 위아래 10px 좌우 15px */
+    margin: 0 10px 0 0;
+    display: inline-block;
+}
+footer {
+        background-color: #1d1d1d;
+        color: rgba(255,255,255,0.8);
+        padding: 20px 0 45px 0;
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin: 0 38px 0 0;
+}
+/* li.privacy (여백없음) li중에서 privacy라는 클래스명을 가진 li을 칭하는 명령 
+만약 li. privacy (여백있음) = li 안에 privacy라는 클래스명을 칭하는 명령 */
+footer .f_nav ul li.privacy {
+    font-weight: 800;
+}
+footer .f_sub {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin: 22px 0 0 0; /* 선 밖 여백 */
+    padding: 17px 0 0 0; /* 선 내부 여백 */
+}
+footer .f_sub .f_info span {
+    display: inline-block;
+    margin: 0 15px 10px 0;
+}
+footer .f_sub .copyright {
+    margin: 20px 0 0 0;
+    color: rgba(255,255,255,0.6);
 }
