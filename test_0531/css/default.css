@@ -1,0 +1,24 @@
+/* 태그의 스타일 초기화 - 브라우저가 태그에 준 스타일을 모두 삭제하는 것이 default.css */
+* {
+    padding: 0;
+    margin: 0; /* 모든 태그 여백 삭제 명령 */
+    box-sizing: border-box; /* width/padding을 같이주면 width가 늘어나는 현상을 막는 명령 */
+}
+li {/* ul li에 앞에 구분점 삭제 명령 */
+    list-style: none;
+}
+/* 글자크기가 커지고, 두꺼워지는 스타일 삭제 명령*/
+h1, h2, h3, h4, h5 ,h6, strong {
+    font-size: inherit; /* 상위요소에서 정의된대로 상속받도록 하는 명령 */
+    font-weight: inherit;
+}
+em, address { /* 글자 기울임꼴 삭제 명령 */
+    font-style: normal;
+}
+a { /* 링크 연결 기능 ; 파란색 언더라인 취소 명령 */
+    color: inherit; /* 상위요소에서 정의된대로 상속받도록 하는 명령 - 브라우저가 주는 스타일 무시 가능 명령 */
+    text-decoration: none; /* 밑줄 삭제 명령 */
+}
+a img { /* 이미지를 a태그로 감싸면 이미지에 파란 테두리가 생겼었는데 그걸 삭제하는 명령. 요즘은 이 명령을 쓸 필요가 없으나 갖고 있는 회사도 많음. */
+    border: 0;
+}
