@@ -1,0 +1,64 @@
+@import url(default.css);
+@import url(fonts.css);
+/* 글자의 스타일은 상속받음. 기본 글자의 스타일은 모든 태그를 감싸는 html, body에 선언 */
+html, body {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.02em; /* 자간 */
+    line-height: 1.2; /* 배수 - 글자크기에 1.2배 */
+    color: #3d3d3d; /* 글자 색상 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+}
+/* 홈페이지의 넓이 제한, 가운데 정렬 기능을 수행함 .*/
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 명령 */
+}
+
+header {
+    height: 100px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 16px 0 0 0;
+}
+header .gnb ul {
+    display: flex;
+}
+/* 1차메뉴는 큼직하게 눌려야 함. 여백 및 사이즈는 a한테 줘야함 */
+header .gnb ul li a {
+    display: block;
+    color: #1d1d1d;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    padding: 38px 29px
+    /* a는 인라인 태그라 padding값이 안들어감. display: block을 줘야함 */
+}
+/* a한테 마우스오버 상태 */
+header .gnb ul li a:hover {
+    color: #0D5FB3;
+}
+
+.visual {
+    height: 750px;
+    background: url(../imges/visual_bg.png) no-repeat center center / cover;
+    /* background를 한 번에 선언하는 방법! */
+    color: #fff;
+}
+.visual strong {
+    padding: 80px 0 0 0;
+    display: block;
+    text-align: right;
+}
+.visual h2 {
+    font-size: 50px;
+    text-align: right;
+}
+.visual h2 em {
+    font-weight: 800;
+}

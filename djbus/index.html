@@ -9,23 +9,43 @@
 <body>
     <!--홈페이지 전체를 감싸는 요소-->
     <div id="wrap">
-        <header></header>
+        <header>
+            <!--레이아웃 그리드 영역 : 넓이 제한, 가운데 정렬-->
+            <div class="wrapper">
+                <!--로고를 클릭하면 무조건 첫 페이지로 이동함-->
+                <h1 class="logo"><a href="index.html"><img src="imges/logo.png" alt="Daejeon Terminal Complex 대전복합터미널 로고"></a></h1>
+                <!-- global navigation bar(홈페이지 모든 페이지에서 보여지는 메뉴)-->
+                <nav class="gnb">
+                    <ul>
+                        <!--임시링크 #n (href=""이렇게 두면 클릭하면 새로고침 됨. a태그에 href속성이 없으면 스타일 변경됨)-->
+                        <li><a href="#n">대전복합터미널 개요</a></li>
+                        <li><a href="#n">DTC아트센터</a></li>
+                        <li><a href="#n">홍보마당</a></li>
+                        <li><a href="#n">고객지원센터</a></li>
+                        <li><a href="#n">(재)이구열 장학재단</a></li>
+                    </ul>
+                </nav>
+            </div><!--//wrapper-->
+        </header>
         <!--header와 footer을 제외한 나머지 전부 다-->
         <div class="container">
             <section class="visual">
-
-            </section><!--visual-->
+                <div class="wrapper">
+                    <strong>대전복합터미널,</strong>
+                    <h2>365일 불이 꺼지지 않는<br>대전의 <em>대중교통 허브</em></h2>
+                </div>
+            </section><!--//visual-->
             <section class="introduce">
-                <div class="art"></div><!--art-->
-                <div class="scholarship"></div><!--scholarship-->
-            </section><!--introduce-->
-            <!--section news와 movie는 배경이 연결되어 있어서 묵었음(section은 본인을 감쌀 수 없음)-->
+                <div class="art"></div><!--//art-->
+                <div class="scholarship"></div><!--//scholarship-->
+            </section><!--//introduce-->
+            <!--section news와 movie는 배경이 연결되어 있어서 묶었음(section은 본인을 감쌀 수 없음)-->
             <div class="promotion">
-                <section class="news"></section><!--news-->
-                <section class="movie"></section><!--movie-->
-            </div><!--promotion-->
-        </div><!--container-->
+                <section class="news"></section><!--//news-->
+                <section class="movie"></section><!--//movie-->
+            </div><!--//promotion-->
+        </div><!--//container-->
         <footer></footer>
-    </div><!--wrap-->
+    </div><!--//wrap-->
 </body>
 </html>
