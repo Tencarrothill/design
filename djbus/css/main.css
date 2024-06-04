@@ -11,6 +11,10 @@ html, body {
     word-break: keep-all; /* 단어별로 줄바꿈 */
 }
 /* 홈페이지의 넓이 제한, 가운데 정렬 기능을 수행함 .*/
+/* 홈페이지 전체를 감싸는 요소 - 가로 스크롤 바가 생겼을 때 배경이 짤리는 현상을 막음 */
+#wrap {
+    min-width: 1260px;
+}
 .wrapper {
     width: 1260px;
     margin: 0 auto; /* 가운데 정렬 명령 */
@@ -33,10 +37,10 @@ header .gnb ul {
 header .gnb ul li a {
     display: block;
     color: #1d1d1d;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 800;
     letter-spacing: -0.03em;
-    padding: 38px 29px
+    padding: 30px 29px
     /* a는 인라인 태그라 padding값이 안들어감. display: block을 줘야함 */
 }
 /* a한테 마우스오버 상태 */
@@ -51,6 +55,7 @@ header .gnb ul li a:hover {
     color: #fff;
 }
 .visual strong {
+    font-size: 20px;
     padding: 80px 0 0 0;
     display: block;
     text-align: right;
@@ -58,7 +63,127 @@ header .gnb ul li a:hover {
 .visual h2 {
     font-size: 50px;
     text-align: right;
+    margin: 5px 0 0 0;
 }
 .visual h2 em {
     font-weight: 800;
+}
+
+.introduce .art {
+    display: flex;
+    justify-content: center;
+    margin: 160px 0 104px 0;
+}
+.introduce .art .txt {
+    margin: 0 0 0 168px;
+    width: 511px;
+}
+.introduce .scholarship {
+    display: flex;
+    margin: 0 0 165px 0;
+    text-align: right;
+}
+.introduce .scholarship .txt {
+    margin: 0 168px 0 0;
+    width: 511px;
+}
+.introduce .scholarship .btn {
+    justify-content: right;
+    /* flex로 배치한 버튼을 오른쪽 정렬 명령. text-align이 안먹음 */
+}
+.introduce h2 {
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 800;
+    margin: 61px 0 0 0;
+}
+.introduce strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 10px 0 10px 0; /* strong tag가 inline tag 이기 때문에 디스플레이 블럭 줘야함 */
+}
+
+.introduce .btn {
+    display: flex;
+    /* a tag는 원래 좌우로 배치됨. 하지만 사이사이 여백이 발생함. 이를 없애기 위한 명령 */
+    margin: 22px 0 0 0;
+}
+.introduce .btn a {
+    border:  1px solid #666;
+    padding: 9px 17px;
+    display: block; /* padding 값을 적용하기 위해 디스플레이 블럭 부여햠 */
+    margin: 0 17px 0 0;
+}
+.introduce .btn a:hover {
+    /* 오버전에 border가 있었다면 오버후에도 border을 주는 것이 좋음 */
+    border:  1px solid #666;
+    color: #fff;
+    background-color: #666;
+}
+/* a tag 중 마지막 a을 선택하는 선택자 명령 */
+.introduce .btn a:last-child {
+    margin-right: 0;
+}
+
+.promotion {
+    /* 배경보다 promotion 내부의 컨텐츠가 더 긺. 그러면 배경의 위치를 정확하게 줘야함. - 가운데 상단.
+    그리고 background-size 주면 안됨. - 디자인한 사이즈대로 들어가야 하니까. */
+    background: url(../imges/promotion_bg.png) no-repeat center top;
+    margin: 0 0 200px 0;
+}
+.promotion .news {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 104px 0 128px 0;
+}
+.promotion .news .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.promotion .news .tit h2 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 800;
+}
+.promotion .news .tit h2 em {
+    color: #D8D262;
+}
+.promotion .news .tit a {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 5px 17px;
+    display: inline-block;
+}
+.promotion .news .tit a:hover {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background-color: #fff;
+    color: #0D5FB3;
+}
+.promotion .news .tit p {
+    margin: 7px 0 29px 0;
+}
+.promotion .list {
+    width: 665px;
+}
+.promotion .list ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.promotion .list ul li a {
+    /* display:flex는 해당 요소를 block 요소로 만들어서 넓이가 100%가 되게 함.
+    (display:block을 또 줄 필요 없다는 뜻.(a tag는 inline tag) */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 위아래 가운데 정렬 명령 */
+    padding:  22px 4px 7px 4px;
+}
+.promotion .list ul li a strong {
+    font-size: 20px;
+    color: #fff;
+}
+.promotion .list ul li a:hover strong {
+    font-weight: 800;
+    color: #D8D262;
+    /* a tag에 오버했을 때 strong tag는 */
+}
+.promotion .list ul li a span {
+    font-size: 20px;
 }
