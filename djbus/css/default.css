@@ -19,6 +19,6 @@ a {
 img { /* img tag를 a tag로 감싸면 일부 브라우저에서 파란색 테두리가 생기기 때문에 부여하는 명령 */
     border: 0;
 }
-em { /* 글자 기울임꼴 삭제 */
+em, address { /* 글자 기울임꼴 삭제 */
     font-style: normal;
 }
