@@ -22,3 +22,13 @@ img { /* img tag를 a tag로 감싸면 일부 브라우저에서 파란색 테�
 em, address { /* 글자 기울임꼴 삭제 */
     font-style: normal;
 }
+button { /* 버튼태그는 글자의 스타일을 상속받지 않음. 버튼은 통태그(아무것도 상속 받지 않는 태그)임. */
+    background-color: transparent; /* 투명 명령 */
+    border: 0; /* 테두리 삭제 명령 */
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+}

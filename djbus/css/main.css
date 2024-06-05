@@ -148,16 +148,7 @@ header .gnb ul li a:hover {
 .promotion .news .tit h2 em {
     color: #D8D262;
 }
-.promotion .news .tit a {
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    padding: 5px 17px;
-    display: inline-block;
-}
-.promotion .news .tit a:hover {
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    background-color: #fff;
-    color: #0D5FB3;
-}
+
 .promotion .news .tit p {
     margin: 7px 0 29px 0;
 }
@@ -186,6 +177,31 @@ header .gnb ul li a:hover {
 }
 .promotion .news .list ul li a span {
     font-size: 20px;
+}
+.promotion .news .wrapper {
+    position: relative;
+    /* more정렬의 기준
+        more을 감싸는 wrapper을 기준으로 정렬해야함.
+        wrapper에 position값을 줘야함.
+        position 속성 값 중에서 유일하게 relative만이 요소에 아무런 영향을 끼치지 않음. */
+}
+.promotion .news .more {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 5px 17px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 115px;
+    /* position:absolute는 반드시 
+    좌우위치 left right
+    위아래 위치 top bottom 값이 필수고, 이 값을 어디서부터 계산하는지 기준이 필요.
+    나를 감싸는 요소 중에서 position 속성을 가진 요소를 기준으로 정렬
+    ---- .wrapper을 기준으로 정렬. */
+}
+.promotion .news .more:hover {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background-color: #fff;
+    color: #0D5FB3;
 }
 .promotion .movie .tit h2 {
     color: #fff;
@@ -258,4 +274,25 @@ footer .f_info span {
 }
 footer .copyright {
     color: rgba(255, 255, 255, 0.4);
+}
+footer .wrapper {
+    /* footer .familysite 의 정렬 기준 */
+    position: relative;
+}
+footer .familysite {
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* footer의 wrapper 기준으로 할 것임 */
+}
+footer .familysite button {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    width: 164px;
+    height: 29px;
+    /* 원래 버튼 태그는 요소가 좌우에 가운데 위아래 가운데 정렬됨. */
+    display: flex;
+    justify-content: space-between;
+    /* 내부 두 요소를 좌우 끝단에 배치하기 위해서 */
+    padding: 0 16px;
+    align-items: center; /* 위아래 가운데 */
 }
