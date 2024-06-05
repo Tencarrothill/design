@@ -129,7 +129,7 @@ header .gnb ul li a:hover {
 .promotion {
     /* 배경보다 promotion 내부의 컨텐츠가 더 긺. 그러면 배경의 위치를 정확하게 줘야함. - 가운데 상단.
     그리고 background-size 주면 안됨. - 디자인한 사이즈대로 들어가야 하니까. */
-    background: url(../imges/promotion_bg.png) no-repeat center top;
+    background: url(../imges/promotion_bg_2.png) no-repeat center top;
     margin: 0 0 187px 0;
 }
 .promotion .news {
