@@ -1,0 +1,310 @@
+@import url(default.css);
+@import url(fonts.css);
+/* 글자의 스타일은 상속받음. 기본 글자의 스타일은 모든 태그를 감싸는 html, body에 선언 */
+html, body {
+    font-family: 'S-CoreDream';
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: -0.05em; /* 자간 */
+    line-height: 1.4; /* 배수 - 글자크기에 1.4배 */
+    color: #3d3d3d; /* 글자 색상 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+}
+/* 홈페이지의 넓이 제한, 가운데 정렬 기능을 수행함 .*/
+/* 홈페이지 전체를 감싸는 요소 - 가로 스크롤 바가 생겼을 때 배경이 짤리는 현상을 막음 */
+#wrap {
+    min-width: 1260px;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 명령 */
+}
+/* container는 공통 사항이기 때문에 생략함. 바로 .visual 부름. */
+header {
+    height: 100px;
+    /* 감싸는 요소 어떤 값에도 position을 안주면 body을 기준으로 정렬함.(상관없음) 
+    header는 원래 block요소라서 너비가 브라우저 너비만큼 들어감.
+    하지만 position:absolute가 적용되면 너비값이 사라짐.
+    내부 컨텐츠 요소의 너비값만큼만 너비가 적용됨. 
+    header에 position:absolute을 주면 너비값을 100% 줘야한다.(cf. header만 그럼) */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100; /* position 속성이 있는 요소들은 서로 순서(위아래)가 존재함.
+    기본적으로 나중에 position이 선언된 요소가 더 위에 존재하게 됨.
+    예) <header></header> --position 
+        <section class="visual"></section> -- position
+    이렇게 코딩된 경우 visual이 header보다 위에 배치됨. 이때, header을 더 위에 배치하기 위해서
+    주는 속성(즉, 순서 변경 명령)이 바로 z-index.
+    z-index는 숫자가 높을수록 위에 위치하게 됨.
+    대부분 header는 100을 줌. 나머지 컨텐츠는 필요시, 100미만의 값을 줌.
+    값을 부여한 애 vs 안 준 애 -> 부여된 애가 더 위임. 
+    예) <header></header> -- z-index 100
+        <section class="visual> -- z-index 10
+            <div class="tit"></div> -- z-index 200
+        </seciotn> 일 경우,
+        header가 맨 위임. 왜냐? visual tit은 visual보다 위에 배치될 수가 없기 때문.
+        (감싸는 요소가 z-index 10 이기 때문에 header보다 높은 숫자를 줘도 아래 배치됨.
+        즉, 아무리 높게 줘도 감싸는 애가 10이면 내려간다는 말. 만사형통이 아니기 때문에 남용해서는
+        안됨. */
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 30.2px 0 0 0;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul li a {
+    display: block;
+    padding: 35px 36.5px;
+    color: #fff;
+    font-size: 21px;
+}
+header .gnb ul li a:hover {
+    font-weight: 800;
+}
+.visual {
+    background: url(../imges/visual_bg.png) no-repeat center center / cover;
+    border-radius: 0 0 200px 0;
+}
+.visual .wrapper {
+    /* .visual .camera absolute의 기준 
+    absolute는 감싸는 요소 중에서 position 속성을 갖고 있는 가장 가까운 요소를
+    기준으로 정렬이 됨. 
+     ex) <div>
+            <strong> -- postion:relative
+                <span></span> -- absolute
+            </strong>
+         </div>
+         이런 구조의 경우 span tag는 strong을 기준으로 정렬.
+         절대로 div를 기준으로 정렬 불가
+         
+         만약 해당 요소가 position 속성이 없으면 position:relative를 줌.
+         relative는 어떠한 요소에 주더라도 스타일에 영향을 미치지 않음. */
+    height: 900px;
+    position: relative;
+}
+.visual h2 {
+    text-align: center; /* img도 가운데 정렬 가능함. 이미지한테 직접 주는거 아니고 감싸는 요소에게 주어야 함. */
+    padding: 253px 0 0 0;
+}
+.visual .camera {
+    /* .visual .wrapper 을 기준으로 정렬 */
+    position: absolute;
+    right: -65px;
+    bottom: -74px;
+}
+.visual .camera a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 133px;
+    height: 133px;
+    border-radius: 50%; /* 정사각형에 border-radius 50% 부여시 원형됨. */
+    background-color: #0163C5;
+    color: #fff;
+    text-align: center;
+    box-shadow: 3px 5px 10px rgba(0,0,0,0.15);
+}
+.visual .camera a span {
+    margin: 11px 0 0 0;
+}
+.culture .tit {
+    margin: 168px 0 60px 0;
+}
+.culture .tit h2 {
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 800;
+}
+.culture .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.culture .list ul li {
+    width: 297px;
+}
+.culture .list ul li a h3 {
+    color: #1d1d1d;
+    font-size: 23px;
+    font-weight: 800;
+    margin: 10px 0 5px 0;
+}
+.culture .list ul li a p {
+    font-size: 13px;
+}
+.culture .list ul li a .photo {
+    overflow: hidden;
+    /* img가 나의 영역(photo)보다 넘치면 그 부분을 짜르는 명령. '넘치면:숨겨' */
+    font-size: 0;
+    line-height: 0; /* img 하단에는 글자의 행간(즉, 여백)값이 적용됨. 그 결과, 하단에 여백 약간 발생.
+    이걸 없애려면, 이미지만 감싸는 요소가 글자크기0, 행간0 값을 부여해야 함. */
+}
+.culture .list ul li a .photo img {
+    transition: 0.5s;
+}
+.culture .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.culture .more a {
+    display: block;
+    border-bottom: 1px solid #3D3D3D;
+    background: url(../imges/more_ico.svg) no-repeat right 3px center;
+    /* 오른쪽에서 3px 떨어져 있고, 위아래 가운데 */
+    padding: 0 22px 1.5px 0;
+    font-size: 13px;
+    /* transition: 0.5s; */ /* 나중에 a에 class가 추가되거나 또는 오버를 해서 스타일이 변경된다면
+    0.5초의 시간동안 천천히 변하기 */
+}
+.culture .more a:hover {
+    /* border: 1px solid #3d3d3; 이렇게 선언된 상태에서
+    오버 했을 때 색상만 변한다면 반드시 border-color라고 정확하게 해당 속성명을 써준다.
+    그러지 않고 border라고 색상만 선언하면 모든게 취소됨. background도 마찬가지. */
+    color: #0163C5;
+    border-color: #0163C5;
+    font-weight: 800;
+    background-image: url(../imges/more_ico_hover.svg);
+
+}
+.culture .wrapper {
+    position: relative;
+    /* .culture .more a 정렬의 중심 */
+}
+.culture .more {
+    /* .culture .wrapper을 기준으로 정렬 */
+    position: absolute;
+    right: 0;
+    top: 108px;
+}
+.tour .tit {
+    margin: 153px 0 60px 0;
+}
+.tour .tit h2 {
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 800;
+}
+.tour .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tour .list ul li {
+    color: rgba(255,255,255,0.8);
+    width: 190px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; /* 그 영역에 최대한 꽉 채우기 명령 */
+}
+.tour .list ul li.active { /* li중에서 active클래스를 갖고 있는 li */
+    width: 618px;
+}
+.tour .list ul li.tour1 {
+    background-image: url(../imges/tour_bg1.png);
+}
+.tour .list ul li.tour2 {
+    background-image: url(../imges/tour_bg2.png);
+}
+.tour .list ul li.tour3 {
+    background-image: url(../imges/tour_bg3.png);
+}
+.tour .list ul li.tour4 {
+    background-image: url(../imges/tour_bg4.png);
+}
+.tour .list ul li a {
+    height: 501px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 53px 40px 53px;
+    text-align: center;
+}
+.tour .list ul li.active a {
+    padding: 384px 290px 31px 31px;
+    text-align: left;
+}
+.tour .list ul li a p {
+    display: none; /* 숨김 명령 (공간차지 x) */
+}
+.tour .list ul li.active a p {
+    display: block; /* 나타남 */
+}
+.tour .list ul li h3 {
+    color: #fff;
+    font-size: 23px;
+    font-weight: 800;
+    margin: 0 0 5px 0;
+}
+.tour .wrapper {
+    position: relative; /* .tour .more정렬 기준 */
+}
+.tour .more { /* .tour .wrapper 기준으로 정렬 */
+    position: absolute;
+    right: 0;
+    top: 110px;
+}
+.tour .more a {
+    padding: 0 20px 3.5px 2px ;
+    display: inline-block;
+    border-bottom: 1px solid #3D3D3D;
+    background: url(../imges/more_ico.svg) no-repeat right 3px center;
+}
+.tour .more a:hover {
+    color: #0163C5;
+    border-color: #0163C5;
+    font-weight: 800;
+    background-image: url(../imges/more_ico_hover.svg);
+}
+.community {
+    height: 806px;
+    background: url(../imges/community_bg.png) no-repeat center center / cover;
+    color: rgba(255,255,255,0.8);
+    margin: 153px 0 0 0;
+}
+.community .wrapper {
+    display: flex;
+}
+.community .tit {
+    width: 359px;
+    margin: 166px 0 0 0;
+}
+.community .tit h2 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+.community .tit strong {
+    color: #fff;
+    display: block;
+    font-size: 32px;
+    margin: 2px 0 6px 0;
+}
+.community .news {
+    background-color: rgba(16,54,84,0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(5px); /* 박스의 뒷배경을 흐리게하는 명령어. 이는 xd와 figma에서만
+    디자인 구현이 가능함. photoshop에서는 좀 힘듦. */
+    width: 473px;
+    height: 316px;
+    margin: 120px 0 0 0;
+    padding: 0 21px; /* 내부여백 */
+}
+.community .news h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 20px 0 14.8px 0;
+}
+.community .news ul li {
+    margin: 0 0 22px 0;
+    border-top: 1px solid #fff;
+}
+
+footer {
+    margin-top: 500px;
+}
