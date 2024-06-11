@@ -1,0 +1,169 @@
+@import url(default.css);
+@import url(fonts.css);
+/* 글자의 스타일은 상속받음. 기본 글자의 스타일은 모든 태그를 감싸는 html, body에 선언 */
+html, body {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0em;
+    line-height: 1.2; /* 배수 - 글자크기에 1.2배 */
+    color: #3d3d3d; /* 글자 색상 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+}
+/* 홈페이지의 넓이 제한, 가운데 정렬 기능을 수행함 .*/
+/* 홈페이지 전체를 감싸는 요소 - 가로 스크롤 바가 생겼을 때 배경이 짤리는 현상을 막음 */
+#wrap {
+    min-width: 1260px;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 명령 */
+}
+@media screen and (max-width:640px){ /* 640px이하에서만 우선 적용될 명령 목록임.
+    그래서 선택자가 동일해야함. ver.pc & ver. mobile의 스타일이 동시에 적용되는 것이라
+    변경되는 요소의 스타일만 써주면 됨. */
+	html, body {
+        font-size: 13px;
+    }
+    #wrap {
+        min-width: 100%; /* 최소넓이 꽉차게 */
+    }
+    .wrapper {
+        /* block요소의 속성대로 알아서주기
+        100%을 주면 margin이 좌우로 20px 씩 들어가서
+        실제 넓이가 100% +40px으로 사이즈가 넘치게 됨 -> 그래서 width값은 auto이다. */
+        width: auto;
+        margin: 0 20px; /* 좌우에 여백 20px */
+    }
+}/* media */
+.eco h2 {
+    color: #1d1d1d;
+    font-size: 35px;
+    font-weight: 900;
+    margin: 127px 0 30px 0;
+}
+.eco ul {
+    display: flex;
+    justify-content: space-between;
+}
+.eco ul li {
+    width: 404px;
+    text-align: center;
+}
+.eco h3 {
+    color: #1d1d1d;
+    font-size: 35px;
+    padding: 12px 0 7px 0;
+}
+
+@media screen and (max-width:640px){
+    .eco h2 {
+        font-size: 25px;
+        margin: 42px 0 28px 0;
+    }
+    .eco ul li {
+        width: calc(50% - 8px);
+        text-align: center;
+        /* 두 개의 li가 반반 들어가는데 사이에 여백이 16px이 고정으로 들어감.
+        (100% / li갯수) - (사이 여백의 총합 / li 갯수)
+        (100% / 2) - (16px / 2) = 50% - 8px
+        퍼센트와 px 두 단위를 동시에 계산하는 계산식 = calc
+        반드시 값 앞 뒤로 스페이스를 주고 기호를 부여해야함. ex. 50% - 8px */
+    }
+    .eco ul li:last-child { /* 3개 나오다가 2개만 나옴 - 마지막꺼 숨김 */
+        display: none;
+    }
+    .eco h3 {
+        font-size: 20px;
+        padding: 7px 0 7px 0;
+    }
+    /* 글자가 넘치면 줄이 바뀌나 이미지는 너비값을 따로 주지 않는 이상 절대 바뀌지 않음. 
+    아무리 이미지를 감싸는 영역의 너비가 줄더라도, 이미지는 넘친다...
+    그러니 정확하게 img에게 값을 주어야 함.*/
+    .eco ul li a .photo img {
+        /* 너비값만 주고 높이는 비율에 맞게 알아서 들어감.
+        너비와 높이를 동시에 선언하면 비율이 망가져서 이미지가 깨짐.
+        100%란? - 이미지를 감싸는 요소의 너비의 100%. -> 만약 이미지의 사이즈가 더 작으면 늘어남. */
+        width: 100%;
+    }
+}/*//media*/
+.pure {
+    background: url(../imges/pure_bg.png) no-repeat center center / cover;
+    color: #fff;
+    margin: 240px 0 0 0;
+    height: 599px;
+    text-align: center;
+}
+.pure h2 {
+    font-size: 50px;
+    font-weight: 900;
+    padding:  81px 0 22px 0;
+}
+.pure ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 134px 0 134px;
+}
+.pure ul li {
+    width: 234px;
+    height: 188px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 30px;
+}
+@media screen and (max-width:640px){
+    .pure {
+        margin: 31px 0 300px 0;
+        padding: 0 0 143px 0; /* mobile에서 높이는 계속 바뀐다. 높이를 지정해주는 것이 아닌,
+        컨텐츠 하단에 여백을 준다. */
+        height: auto; /* 기존에 선언된 높이값을 해제하는 방법.
+        auto로 주면 내부 컨텐츠의 길이대로 늘어남 (원래대로) */
+    }
+    .pure h2 {
+        font-size: 30px;
+        padding:  31px 0 9px 0;
+    }
+    .pure ul {
+        flex-wrap: wrap; /* 여러 줄 허용 */
+        gap: 16px; /* 사이 여백 */
+        margin: 77px 0 0 0;
+    }
+    .pure ul li {
+        width: calc(50% - 8px);
+        height: 188px;
+    }
+}/*//media*/
+.tech {
+    margin: 243px 59px 0 54px;
+}
+.tech .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.tech strong {
+    color: #1d1d1d;
+    font-size: 35px;
+    margin: 131px 0 0 0;
+    display: block;
+}
+.tech h2 {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 900;
+    margin: 10px 0 21px 0;
+}
+.tech p {
+    width: 416px; /* 글자야 줄바꿈을 너비에 맞춰서 잘 해보렴 */
+    margin: 21px 0;
+}
+@media screen and (max-width:640px){
+    .tech .wrapper {
+        display: block; /* flex을 해제하기 위해서는 display에 다른 속성을 선언하면 됨. 
+        inline, inline-block, block, none 중에서...*/
+    }
+    .tech p {
+        width: auto; /* 너비 해제. 하던대로 하라는 명령 */
+    }
+    .tech .photo img {
+        width: 100%;
+    }
+}/*//media*/
