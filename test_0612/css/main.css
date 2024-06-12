@@ -37,3 +37,164 @@
         margin: 0 ; /* 이미 부여된 여백(pc버전)을 취소하려면 0을 주면 됨. */
     }
 }/* media */
+.health {
+    background: url(../imges/sound_bg.png) no-repeat center center;
+    color: #fff;
+    text-align: center;
+    margin: 100px 0 0 0;
+    padding: 47px 0 127px 0;
+}
+.health h2 {
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    padding: 0 0 7px 0;
+}
+@media screen and (max-width:640px){
+    .health {
+        padding: 52px 0 83px 0;
+    }
+    .health h2 {
+        font-size: 23px;
+        line-height: 1;
+    }
+    .health p br {
+        display: none; /* 줄바꿈을 주는 기능의 태그인 <br>의 기능을 숨김 */
+    }
+}/* media */
+.solution {
+    background: url(../imges/sound_bg.png) no-repeat center center;
+    color: #fff;
+    text-align: center;
+    margin: 100px 0 0 0;
+    padding: 47px 0 127px 0;
+}
+.solution p span {
+    display: block; /* 줄 바꿈 위해 지시한 명령 */
+}
+.solution h2 {
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    padding: 0 0 7px 0;
+}
+@media screen and (max-width:640px){
+    .solution {
+        padding: 52px 0 83px 0;
+    }
+    .solution h2 {
+        font-size: 23px;
+        line-height: 1;
+    }
+    .solution p span {
+        display: inline; /* 줄 바꿈 해제 */
+    }
+}/* media */
+
+.story {
+    margin: 224px 0 200px 0;
+}
+.story .rowgroup1, 
+.story .rowgroup2 {
+    display: flex;
+    align-items: center; /* txt와 photo을 위아래 가운데 정렬 (세로정렬) */
+}
+.story .rowgroup2 {
+    flex-direction: row-reverse;
+    margin: 102px 0 0 0;
+}
+.story .txt {
+    width: 668px;
+    padding: 0 0 0 107px;
+}
+.story .txt strong {
+    font-weight: 900;
+}
+.story .txt h2 {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin: 3px 0 19px 0;
+}
+.story .txt .more {
+    margin: 38px 0 0 0;
+}
+.story .txt .more a {
+    color: #fff;
+    padding: 9px 82px 9px 12px;
+    background-color: #00AC4F;
+    display: inline-block; /* padding값을 적용 시키기 위해 필요한 명령 */
+    position: relative; /* after 정렬 기준*/
+}
+.story .txt .more a::after {
+    /* 아이콘, 로고같이 전체가 보여야하는 경우는 contain - 이미지 안 짤림
+    배경에 이미지를 넣은 경우는 cover - 이미지 짤림 
+    둘 다 영역의 크기에 맞춰 리사이즈되는 특징이 있음.*/
+    background: url(../imges/more_ico.svg) no-repeat center center / contain;
+    content: ""; /* 가상선택자 before, after은 content 명령이 없으면 구현 불가함.
+    또 얘네는 너비와 높이가 존재하지 않기 때문에, 이미지를 배경으로 넣으려면 이미지 사이즈를
+    너비와 높이로 지정을 따로 해줘야함. */
+    width: 16px;
+    height: 16px;
+     /* 위에 준 너비, 높이 값은 inline 요소에겐 들어가지 않음. 그러니 block
+    또는 inline-block으로 변경해줘야 들어간다! 
+    하지만, 태그의 시작&종료 위치가 맘대로 배치된다. -> 내가 원하는 위치에 배치하려면
+    absolute로 배치해야함. 그냥 가상 선택자before, after은 반드시 absolute을 준다고 생각하자. */
+    position: absolute; /* a tag 기준 정렬 */
+    right: 12px;
+    top: 10px;
+}
+.story .photo { /* 이미지태그 하단에는 행간이 적용됨. 이를 없애기 위해선 이미지를 감싸는 태그에게 
+    서체 크기와 행간 값을 0을 줘서 없애야 함. */
+    font-size: 0;
+    line-height: 0;
+}
+@media screen and (max-width:640px){
+        .story {
+            margin: 0 0 100px 0;
+        }
+        .story .rowgroup1, 
+        .story .rowgroup2 {
+            display: block; /* flex를 해지하기 위해서 적합한 값(이 경우는 blcok이었음)을 주었음 */
+            /* align-items: cneter; 이 값은 flex일 때만 적용되기 때문에 속성 해제가 필요없음 */
+        }
+        .story .rowgroup2 {
+            /* flex-direction: row-reverse; 이 또한 마찬가지로 flex일때만 적용됨. */
+            margin: 0;
+        }
+        .story .txt {
+            width: auto; /* 너비 제한 해제 명령 */
+            padding: 0;
+            margin: 54px 0 0 0;
+        }
+        .story .txt strong {
+            font-size: 13px;
+            margin: 0 18% 0 0; /* 100/56*100 */
+            display: block; /* margin 값을 주기 위해... */
+        }
+        .story .txt strong br {
+            display: none; /* br로 줄바꿈한 것 삭제 */
+        }
+        .story .txt h2 {
+            font-size: 23px;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            margin: 4px 0 8px 0;
+        }
+        .story .txt .more {
+            margin: 12px 0 22px 0;
+        }
+        .story .txt .more a {
+            padding: 3px 29px 5px 12px;
+        }
+        .story .txt .more a::after {
+            width: 12px;
+            height: 12px;
+            right: 8px;
+            top: 6px;
+        }
+        .story .photo img {
+            width: 100%; /* photo의 너비에 100%라는 말 */
+        }
+}/* media */
