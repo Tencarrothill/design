@@ -1,0 +1,39 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+.sound {
+    background: url(../imges/sound_bg.png) no-repeat center center / cover;
+    color: #fff;
+    text-align: center;
+    height: 325px;
+    margin: 100px 0 0 0;
+}
+.sound h2 {
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    padding: 47px 0 7px 0;
+    
+}
+.sound p {
+    /* 글자에 좌우에 여백이 있어서 글자가 들어갈 공간이 좁아서 글자가 2줄이 되도록 함 
+    width로 주면 가운데 정렬이 안됨.*/
+    margin: 0 437px;
+}
+@media screen and (max-width:640px){
+    .sound {
+        height: auto; /* 이미 부여된 높이 취소. 원래 스타일대로 적용 명령 -> auto. 
+        원래 스타일이란? 컨텐츠 길이에 맞춰 늘고 주는 것. */
+        padding: 0 0 83px 0;
+    }
+    .sound h2 {
+        font-size: 23px;
+        line-height: 1;
+        padding: 52px 0 8px 0;
+        
+    }
+    .sound p {
+        margin: 0 ; /* 이미 부여된 여백(pc버전)을 취소하려면 0을 주면 됨. */
+    }
+}/* media */
