@@ -7,7 +7,6 @@
     color: #fff;
     text-align: center;
     height: 325px;
-    margin: 100px 0 0 0;
 }
 .sound h2 {
     font-size: 45px;
@@ -41,7 +40,6 @@
     background: url(../imges/sound_bg.png) no-repeat center center;
     color: #fff;
     text-align: center;
-    margin: 100px 0 0 0;
     padding: 47px 0 127px 0;
 }
 .health h2 {
@@ -66,7 +64,6 @@
     background: url(../imges/sound_bg.png) no-repeat center center;
     color: #fff;
     text-align: center;
-    margin: 100px 0 0 0;
     padding: 47px 0 127px 0;
 }
 .solution p span {
@@ -92,7 +89,7 @@
 }/* media */
 
 .story {
-    margin: 224px 0 200px 0;
+    margin: 224px 0 0 0;
 }
 .story .rowgroup1, 
 .story .rowgroup2 {
@@ -182,6 +179,9 @@
             letter-spacing: -0.03em;
             margin: 4px 0 8px 0;
         }
+        .story .txt p br {
+            display: none;
+        }
         .story .txt .more {
             margin: 12px 0 22px 0;
         }
@@ -198,3 +198,92 @@
             width: 100%; /* photo의 너비에 100%라는 말 */
         }
 }/* media */
+.news h2 {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin: 185px 0 38px 0;
+}
+.news ul {
+    display: flex;
+    justify-content: space-between;
+}
+.news ul li {
+    width: 297px;
+    border: 1px solid #ccc;
+}
+.news ul li a {
+    display: block; /* padding을 적용하기 위한 값 */
+    padding: 34px 26px; 
+}
+.news ul li a strong {
+    color: #00AC4F;
+    font-size: 18px;
+}
+.news ul li a h3 {
+    color: #1d1d1d;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 8px 0 17px 0;
+    /* 1줄로 제한하기 - !!주의; padding 절대 금지!! */
+    white-space: nowrap; /* 줄바꿈 금지 명령 */
+    overflow: hidden; /* 영역에서 넘치는 부분 자르기 - 이 요소가 block요소여야 함.(inline요소는 너비가 없으니 안잘릴수밖에) */
+    text-overflow: ellipsis; /* 글자 마지막에 '...'추가 명령. 글자가 잘리는 현상 막음. 주의!! '...'은 수정 불가함. */
+}
+.news ul li a span {
+    display: block;
+    color: rgba(61,61,61,0.8);
+    margin: 33px 0 0 0;
+}
+.news ul li a p {
+    /* 3줄로 제한 - 주의!! padding 절대 금지. */
+    line-height: 1.2;
+    height: 3.6em; /* 행간*줄수 = 단위는 em */
+    overflow: hidden; /* 넘치면? 숨김 */
+}
+@media screen and (max-width:640px){
+    .news h2 {
+        font-size: 23px;
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        margin: 54px 0 26px 0;
+    }
+    .news ul {
+        flex-wrap: wrap; /*줄바꿈 허용 */
+    }
+    .news ul li {
+        width: calc(50% - 8px);
+        margin-bottom: 16px;
+    }
+    .news ul li a {
+        display: block; /* padding을 적용하기 위한 값 */
+        padding: 34px 26px; 
+    }
+    .news ul li a strong {
+        font-size: 15px;
+    }
+    .news ul li a h3 {
+        font-size: 18px;
+        margin: 3px 0 7px 0;
+    }
+    .news ul li a span {
+        font-size: 13px;
+    }
+    .news ul li a p {
+        font-size: 13px;
+    }
+}/* media */
+
+@media screen and (max-width:500px){
+    .news ul {
+        display: block;
+    }
+    .news ul li {
+        width: auto; /* 너비 제한 명령 해제 명령 */
+    }
+}/* media */
+
+.container {
+    margin: 0 0 150px 0;
+}
