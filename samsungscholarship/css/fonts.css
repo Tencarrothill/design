@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 300;
+    font-style: normal;
+	src: local('S-CoreDream Light'), url(../fonts/GmarketSansLight.woff2) format('woff2'), url(../fonts/GmarketSansLight.woff) format('woff');
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 500;
+    font-style: normal;
+	src: local('S-CoreDream Medium'), url(../fonts/SCoreDreamMedium.woff2) format('woff2'), url(../fonts/SCoreDreamRegular.woff) format('woff');
+}
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('../fonts/GmarketSansBold.woff2') format('woff2'), url('../fonts/GmarketSansBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
