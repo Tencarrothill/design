@@ -286,7 +286,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
         margin: 5px 0 5px 0;
     }
     .biz .subject p {
-        margin: 0 0 0 5px;
+        margin: 0 0 19px 0;
     }
     .biz .list {
         width: auto; /* 너비 고정값 해제 */
@@ -342,6 +342,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
         left: auto;
         bottom: auto;
         font-size: 14px;
+        margin-top: 5px;
     }
     .biz .list ul li a:hover h3 {
         bottom: auto; /* 오버 삭제 */
