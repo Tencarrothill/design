@@ -1,0 +1,68 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+.biz h1 {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    padding: 85px 0 0 0;
+}
+.biz ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 0 0;
+}
+.biz ul li h2 {
+    color: #1d1d1d;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 13px 0 7px 0;
+}
+.biz ul li p {
+    width: 297px;
+}
+@media screen and (max-width:640px) {
+
+}/* biz media */
+.tech {
+    background-color: #f4f4f4;
+    margin: 87px 0 80px 0;
+    text-align: center;
+
+}
+.tech h1 {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 700;
+    padding: 80px 0 20px 0 ;
+}
+.tech ul {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+.tech ul li {
+    padding: 196px 0 0 0;
+}
+.tech ul .tech01 {
+    background: url(../imges/tech01.png) no-repeat center center / cover;
+    height: 514px;
+    width: 618px;
+}
+.tech ul .tech01 h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.tech ul .tech02 {
+    background: url(../imges/tech02.png) no-repeat center center / cover;
+    height: 514px;
+    width: 618px;
+}
+.tech ul .tech02 h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}

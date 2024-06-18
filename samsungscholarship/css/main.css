@@ -648,7 +648,6 @@ header .gnb .gnb_wrap ul li:last-child a::after {
         border: 1px solid #666;
         border-radius: 13px; /*높이값 절반 부여시 최대 둥근값 됨 */
         position: relative; /* after 정렬 기준 */
-        
     }
     .webzine .more a::after {
         position: absolute; /* a 기준 정렬 */
@@ -659,18 +658,230 @@ header .gnb .gnb_wrap ul li:last-child a::after {
         width: 15px;
         content: "";
     }
-    /* hover ver. */
-    .webzine .more a:hover {
-        color: #fff;
-        border-color: #50AE62;
-        background: #50AE62;
-    }
-    .webzine .more a:hover::after {
-        background-image: url(../imges/news_more_over_ico.svg);
-    }
 }/* webzine media */
 
+.introduce .subject {
+    text-align: center;
+}
+.introduce .subject .tit {
+    display: block;
+    color: #50AE62;
+    margin: 159px 0 11px 0;
+}
+.introduce .subject h2 {
+    color: #1d1d1d;
+    font-size: 45px;
+    margin-bottom: 38px;
+}
+.introduce .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.introduce .list ul li {
+    color: #fff;
+    width: 618px;
+}
+.introduce .list ul li a {
+    display: block;
+    height: 180px;
+    padding: 42px 0 0 51px;
+}
+.introduce .list ul li.intro1 a {
+    background: url(../imges/introduce_bg1.png) no-repeat center center /cover;
+    border-radius: 30px;
+}
+.introduce .list ul li.intro2 a {
+    background: url(../imges/introduce_bg2.png) no-repeat center center /cover;
+    border-radius: 30px;
+}
+.introduce .list ul li strong {
+    display: none;
+}
+.introduce .list ul li h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+.introduce .list ul li .more span {
+    margin-right: 13px;
+    position: relative;
+}
+.introduce .list ul li .more span.more2::before {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    right: 79px;
+    top: 2px;
+}
+.introduce .list ul li .more span.more2::after {
+    position: absolute; /* a 기준 정렬 */
+    background: url(../imges/news_more_over_ico.svg) no-repeat center center /contain;
+    right: -27px;
+    top: 1px;
+    height: 18px;
+    width: 18px;
+    content: "";
+}
+@media screen and (max-width:640px) {
+    .introduce .subject {
+        display: none;
+    }
+    .introduce .list ul {
+        display: block;
+        margin-top: 70px;
+    }
+    .introduce .list ul li {
+        width: auto;
+        margin-bottom: 11px;
+    }
+    .introduce .list ul li a {
+        display: block;
+        height: 82px;
+        padding: 20px 0 0 40px;
+    }
+    .introduce .list ul li.intro1 a {
+        border-radius: 50px;
+    }
+    .introduce .list ul li.intro2 a {
+        border-radius: 50px;
+    }
+    .introduce .list ul li strong {
+        display: block;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    .introduce .list ul li h3 {
+        display: none;
+    }
+    .introduce .list ul li .more span {
+        margin-right: 0;
+        position: relative;
+    }
+    .introduce .list ul li .more span.more1 {
+        display: none;
+    }
+    .introduce .list ul li .more span.more2::before {
+        display: none;
+    }
+    .introduce .list ul li .more span.more2::after {
+        right: -21px;
+        top: -2px;
+        height: 15px;
+        width: 15px;
+    }
+}/* introduce media */
 
 footer {
-    margin: 2000px 0 0 0;
+    background-color: #406246;
+    color: rgb(255, 255, 255, 0.8);
+    margin: 175px 0 0 0;
+    padding: 66px 0 102px 0;
 }
+footer .wrapper {
+    position: relative; /* top 정렬 기준 */
+}
+footer .top {
+    position: absolute; /* wrapper 기준 정렬 */
+    right: 0;
+    top: -27px;
+}
+footer .top button {
+    width: 52px;
+    height: 52px;
+    border: 1px solid #fff;
+    border-radius: 50%; /* 동그라미 */
+    font-size: 13px;
+    padding-top: 24px;
+    position: relative;
+}
+footer .top button::before {
+    background: url(../imges/top_ico.svg) no-repeat center center / contain;
+    position: absolute;
+    left: 13px;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    content: "";
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin-right: 35px;
+    position: relative; /* after 정렬 기준 */
+}
+footer .f_nav ul li::after {
+    content: "";
+    position: absolute; /* li 기준 정렬 */
+    right: -18px;
+    top: 3px;
+    width: 1px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.3);   
+}
+footer .f_nav ul li:last-child::after {
+    display: none;
+}
+footer .f_info {
+    margin: 19px 0;
+    display: flex;
+    gap: 38px;
+}
+footer .copyright {
+    color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (max-width:640px) {
+    footer {
+        color: rgb(255, 255, 255, 0.8);
+        margin: 46px 0 0 0;
+        padding: 24px 0 42px 0;
+    }
+footer .top {
+        position: relative;
+        right: auto;
+        top: auto;
+        text-align: center;
+    }
+    footer .top button {
+        width: 36px;
+        height: 36px;
+        font-size: 9px;
+        padding-top: 14px;
+    }
+    footer .top button::before {
+        left: 10px;
+        top: 3px;
+        width: 15px;
+        height: 15px;
+    }
+    footer .f_nav ul {
+        flex-wrap: wrap; /* n줄 허용 */
+        margin-top: 20px;
+    }
+    footer .f_nav ul li {
+        margin-right: 22px;
+    }
+    footer .f_nav ul li::after {
+        content: "";
+        position: absolute; /* li 기준 정렬 */
+        right: -14px;
+        top: 2px;
+        width: 1px;
+        height: 8px;
+        background-color: rgba(255, 255, 255, 0.3);   
+    }
+    footer .f_info {
+        margin: 14px 0;
+        display: block;
+        gap: 0;
+    }
+    footer .f_info address, footer .f_info span {
+        margin-right: 31px;
+    }
+} /* footer media */
+
+
