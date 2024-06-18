@@ -32,4 +32,5 @@ button { /* 버튼태그는 글자의 스타일을 상속받지 않음. 버튼�
     color: inherit;
     letter-spacing: inherit;
     line-height: inherit;
+    cursor: pointer;
 }
