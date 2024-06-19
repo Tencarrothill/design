@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- swiper library 불러오기 -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,200,0,0" />
+    <!-- google icon 불러오기 -->
+    <title>반응형, swiper test</title>
+</head>
+<body>
+    <div id="wrap">
+        <main class="container">
+            <section class="biz">
+                <div class="wrapper">
+                    <ul>
+                        <li>
+                            <a href="#n">
+                                <!-- pc 에서는 사진위에 글자가 들어가지만 모바일에선 사진 아래로
+                                글자가 들어가기 때문에 따로 코딩해줘야 쉬움. -->
+                                <div class="photo"><img src="imges/biz1.png" alt=""></div>
+                                <h2>Françoise</h2>
+                                <p>historienne d’art et professeure à l’Ecole du Louvre.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="imges/biz2.png" alt=""></div>
+                                <h2>Histoire de l'art</h2>
+                                <p>Françoise Barbe-Gall : « De Manet à Cézanne, regarder l'impressionnisme </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="imges/biz3.png" alt=""></div>
+                                <h2>Détails du cours</h2>
+                                <p>Jusqu'au 15 juillet profitez d'une promotion exclusive de 30% sur vidéos.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="imges/biz4.png" alt=""></div>
+                                <h2>L'achat</h2>
+                                <p>ce cours vous permettra de visionner les huit leçons vidéos.</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section><!--biz-->
+            <section class="business">
+                <div class="wrapper">
+                    <ul>
+                        <!-- pc ver. , mobile ver. 모두 글자하단에 이미지가 나타나면 background 처리 하면 됨.
+                            각각의 li을 구분해서 배경 이미지를 주기 위해 li에게 class을 줌. -->
+                        <li class="biz1">
+                            <a href="#n">
+                                <h2>Françoise</h2>
+                                <p>historienne d’art et professeure à l’Ecole du Louvre.</p>
+                            </a>
+                        </li>
+                        <li class="biz2">
+                            <a href="#n">
+                                <h2>Histoire de l'art</h2>
+                                <p>Françoise Barbe-Gall : « De Manet à Cézanne, regarder l'impressionnisme </p>
+                            </a>
+                        </li>
+                        <li class="biz3">
+                            <a href="#n">
+                                <h2>Détails du cours</h2>
+                                <p>Jusqu'au 15 juillet profitez d'une promotion exclusive de 30% sur vidéos.</p>
+                            </a>
+                        </li>
+                        <li class="biz4">
+                            <a href="#n">
+                                <h2>L'achat</h2>
+                                <p>ce cours vous permettra de visionner les huit leçons vidéos.</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="gallery">
+                <div class="wrapper">
+                    <ul>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="imges/gallery1.png"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="imges/gallery2.png"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="imges/gallery3.png"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section><!--gallery-->
+            <section class="news">
+                <div class="wrapper">
+                    <ul>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="imges/gallery1.png" alt=""></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="imges/gallery2.png" alt=""></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="imges/gallery3.png" alt=""></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section><!--news-->
+            <section class="popup">
+                <div class="wrapper">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                            <li class="swiper-slide"><img src="imges/popup1.png" alt=""></li>
+                            <li class="swiper-slide"><img src="imges/popup2.png" alt=""></li>
+                            <li class="swiper-slide"><img src="imges/popup3.png" alt=""></li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                        </ul>
+                    </div>
+                    <div class="swiper-pagination"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
+                    <button class="swiper-button-prev"></button>
+                    <button class="swiper-button-next"></button>
+                </div><!--wrapper-->
+            </section><!--popup-->
+            <section class="visual">
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                        <li class="swiper-slide bg1">
+                            <div class="wrapper">
+                                <h2>Pouvoir d’achat, <br> immigration, insécurité…</h2>
+                                <p>Le président du Rassemblement national a affiché ses priorités s’il est nommé premier ministre.</p>
+                            </div>
+                        </li>
+                        <li class="swiper-slide bg2">
+                            <div class="wrapper">
+                                <h2>Mais la plupart <br> de ses promesses</h2>
+                                <p>butent sur les règles européennes ou la Constitution.</p>
+                            </div>
+                        </li>
+                    </li>
+                    <li class="swiper-slide bg3">
+                        <div class="wrapper">
+                            <h2>Le programme</h2>
+                            <p>du Rassemblement national se résume, pour l’instant, à quelques « mesures d’urgence ».</p>
+                        </div>
+                    </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                    </ul>
+                    <div class="btn_wrap">
+                        <div class="paging"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
+                        <button class="pause" title="일시정지"><i class="material-symbols-rounded">pause</i></button>
+                        <button class="play" title="재생"><i class="material-symbols-rounded">play_arrow</i></button>
+                    </div>
+                    <button class="btn_prev" title="이전팝업"><i class="material-symbols-rounded">arrow_back_ios</i></button>
+                    <button class="btn_next" title="다음팝업"><i class="material-symbols-rounded">arrow_forward_ios</i></button>
+                </div>
+            </section><!--visual-->
+            <section class="book">
+                <div class="wrapper">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="imges/book.png" alt=""></div>
+                                    <h2>Dans l’esprit</h2>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="imges/book2.png" alt=""></div>
+                                    <h2>Elisabeth Borne</h2>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="imges/book3.png" alt=""></div>
+                                    <h2>Gabriel Attal</h2>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="imges/book4.png" alt=""></div>
+                                    <h2>Le Pen</h2>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--wrapper-->
+            </section><!--book-->
+            <section class="sns">
+                <div class="wrapper">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="imges/book.png" alt=""></div>
+                                    <h2>Dans l’esprit</h2>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="imges/book2.png" alt=""></div>
+                                    <h2>Elisabeth Borne</h2>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="imges/book3.png" alt=""></div>
+                                    <h2>Gabriel Attal</h2>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="imges/book4.png" alt=""></div>
+                                    <h2>Le Pen</h2>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--wrapper-->
+            </section><!--sns-->
+        </main><!--container-->
+    </div><!--wrap-->
+</body>
+</html>
