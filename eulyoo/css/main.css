@@ -264,6 +264,97 @@
     }
 } /* book media */
 
+.interview {
+    color: #F1EFE3;
+    background-color: #75796B;
+    margin-top: 104px;
+    padding: 75px 0 172px 0;
+}
+.interview .wrapper {
+    position: relative; /* more 정렬 기준 */
+}
+.interview .tit {
+    text-align: center;
+    margin-bottom: 115px;
+}
+.interview .tit h2 {
+    font-family: 'Eulyoo1945';
+    font-size: 45px;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+.interview .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.interview .list ul li {
+    width: 404px;
+}
+.interview .list ul li:nth-child(2) {
+    margin-top: 78px;
+}
+.interview .list ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0; /* 이미지 하단 여백 삭제 명령 */
+    border-radius: 50px 0 50px 0;
+}
+.interview .list ul li:nth-child(2) a .photo {
+    border-radius: 0 50px 0 50px;
+}
+.interview .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*감싸는 요소 photo 영역에 이미지 꽉 채우기 */
+    transition: 0.3s;
+    filter: grayscale(100%);
+    
+}
+
+.interview .list ul li a .txt h3 {
+    font-family: 'Eulyoo1945';
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+    margin-bottom: 13px;
+}
+.interview .more {
+    position: absolute; /* wrapper 기준 정렬 */
+    top: 102px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.interview .more a {
+    display: inline-block;
+    padding: 7px 59px 7px 13px;
+    border: 1px solid #F1EFE3;
+    position: relative; /* after 정렬 기준 */
+}
+.interview .more a::after {
+    position: absolute; /* a 기준 정렬 */
+    right: 13px;
+    top: 9px;
+    width: 32px;
+    height: 7px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='35' height='9' viewBox='0 0 35 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7.46638C0.723858 7.46638 0.5 7.69023 0.5 7.96638C0.5 8.24252 0.723858 8.46638 1 8.46638V7.46638ZM33 7.96638V8.46638H34.2071L33.3536 7.61283L33 7.96638ZM1 8.46638H33V7.46638H1V8.46638ZM33.3536 7.61283L26.3874 0.646452L25.6803 1.35355L32.6464 8.31992L33.3536 7.61283Z' fill='%23F1EFE3'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.interview .more a:hover {
+    border-color: #F1EFE3;
+    background-color: #F1EFE3;
+    color: #75796B;
+}
+.interview .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='35' height='9' viewBox='0 0 35 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7.46638C0.723858 7.46638 0.5 7.69023 0.5 7.96638C0.5 8.24252 0.723858 8.46638 1 8.46638V7.46638ZM33 7.96638V8.46638H34.2071L33.3536 7.61283L33 7.96638ZM1 8.46638H33V7.46638H1V8.46638ZM33.3536 7.61283L26.3874 0.646452L25.6803 1.35355L32.6464 8.31992L33.3536 7.61283Z' fill='%2375796B'/%3E%3C/svg%3E%0A");
+}
+
 
 footer {
     margin-top: 200px;
