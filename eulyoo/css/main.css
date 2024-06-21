@@ -1,0 +1,270 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+.visual ul li {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    color: rgba(255,255,255,0.8);
+}
+.visual ul li.pop_bg1 {
+    background-image: url(../imges/visual_bg1.png);
+}
+.visual ul li.pop_bg2 {
+    background-image: url(../imges/visual_bg2.png);
+}
+.visual ul li.pop_bg3 {
+    background-image: url(../imges/visual_bg3.png);
+}
+.visual ul li strong {
+    font-family: 'Eulyoo1945';
+    font-size: 100px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.2);
+    margin: 231px 0 0 162px;
+    display: block;
+}
+.visual ul li h2 {
+    font-family: 'Eulyoo1945';
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    margin: -48px 0 15px 0;
+    color: #fff;
+}
+.visual ul li p {
+    font-family: 'Eulyoo1945';
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+}
+.visual .btn_prev {
+    left: 1%;
+}
+.visual .btn_next {
+    right: 1%;
+}
+.visual .btn_prev, .visual .btn_next {
+    position: absolute; /* swiper 기준 정렬 */
+    top: 470px;
+    z-index: 10; /*position 속성이 들어간 요소끼리 위아래가 있기 때문에 우선 순위를 부여해서 올린다. */
+    width: 66px;
+    height: 18px; /* btn의 크기를 지정해준 것. */
+    font-size: 0;
+    line-height: 0;
+}
+.visual .btn_prev::before, .visual .btn_next::before {
+    position: absolute; /* btn 기준 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+.visual .btn_next::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='73' height='22' viewBox='0 0 73 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 20.5H68.5L48 2' stroke='white' stroke-opacity='0.6' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+}
+.visual .btn_prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='72' height='22' viewBox='0 0 72 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M70.5 20.5H4L24.5 2' stroke='white' stroke-opacity='0.6' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+}
+@media screen and (max-width:1400px) {
+    .visual .btn_prev, .visual .btn_next {
+        display: none;
+    }
+}/* media 1400 */
+@media screen and (max-width:640px) {
+    .visual ul li {
+        height: 389px;
+    }
+    .visual ul li strong {
+        display: none;
+    }
+    .visual ul li h2 {
+        font-family: 'Eulyoo1945';
+        font-size: 30px;
+        margin: 145px 0 10px 0;
+    }
+    .visual ul li p {    
+        font-size: 13px;
+    }
+    .visual ul li p br {
+        display: none;
+    }
+} /* visual media */
+
+.book {
+    margin: 136px 0 0 0;
+}
+.book .wrapper {
+    position: relative; /* more 정렬 기준 */
+}
+.book .tit {
+    float: left; /* 부유요소 */
+    margin-top: 24px;
+}
+.book .tit h2 {
+    font-family: 'Eulyoo1945';
+    font-size: 45px;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+}
+.book .tit p {
+    margin: 12px 0 18px 0;
+}
+.book .list {
+    margin:  0 0 0 321px;
+    width: 1260px;
+}
+.book .list ul li {
+    width: 297px;
+}
+.book .list ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0; /* 이미지 하단 여백 삭제 명령 */
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.book .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*감싸는 요소 photo 영역에 이미지 꽉 채우기 */
+    transition: 0.3s;
+}
+.book .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1); /* 가운데 기준 확대 */
+}
+.book .list ul li a h3 {
+    /* 1줄 제한 -- blcok요소여야 함. */
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Eulyoo1945';
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+    margin-top: 14px;
+}
+.book .list ul li a p {
+    /* 2줄 이상 제한 */
+    display: block;
+    line-height: 1.2;
+    height: 2.4em; /* 행간 x 줄수 */
+    overflow: hidden;
+    margin: 11px 0;
+}
+.book .list ul li a span {
+    /* 1줄 제한 -- blcok요소여야 함. */
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.book .more {
+    position: absolute; /* wrapper 기준 정렬 */
+    left: 0;
+    top: 122px;
+}
+.book .more a {
+    display: block;
+    padding: 7px 59px 7px 13px;
+    border: 1px solid #1d1d1d;
+    position: relative; /* after 정렬 기준 */
+}
+.book .more a::after {
+    position: absolute; /* a 기준 정렬 */
+    right: 13px;
+    top: 9px;
+    width: 32px;
+    height: 7px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='35' height='9' viewBox='0 0 35 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7.96638H33L26.0338 1' stroke='black' stroke-linecap='round'/%3E%3C/svg%3E");;
+    content: "";
+}
+.book .more a:hover {
+    border-color: #75796B;
+    background-color: #75796B;
+    color: #F1EFE3;
+}
+.book .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='35' height='9' viewBox='0 0 35 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7.46638C0.723858 7.46638 0.5 7.69023 0.5 7.96638C0.5 8.24252 0.723858 8.46638 1 8.46638V7.46638ZM33 7.96638V8.46638H34.2071L33.3536 7.61283L33 7.96638ZM1 8.46638H33V7.46638H1V8.46638ZM33.3536 7.61283L26.3874 0.646452L25.6803 1.35355L32.6464 8.31992L33.3536 7.61283Z' fill='%23F1EFE3'/%3E%3C/svg%3E%0A");
+}
+@media screen and (max-width:640px) {
+    .book {
+        margin: 34px 0 0 0;
+    }
+    .book .tit {
+        float: none; /* 부유요소 */
+        margin-top: 34px;
+    }
+    .book .tit h2 {
+        font-size: 25px;
+    }
+    .book .tit p {
+        margin: 4px 0 13px 0;
+    }
+    .book .list {
+        margin:  0;
+        width: calc(100% + 20px); /* 오른쪽 wrapper 밖까지 list가 나오게 하기 위해서 list한테
+        100%에 오른쪽 여백 20px을 추가해줌 */
+    }
+    .book .list ul li {
+        width: 152px;
+    }
+    .book .list ul li a .photo {
+        box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+    }
+    .book .list ul li a h3 {
+        /* 1줄 제한 -- blcok요소여야 함. */
+        font-size: 19px;
+        margin: 12px 0 3px 0;
+    }
+    .book .list ul li a p {
+        display: none;
+    }
+    .book .more {
+        left: auto; /* 만약 왼쪽 이었다가 오른쪽으로 변경 시 왼쪽 값 취소 명령이 이거임 */
+        right: 8px; 
+        top: 0;
+    }
+    .book .more a {
+        padding: 0;
+        border: 0;
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+        line-height: 0;
+    }
+    .book .more a::after {
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_0_1' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_0_1)'%3E%3Cpath d='M11.5 12.5H6V11.5H11.5V6H12.5V11.5H18V12.5H12.5V18H11.5V12.5Z' fill='%231D1D1D'/%3E%3C/g%3E%3Ccircle cx='12' cy='12' r='11.5' stroke='%231D1D1D'/%3E%3C/svg%3E%0A");
+        content: "";
+    }
+    .book .more a:hover {
+        border-color: transparent;
+        background-color: transparent;
+    }
+    .book .more a:hover::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_0_1' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_0_1)'%3E%3Cpath d='M11.5 12.5H6V11.5H11.5V6H12.5V11.5H18V12.5H12.5V18H11.5V12.5Z' fill='%231D1D1D'/%3E%3C/g%3E%3Ccircle cx='12' cy='12' r='11.5' stroke='%231D1D1D'/%3E%3C/svg%3E%0A");
+    }
+} /* book media */
+
+
+footer {
+    margin-top: 200px;
+}

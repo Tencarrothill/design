@@ -1,0 +1,43 @@
+html, body {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: -0.02em; /* 자간 */
+    line-height: 1.2; /* 배수 - 글자크기에 1.2배 */
+    color: #1d1d1d; /* 글자 색상 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+    word-wrap: break-word; /* 만약 단어가 엄청 길면 강제 줄바꿈 실행 명령 */
+}
+/* 홈페이지의 넓이 제한, 가운데 정렬 기능을 수행함 .*/
+/* 홈페이지 전체를 감싸는 요소 - 가로 스크롤 바가 생겼을 때 배경이 짤리는 현상을 막음 */
+#wrap {
+    min-width: 1260px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 명령 */
+}
+/* 1260px 나의 wrapper의 사이즈에 좌우 여백 20px씩 더한 사이즈가 1300px임. 이 사이즈부터 반응형을
+하겠다는 선언임. */
+@media screen and (max-width:1300px){
+    #wrap {
+        min-width: 1300px; 
+    }
+    .wrapper {
+        /* 너비는 1260px 유지 */
+        margin: 0 20px; /* 좌우에 20px씩 부여함 */
+    }
+}/*media1300*/
+@media screen and (max-width:640px){ /*이 사이즈 이하부터 모바일 반응형 시작 */
+    html, body {
+        font-size: 13px;
+    }
+    #wrap {
+        min-width: 100%;
+    }
+    .wrapper {
+        width: auto;
+    }
+    
+}/*media640*/
