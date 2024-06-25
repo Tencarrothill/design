@@ -50,6 +50,12 @@ header {
         안됨. */
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
+header.fixed {
+    backdrop-filter: blur(3px) brightness(0.85);
+    position: fixed;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+}
 header .wrapper {
     display: flex;
     justify-content: space-between;
@@ -195,11 +201,13 @@ header .gnb ul li a:hover {
     justify-content: space-between;
 }
 .tour .list ul li {
+    overflow: hidden; /* 내가 준 너비보다 내부요소가 더 크면 자르기 */
     color: rgba(255,255,255,0.8);
     width: 190px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; /* 그 영역에 최대한 꽉 채우기 명령 */
+    transition: 0.3s;
 }
 .tour .list ul li.active { /* li중에서 active클래스를 갖고 있는 li */
     width: 618px;
@@ -227,6 +235,9 @@ header .gnb ul li a:hover {
 .tour .list ul li.active a {
     padding: 384px 290px 31px 31px;
     text-align: left;
+    width: 618px; /* transition의 영향으로 너비가 0.3초동안 190px -> 618px로 점점 변함.
+    하지만 a에는 transition이 없기 때문에, 즉시 너비가 618px로 고정되기 때문에 내부 컨텐츠 너비가
+    고정된 p tag의 글이 여러줄로 바뀌는 현상이 사라진다. */
 }
 .tour .list ul li a p {
     display: none; /* 숨김 명령 (공간차지 x) */
@@ -366,6 +377,7 @@ footer {
 footer .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 footer .f_nav ul {
     display: flex;
@@ -399,12 +411,55 @@ footer .f_info {
 footer .copyright {
     color: #666
 }
+footer .familysite {
+    position: relative; /* list 정렬 기준 */
+}
 footer .familysite button {
     width: 122px;
     height: 29px;
     border: 1px solid #ccc;
     padding: 0 20px 2px 10px;
     text-align: left; /* 버튼의 기본을 가운데 - 왼쪽정렬로 변경 */
-    background: url(../imges/family_ico.svg) no-repeat right 11px center;
-    
+    position: relative; /* after 정렬 기준 */
+}
+footer .familysite button::after {
+    position: absolute;
+    right: 15px;
+    top: 7px;
+    width: 11px;
+    height: 11px;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+footer .familysite button.btn_open::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10.833' height='10.833' viewBox='0 0 10.833 10.833'%3E%3Cpath id='add_24dp_FILL0_wght400_GRAD0_opsz24' d='M204.643-753.81h-3.869a.748.748,0,0,1-.551-.223.747.747,0,0,1-.222-.551.747.747,0,0,1,.222-.551.746.746,0,0,1,.551-.223h3.869v-3.869a.749.749,0,0,1,.222-.551.75.75,0,0,1,.551-.222.749.749,0,0,1,.551.222.749.749,0,0,1,.222.551v3.869h3.869a.746.746,0,0,1,.551.223.748.748,0,0,1,.222.551.748.748,0,0,1-.222.551.748.748,0,0,1-.551.223H206.19v3.869a.749.749,0,0,1-.222.552.75.75,0,0,1-.551.223.75.75,0,0,1-.551-.223.749.749,0,0,1-.222-.552Z' transform='translate(-200 760)' fill='%23fff'/%3E%3C/svg%3E%0A");
+}
+footer .familysite button.btn_close {
+    display: none;
+}
+footer .familysite button.btn_close::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='1' viewBox='0 0 11 1'%3E%3Cline id='선_20' data-name='선 20' x2='10' transform='translate(0.5 0.5)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='1'/%3E%3C/svg%3E%0A");
+}
+footer .familysite .list {
+    display: none; /* 닫혀있는 상태에서 안 보임 */
+    position: absolute; /* familysite 기준 정렬 */
+    left: 0;
+    bottom: 29px;
+    border: 1px solid #ccc;
+    background-color: #222;
+    width: 100%;
+    padding: 8px;
+}
+footer .familysite .list  ul li a {
+    display: block; /* 넓게 눌리도록 너비를 주기 위해서 */
+    line-height: 1.8;
+}
+/* familysite가 열렸을 때 */
+footer .familysite.open button.btn_open {
+    display: none;
+}
+footer .familysite.open button.btn_close {
+    display: block;
 }
