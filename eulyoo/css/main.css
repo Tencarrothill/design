@@ -453,8 +453,8 @@ header.fixed .tnb .search::before {
     color: #F1EFE3;
     background-color: #75796B;
     margin-top: 104px;
-    padding: 75px 0 172px 0;
-    height: auto;
+    padding: 75px 0 0 0;
+    height: 970px;
 }
 .interview .wrapper {
     position: relative; /* more 정렬 기준 */
@@ -645,6 +645,7 @@ header.fixed .tnb .search::before {
     .interview {
         margin-top: 59px;
         padding: 27px 0 44px 0;
+        height: auto;
     }
     .interview .tit {
         text-align: left;
@@ -783,6 +784,10 @@ header.fixed .tnb .search::before {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.3s;
+}
+.series .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
 }
 .series .list ul li a strong {
     display: block;
@@ -908,5 +913,96 @@ header.fixed .tnb .search::before {
 
 
 footer {
-    margin-top: 200px;
+    background-color: #C8C6BA;
+    color: rgba(29,29,29,0.8);
+    margin-top: 145px;
+    padding: 64px 0 77px 0;
 }
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    /* absolute을 빼고 나머지 두 개의 요소만 flex의 영향을 받음. */
+    position: relative; /* coplyright 정렬 기준 */
+}
+footer .slogan {
+    color: #1d1d1d;
+    font-family: 'Eulyoo1945';
+    font-size: 22px;
+    font-weight: 500;
+}
+footer .f_info .item {
+    margin-bottom: 34px;
+}
+footer .f_info .item:last-child {
+    margin-bottom: 0; /* 중간에 다른 class명이 껴 있으면 nth child 선택자 쓸 수 없음 */
+}
+footer .f_info .item h2 {
+    color: #1d1d1d;
+    font-family: 'Eulyoo1945';
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    margin-bottom: 9px;
+}
+footer .f_info .item .tel li {
+    display: flex;
+}
+footer .f_info .item .tel li strong {
+    width: 5em;
+}
+footer .f_info .item .tel li span {
+    width: calc(100% - 5em);
+    /* 왼쪽 strong의 너비 빼고 전부 다 */
+}
+footer .f_info .item .sns {
+    display: flex;
+    flex-wrap: wrap;
+}
+footer .f_info .item .sns li {
+    margin-right: 39px;
+}footer .f_info .item .sns li a:hover {
+    text-decoration: underline;
+}
+footer .copyright {
+    position: absolute; /* wrapper 기준 정렬 */
+    left: 0;
+    bottom: 0;
+    font-family: 'Eulyoo1945';
+}
+footer .copyright .f_logo img {
+    width: 100px;
+}
+footer .copyright .copy {
+    color: rgba(29, 29, 29, 0.6);
+}
+@media screen and (max-width:640px) {
+    footer {
+        margin-top: 56px;
+        padding: 40px 0 61px 0;
+    }
+    footer .wrapper {
+        display: block;
+        position: relative;
+    }
+    footer .slogan {
+        font-size: 19px;
+        margin-bottom: 42px;
+    }
+    footer .f_info .item {
+        margin-bottom: 42px;
+    }
+    footer .f_info .item h2 {
+        font-size: 19px;
+        margin-bottom: 6px;
+    }
+    footer .f_info .item .sns li {
+        margin-right: 34px;
+        margin-bottom: 5px;
+    }
+    footer .copyright {
+        position: relative; /* 원래 코딩 순서로 정렬 배치 될 것. */
+        left: auto;
+        bottom: auto; /* relative도 left값 등을 먹기 때문에 해제해줘야함. */
+        margin-top: 42px;
+    }
+} /* footer media */
