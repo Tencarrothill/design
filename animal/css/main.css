@@ -1,0 +1,9 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+h2 {
+    font-size: 50px;
+    font-family: 'TTTtangsbudaejjigaeB';
+    font-weight: 700;
+}
