@@ -26,11 +26,20 @@ em, address { /* 글자 기울임꼴 삭제 */
 button { /* 버튼태그는 글자의 스타일을 상속받지 않음. 버튼은 통태그(아무것도 상속 받지 않는 태그)임. */
     background-color: transparent; /* 투명 명령 */
     border: 0; /* 테두리 삭제 명령 */
+    cursor: pointer;
+}
+/* form tag가 문자 스타일 비상속 받음. 받게해줘야함 */
+input, select, textarea, button {
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
     color: inherit;
     letter-spacing: inherit;
     line-height: inherit;
-    cursor: pointer;
+}
+legend {
+    display: none;
+}
+fieldset {
+    border: 0;
 }
