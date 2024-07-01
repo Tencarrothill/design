@@ -15,6 +15,9 @@
 </head>
 <body>
     <div id="wrap">
+        <!-- 스크롤을 내려서 header가 고정 됐을 시 (fixed) ,
+            pc ver. menu ver.hover 시 (menu_over) ,
+        mobile ver. 에서 menu open click시 (mobile_open) -->
         <header>
             <div class="wrapper">
                 <h1 class="logo"><a href="index.html">Angel Animal Shelter</a></h1>
@@ -25,6 +28,7 @@
                             그 하위메뉴 = 2 depth
                             하지만 class명은 숫자가 먼저 올 수 없다 -->
                         <ul class="depth1">
+                            <!-- 메뉴가 열리면 li에 class:on 추가 (ver. pc/mobile 똑같이) -->
                             <li>
                                 <a href="#n">찾습니다</a>
                                 <ul class="depth2">
