@@ -156,5 +156,15 @@ $(document).ready(function(){
         },
     });//find02_swiper
 
+    /*
+        find의 tab_menu
+        .find .tab>ul>li 을 클릭하면 클릭된 li에 class:on 부여
+        1. 원래 html에 기본적으로 하나의 li에 class:on이 있어야 함.
+            jquery에서 클릭하면 class:on이 다른 li에 이동되게 하는 능력 부여.
+    */
+   $('.find .tab>ul>li').on('click', function(){
+    $('.find .tab>ul>li').removeClass('on') /* 모든 li에 있는 class:on 모두 삭제 */
+    $(this).addClass('on') /* click한 li에만 다시 class:on 줌 */
+   })
 
 })//document .ready

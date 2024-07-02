@@ -574,6 +574,86 @@ header.menu_over {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.find .tab .tab_detail .btn_wrap {
+    margin-top: 71px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.find .tab .tab_detail .btn_wrap button {
+    width: 49px;
+    height: 49px;
+    font-size: 0;
+    line-height: 0;
+    margin-right: 10px;
+    position: relative; /* before 정렬 기준 */
+}
+.find .tab .tab_detail .btn_wrap button::before {
+    position: absolute; /* button 기준 정렬 */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* 정렬 기준이 되는 영역의 상하 좌우 중앙값 */
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+.find .tab .tab_detail .btn_wrap button.prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='btn_prev' transform='translate(-847 -1666)'%3E%3Cpath id='keyboard_arrow_down_24dp_FILL0_wght200_GRAD0_opsz24' d='M285.819-593.79a1.6,1.6,0,0,1-.583-.1,1.545,1.545,0,0,1-.524-.36l-8.589-8.59a.985.985,0,0,1-.294-.674.913.913,0,0,1,.294-.711.96.96,0,0,1,.693-.313.959.959,0,0,1,.692.313l8.312,8.311,8.311-8.311a.984.984,0,0,1,.674-.294.913.913,0,0,1,.711.294.96.96,0,0,1,.313.692.96.96,0,0,1-.313.693l-8.589,8.59a1.544,1.544,0,0,1-.524.36A1.6,1.6,0,0,1,285.819-593.79Z' transform='translate(270.335 1404.672) rotate(90)' fill='%232e324d'/%3E%3Cg id='타원_71' data-name='타원 71' transform='translate(847 1666)' fill='none' stroke='%232e324d' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.find .tab .tab_detail .btn_wrap button.next::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='btn_next' transform='translate(-906 -1666)'%3E%3Cpath id='keyboard_arrow_down_24dp_FILL0_wght200_GRAD0_opsz24' d='M9.991,0a1.6,1.6,0,0,0-.583.1,1.545,1.545,0,0,0-.524.36L.295,9.053A.985.985,0,0,0,0,9.727a.913.913,0,0,0,.294.711.96.96,0,0,0,.693.313.959.959,0,0,0,.692-.313L9.991,2.127,18.3,10.438a.984.984,0,0,0,.674.294.913.913,0,0,0,.711-.294.923.923,0,0,0,0-1.385L11.1.463A1.544,1.544,0,0,0,10.574.1,1.6,1.6,0,0,0,9.991,0Z' transform='translate(937.875 1680.5) rotate(90)' fill='%232e324d'/%3E%3Cg id='타원_70' data-name='타원 70' transform='translate(906 1666)' fill='none' stroke='%232e324d' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.find .tab .tab_detail .btn_wrap .more {
+    width: 106px;
+    height: 36px;
+    line-height: 31px; /* 왼쪽 좌우 버튼과 동일 높이로 코딩하기 위해 */
+    border: 2px solid #2E324D;
+    border-radius: 18px;
+    padding: 0 0 0 14px;
+    position: relative; /* after 정렬 기준 */
+}
+.find .tab .tab_detail .btn_wrap .more::after {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 11px;
+    height: 12px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.916' height='13.756' viewBox='0 0 12.916 13.756'%3E%3Cg id='그룹_102' data-name='그룹 102' transform='translate(-1050 -1681.5)'%3E%3Cline id='선_3' data-name='선 3' y2='11.756' transform='translate(1056.458 1682.5)' fill='none' stroke='%232e324d' stroke-linecap='round' stroke-width='2'/%3E%3Cline id='선_4' data-name='선 4' x1='10.916' transform='translate(1051 1688.378)' fill='none' stroke='%232e324d' stroke-linecap='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+/* tab menu 구현 : 하나의 li에만 class : on 부여 */
+.find .tab {
+    position: relative; /* tab_menu 정렬 기준 */
+}
+.find .tab>ul>li .tab_menu {
+    position: absolute; /* tab 기준 정렬 */
+    top: 0;
+}
+.find .tab>ul>li.find01 .tab_menu {
+    right: 50%;
+}
+.find .tab>ul>li.find02 .tab_menu {
+    left: 50%;
+}
+.find .tab>ul>li .tab_detail {
+    display: none;
+    padding: 111px 0 0 0;
+}
+.find .tab>ul>li.on .tab_detail {
+    display: block;
+}
+@media screen and (max-width:768px) {
+    .find .tab>ul>li .tab_detail {
+        display: none;
+        padding: 67px 0 0 0;
+    }
+}
 @media screen and (max-width:768px) {
     .find h2 {
         font-size: 35px;
@@ -613,7 +693,39 @@ header.menu_over {
         font-size: 13px;
     }
 }
-
+@media screen and (max-width:768px) {
+    .find .tab .tab_detail .btn_wrap button {
+        display: none;
+    }
+    .find .tab .tab_detail .btn_wrap .more {
+        font-size: 14px;
+        width: 90px;
+        height: 30px;
+        line-height: 25px;
+        border-radius: 11px;
+        padding: 0 0 0 8px;
+    }
+    .find .tab .tab_detail .btn_wrap .more::after {
+        position: absolute;
+        right: 6px;
+        top: 6px;
+    }
+}/* btn media */
+@media screen and (max-width:640px) {
+    .find .tab .tab_detail .btn_wrap .more {
+        font-size: 11px;
+        width: 75px;
+        height: 22px;
+        line-height: 19px; /* 왼쪽 좌우 버튼과 동일 높이로 코딩하기 위해 */
+        border-radius: 11px;
+        padding: 0 0 0 5px;
+    }
+    .find .tab .tab_detail .btn_wrap .more::after {
+        position: absolute;
+        right: 6px;
+        top: 3px;
+    }
+}/* btn media */
 
 footer {
     margin-top: 1000px;
