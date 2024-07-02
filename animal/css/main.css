@@ -483,6 +483,138 @@ header.menu_over {
     }
 }/* visual media */
 
+.find {
+    background-color: #EAC5BC;
+    color: #2E324D;
+    padding: 86px 0 63px 0;
+}
+.find h2 {
+    text-align: center;
+    font-family: 'TTTtangsbudaejjigaeB';
+    font-weight: 700;
+    font-size: 45px;
+    letter-spacing: -0.05em;
+    line-height: 1.4;
+    margin-bottom: 28px;
+}
+.find .tab>ul>li .tab_menu {
+    font-family: 'TTTtangsbudaejjigaeB';
+    font-weight: 700;
+    font-size: 30px;
+    padding: 15px 25px 7px 25px;
+}
+.find .tab>ul>li.on .tab_menu {
+    background-color: #7898FF;
+    border-radius: 42px;
+}
+.find .tab .tab_detail ul li {
+    width: 297px;
+}
+@media screen and (max-width:768px) {
+    .find .tab .tab_detail ul li {
+        width: 208px;
+    }
+}
+.find .tab .tab_detail ul li a {
+    display: block;
+}
+.find .tab .tab_detail ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 39px;
+}
+.find .tab .tab_detail ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.find .tab .tab_detail ul li a .tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 19px 0 15px 0;
+    font-family: 'TTTtangsbudaejjigaeB';
+    font-weight: 700;
+}
+.find .tab .tab_detail ul li a .tit strong {
+    font-size: 18px;
+    width: 3.7em; /* 너비가 67, 글자 크기가 18. 67 / 18 = 3.7
+    단위 em : 글자 1개 크기가 1em */
+    height: 1.5em;
+    line-height: 1.8em;
+    text-align: center; /* 너비와 높이를 주는 이유 : 옆 h3 tag에 정확한 너비를 주기 위해서 strong tag의 너비가
+    특정되어야한다. */
+    border-radius: 14px;
+    white-space: nowrap; /* strong tag and h3 tag 가 좌우로 배치되어있음. 너비가 줄어들면 h3 tag의 글자만 짤림. */
+}
+.find .tab .tab_detail ul li a .tit strong.cate01,
+.find .tab .tab_detail ul li a .tit strong.cate03 {
+    background-color: #8CA1E4;
+}
+.find .tab .tab_detail ul li a .tit strong.cate02 {
+    background-color: #666666;
+    color: #B2B2B2;
+}
+.find .tab .tab_detail ul li a .tit strong.cate04 {
+    background-color: #2E324D;
+    color: #fff;
+}
+.find .tab .tab_detail ul li a .tit h3 {
+    font-size: 20px;
+    width: calc(100% - 4.2em );
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* 1줄 제한 */
+}
+.find .tab .tab_detail ul li a p {
+    letter-spacing: -0.05em;
+    /* 내용이 2줄이지만 <br> tag 이용하여 줄바꿈했으면 1줄로 계산함. */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@media screen and (max-width:768px) {
+    .find h2 {
+        font-size: 35px;
+        letter-spacing: -0.05em;
+        line-height: 1.4;
+        margin-bottom: 23px;
+    }
+    .find .tab>ul>li .tab_menu {
+        font-size: 28px;
+        padding: 8px 16px;
+    }
+    .find .tab .tab_detail ul li a .tit {
+        margin: 13px 0 9px 0;
+    }
+    .find .tab .tab_detail ul li a .tit strong {
+        font-size: 15px;
+    }
+    .find .tab .tab_detail ul li a .tit h3 {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:640px) {
+    .find h2 {
+        font-size: 30px;
+    }
+    .find .tab>ul>li .tab_menu {
+        font-size: 23px;
+        padding: 8px 16px;
+    }
+    .find .tab .tab_detail ul li a .tit {
+        margin: 13px 0 9px 0;
+    }
+    .find .tab .tab_detail ul li a .tit strong {
+        font-size: 11px;
+    }
+    .find .tab .tab_detail ul li a .tit h3 {
+        font-size: 13px;
+    }
+}
+
+
 footer {
     margin-top: 1000px;
 }
