@@ -361,6 +361,9 @@ header.menu_over {
     }
 }/* header media 768 */
 
+.visual {
+    position: relative; /* slogan 정렬 기준 */
+}
 .visual h2 {
     display: none;
 }
@@ -427,17 +430,48 @@ header.menu_over {
 .visual .btn_wrap button.btn_prev::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='btn_prev' transform='translate(-847 -773)'%3E%3Cpath id='keyboard_arrow_down_24dp_FILL0_wght200_GRAD0_opsz24' d='M285.819-593.79a1.6,1.6,0,0,1-.583-.1,1.545,1.545,0,0,1-.524-.36l-8.589-8.59a.985.985,0,0,1-.294-.674.913.913,0,0,1,.294-.711.96.96,0,0,1,.693-.313.959.959,0,0,1,.692.313l8.312,8.311,8.311-8.311a.984.984,0,0,1,.674-.294.913.913,0,0,1,.711.294.96.96,0,0,1,.313.692.96.96,0,0,1-.313.693l-8.589,8.59a1.544,1.544,0,0,1-.524.36A1.6,1.6,0,0,1,285.819-593.79Z' transform='translate(270.335 511.672) rotate(90)' fill='%23fff'/%3E%3Cg id='타원_64' data-name='타원 64' transform='translate(847 773)' fill='none' stroke='%23fff' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
 }
+.visual .btn_wrap button.btn_prev:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='그룹_155' data-name='그룹 155' transform='translate(-847 -773)'%3E%3Cg id='타원_64' data-name='타원 64' transform='translate(847 773)' fill='%23fff' stroke='%23fff' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3Cpath id='keyboard_arrow_down_24dp_FILL0_wght200_GRAD0_opsz24' d='M285.819-593.79a1.6,1.6,0,0,1-.583-.1,1.545,1.545,0,0,1-.524-.36l-8.589-8.59a.985.985,0,0,1-.294-.674.913.913,0,0,1,.294-.711.96.96,0,0,1,.693-.313.959.959,0,0,1,.692.313l8.312,8.311,8.311-8.311a.984.984,0,0,1,.674-.294.913.913,0,0,1,.711.294.96.96,0,0,1,.313.692.96.96,0,0,1-.313.693l-8.589,8.59a1.544,1.544,0,0,1-.524.36A1.6,1.6,0,0,1,285.819-593.79Z' transform='translate(270.335 511.672) rotate(90)' fill='%232e324d'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
 .visual .btn_wrap button.btn_next::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='btn_next' transform='translate(-906 -773)'%3E%3Cpath id='keyboard_arrow_down_24dp_FILL0_wght200_GRAD0_opsz24' d='M9.991,0a1.6,1.6,0,0,0-.583.1,1.545,1.545,0,0,0-.524.36L.295,9.053A.985.985,0,0,0,0,9.727a.913.913,0,0,0,.294.711.96.96,0,0,0,.693.313.959.959,0,0,0,.692-.313L9.991,2.127,18.3,10.438a.984.984,0,0,0,.674.294.913.913,0,0,0,.711-.294.923.923,0,0,0,0-1.385L11.1.463A1.544,1.544,0,0,0,10.574.1,1.6,1.6,0,0,0,9.991,0Z' transform='translate(937.875 787.5) rotate(90)' fill='%23fff'/%3E%3Cg id='타원_65' data-name='타원 65' transform='translate(906 773)' fill='none' stroke='%23fff' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap button.btn_next:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='그룹_156' data-name='그룹 156' transform='translate(-906 -773)'%3E%3Cg id='타원_65' data-name='타원 65' transform='translate(906 773)' fill='%23fff' stroke='%23fff' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3Cpath id='keyboard_arrow_down_24dp_FILL0_wght200_GRAD0_opsz24' d='M9.991,0a1.6,1.6,0,0,0-.583.1,1.545,1.545,0,0,0-.524.36L.295,9.053A.985.985,0,0,0,0,9.727a.913.913,0,0,0,.294.711.96.96,0,0,0,.693.313.959.959,0,0,0,.692-.313L9.991,2.127,18.3,10.438a.984.984,0,0,0,.674.294.913.913,0,0,0,.711-.294.923.923,0,0,0,0-1.385L11.1.463A1.544,1.544,0,0,0,10.574.1,1.6,1.6,0,0,0,9.991,0Z' transform='translate(937.875 787.5) rotate(90)' fill='%232e324d'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 .visual .btn_wrap button.btn_pause::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='btn_pause' transform='translate(-967 -773)'%3E%3Cg id='타원_66' data-name='타원 66' transform='translate(967 773)' fill='none' stroke='%23fff' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3Cg id='그룹_98' data-name='그룹 98' transform='translate(126 -10)'%3E%3Cline id='선_1' data-name='선 1' y2='17' transform='translate(859.875 799)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='2'/%3E%3Cline id='선_2' data-name='선 2' y2='17' transform='translate(869.875 799)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
 }
+.visual .btn_wrap button.btn_pause:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='그룹_157' data-name='그룹 157' transform='translate(-967 -773)'%3E%3Cg id='타원_66' data-name='타원 66' transform='translate(967 773)' fill='%23fff' stroke='%23fff' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3Cg id='그룹_98' data-name='그룹 98' transform='translate(126 -10)'%3E%3Cline id='선_1' data-name='선 1' y2='17' transform='translate(859.875 799)' fill='none' stroke='%232e324d' stroke-linecap='round' stroke-width='2'/%3E%3Cline id='선_2' data-name='선 2' y2='17' transform='translate(869.875 799)' fill='none' stroke='%232e324d' stroke-linecap='round' stroke-width='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
 .visual .btn_wrap button.btn_play::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='btn_play' transform='translate(-1025 -773)'%3E%3Cg id='타원_67' data-name='타원 67' transform='translate(1025 773)' fill='none' stroke='%23fff' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3Cpath id='play_arrow_24dp_FILL1_wght200_GRAD0_opsz24' d='M360-640.959V-658.9a1.822,1.822,0,0,1,.588-1.419,1.98,1.98,0,0,1,1.373-.532,2.061,2.061,0,0,1,.514.068,2.086,2.086,0,0,1,.512.2l14.111,9.017a2.2,2.2,0,0,1,.677.721,1.844,1.844,0,0,1,.225.915,1.849,1.849,0,0,1-.225.914,2.2,2.2,0,0,1-.677.721l-14.111,9.017a2.1,2.1,0,0,1-.515.2,2.086,2.086,0,0,1-.516.068,1.973,1.973,0,0,1-1.371-.531A1.828,1.828,0,0,1,360-640.959Z' transform='translate(683 1447.429)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
+.visual .btn_wrap button.btn_play:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='그룹_158' data-name='그룹 158' transform='translate(-1025 -773)'%3E%3Cg id='타원_67' data-name='타원 67' transform='translate(1025 773)' fill='%23fff' stroke='%23fff' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3Cpath id='play_arrow_24dp_FILL1_wght200_GRAD0_opsz24' d='M360-640.959V-658.9a1.822,1.822,0,0,1,.588-1.419,1.98,1.98,0,0,1,1.373-.532,2.061,2.061,0,0,1,.514.068,2.086,2.086,0,0,1,.512.2l14.111,9.017a2.2,2.2,0,0,1,.677.721,1.844,1.844,0,0,1,.225.915,1.849,1.849,0,0,1-.225.914,2.2,2.2,0,0,1-.677.721l-14.111,9.017a2.1,2.1,0,0,1-.515.2,2.086,2.086,0,0,1-.516.068,1.973,1.973,0,0,1-1.371-.531A1.828,1.828,0,0,1,360-640.959Z' transform='translate(683 1447.429)' fill='%232e324d'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
 .visual .btn_wrap button.btn_play {
     display: none;
+}
+.visual .slogan {
+    position: absolute;   
+    left: 5%;
+    bottom: -86px;
+    z-index: 10;
+    width: 199px;
+    height: 199px;
+    mix-blend-mode: difference;
+}
+.visual .slogan img {
+    width: 100%;
+}
+@media screen and (max-width:1024px) {
+    .visual .slogan {
+        left: 10px;
+        width: 100px;
+        height: 100px;
+    }
 }
 @media screen and (max-width:1024px) {
     .visual ul li {
@@ -528,6 +562,10 @@ header.menu_over {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.3s;
+}
+.find .tab .tab_detail ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
 }
 .find .tab .tab_detail ul li a .tit {
     display: flex;
@@ -603,8 +641,14 @@ header.menu_over {
 .find .tab .tab_detail .btn_wrap button.prev::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='btn_prev' transform='translate(-847 -1666)'%3E%3Cpath id='keyboard_arrow_down_24dp_FILL0_wght200_GRAD0_opsz24' d='M285.819-593.79a1.6,1.6,0,0,1-.583-.1,1.545,1.545,0,0,1-.524-.36l-8.589-8.59a.985.985,0,0,1-.294-.674.913.913,0,0,1,.294-.711.96.96,0,0,1,.693-.313.959.959,0,0,1,.692.313l8.312,8.311,8.311-8.311a.984.984,0,0,1,.674-.294.913.913,0,0,1,.711.294.96.96,0,0,1,.313.692.96.96,0,0,1-.313.693l-8.589,8.59a1.544,1.544,0,0,1-.524.36A1.6,1.6,0,0,1,285.819-593.79Z' transform='translate(270.335 1404.672) rotate(90)' fill='%232e324d'/%3E%3Cg id='타원_71' data-name='타원 71' transform='translate(847 1666)' fill='none' stroke='%232e324d' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
 }
+.find .tab .tab_detail .btn_wrap button.prev:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='그룹_154' data-name='그룹 154' transform='translate(-847 -1666)'%3E%3Cg id='타원_71' data-name='타원 71' transform='translate(847 1666)' fill='%232e324d' stroke='%232e324d' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3Cpath id='keyboard_arrow_down_24dp_FILL0_wght200_GRAD0_opsz24' d='M285.819-593.79a1.6,1.6,0,0,1-.583-.1,1.545,1.545,0,0,1-.524-.36l-8.589-8.59a.985.985,0,0,1-.294-.674.913.913,0,0,1,.294-.711.96.96,0,0,1,.693-.313.959.959,0,0,1,.692.313l8.312,8.311,8.311-8.311a.984.984,0,0,1,.674-.294.913.913,0,0,1,.711.294.96.96,0,0,1,.313.692.96.96,0,0,1-.313.693l-8.589,8.59a1.544,1.544,0,0,1-.524.36A1.6,1.6,0,0,1,285.819-593.79Z' transform='translate(270.335 1404.672) rotate(90)' fill='%23eac5bc'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
 .find .tab .tab_detail .btn_wrap button.next::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='btn_next' transform='translate(-906 -1666)'%3E%3Cpath id='keyboard_arrow_down_24dp_FILL0_wght200_GRAD0_opsz24' d='M9.991,0a1.6,1.6,0,0,0-.583.1,1.545,1.545,0,0,0-.524.36L.295,9.053A.985.985,0,0,0,0,9.727a.913.913,0,0,0,.294.711.96.96,0,0,0,.693.313.959.959,0,0,0,.692-.313L9.991,2.127,18.3,10.438a.984.984,0,0,0,.674.294.913.913,0,0,0,.711-.294.923.923,0,0,0,0-1.385L11.1.463A1.544,1.544,0,0,0,10.574.1,1.6,1.6,0,0,0,9.991,0Z' transform='translate(937.875 1680.5) rotate(90)' fill='%232e324d'/%3E%3Cg id='타원_70' data-name='타원 70' transform='translate(906 1666)' fill='none' stroke='%232e324d' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.find .tab .tab_detail .btn_wrap button.next:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='타원_70' data-name='타원 70' fill='%232e324d' stroke='%232e324d' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3Cpath id='keyboard_arrow_down_24dp_FILL0_wght200_GRAD0_opsz24' d='M9.991,0a1.6,1.6,0,0,0-.583.1,1.545,1.545,0,0,0-.524.36L.295,9.053A.985.985,0,0,0,0,9.727a.913.913,0,0,0,.294.711.96.96,0,0,0,.693.313.959.959,0,0,0,.692-.313L9.991,2.127,18.3,10.438a.984.984,0,0,0,.674.294.913.913,0,0,0,.711-.294.923.923,0,0,0,0-1.385L11.1.463A1.544,1.544,0,0,0,10.574.1,1.6,1.6,0,0,0,9.991,0Z' transform='translate(31.875 14.5) rotate(90)' fill='%23eac5bc'/%3E%3C/svg%3E%0A");
 }
 .find .tab .tab_detail .btn_wrap .more {
     width: 106px;
@@ -614,6 +658,11 @@ header.menu_over {
     border-radius: 18px;
     padding: 0 0 0 14px;
     position: relative; /* after 정렬 기준 */
+}
+.find .tab .tab_detail .btn_wrap .more:hover {
+    border-color: #2E324D;
+    background-color: #2E324D;
+    color: #EAC5BC;
 }
 .find .tab .tab_detail .btn_wrap .more::after {
     position: absolute;
@@ -626,6 +675,9 @@ header.menu_over {
     background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.916' height='13.756' viewBox='0 0 12.916 13.756'%3E%3Cg id='그룹_102' data-name='그룹 102' transform='translate(-1050 -1681.5)'%3E%3Cline id='선_3' data-name='선 3' y2='11.756' transform='translate(1056.458 1682.5)' fill='none' stroke='%232e324d' stroke-linecap='round' stroke-width='2'/%3E%3Cline id='선_4' data-name='선 4' x1='10.916' transform='translate(1051 1688.378)' fill='none' stroke='%232e324d' stroke-linecap='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
     content: "";
+}
+.find .tab .tab_detail .btn_wrap .more:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.916' height='13.756' viewBox='0 0 12.916 13.756'%3E%3Cg id='그룹_102' data-name='그룹 102' transform='translate(-1050 -1681.5)'%3E%3Cline id='선_3' data-name='선 3' y2='11.756' transform='translate(1056.458 1682.5)' fill='none' stroke='%23eac5bc' stroke-linecap='round' stroke-width='2'/%3E%3Cline id='선_4' data-name='선 4' x1='10.916' transform='translate(1051 1688.378)' fill='none' stroke='%23eac5bc' stroke-linecap='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 /* tab menu 구현 : 하나의 li에만 class : on 부여 */
 .find .tab {
@@ -710,7 +762,8 @@ header.menu_over {
         right: 6px;
         top: 6px;
     }
-}/* btn media */
+}/* //tab media , tab menu 구현 끝 */
+/* btn media */
 @media screen and (max-width:640px) {
     .find .tab .tab_detail .btn_wrap .more {
         font-size: 11px;
@@ -725,8 +778,291 @@ header.menu_over {
         right: 6px;
         top: 3px;
     }
-}/* btn media */
+}/* //btn media */
 
+.campaign {
+    margin: 160px 0;
+}
+.campaign h2 {
+    display: none;
+}
+.campaign p {
+    font-family: 'TTTtangsbudaejjigaeB';
+    font-weight: 700;
+    font-size: 50px;
+    color: #2E324D;
+    line-height: 1.5;
+    letter-spacing: -0.05em;
+    text-align: center;
+}
+.campaign p span {
+    display: inline-block;
+}
+.campaign p .emoji1 {
+    height: 0.5em;
+    width: 1.74em; /* 이모지 사이즈 / 폰트 크기 = 87 / 50 = 1.74 */
+    position: relative; /* before 정렬 기준 */
+}
+.campaign p .emoji1::before {
+    position: absolute;
+    left: 0;
+    top: 43%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 55px;
+    background: url(../imges/campaign-collar.svg) no-repeat center center / contain;
+    content: "";
+}
+.campaign p .emoji2 {
+    height: 0.5em;
+    width: 3.12em; /* 이모지 사이즈 / 폰트 크기 = 79 / 50 = 1.58 */
+    position: relative; /* before 정렬 기준 */
+}
+.campaign p .emoji2::before {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 67px;
+    background: url(../imges/campaign-catdog.svg) no-repeat center center / contain;
+    content: "";
+}
+.campaign p .emoji3 {
+    height: 0.5em;
+    width: 1.14em;/* 이모지 사이즈 / 폰트 크기 */
+    position: relative; /* before 정렬 기준 */
+}
+.campaign p .emoji3::before {
+    position: absolute;
+    left: 0;
+    top: 28%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 56px;
+    background: url(../imges/campaign-paw.svg) no-repeat center center / contain;
+    content: "";
+}
+.campaign p .emoji4 {
+    height: 0.5em;
+    width: 1.4em;/* 이모지 사이즈 / 폰트 크기 */
+    position: relative; /* before 정렬 기준 */
+}
+.campaign p .emoji4::before {
+    position: absolute;
+    left: 0;
+    top: 28%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 50px;
+    background: url(../imges/campaign-heart.svg) no-repeat center center / contain;
+    content: "";
+}
+.campaign p .emoji5 {
+    height: 0.5em;
+    width: 1.12em;/* 이모지 사이즈 / 폰트 크기 */
+    position: relative; /* before 정렬 기준 */
+}
+.campaign p .emoji5::before {
+    position: absolute;
+    left: 0;
+    top: 28%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 44px;
+    background: url(../imges/campaign-siren.svg) no-repeat center center / contain;
+    content: "";
+}
+.campaign strong {
+    display: block;
+    text-align: center;
+    color: #666;
+    letter-spacing: -0.05em;
+    margin-top: 20px;
+
+}
+@media screen and (max-width:1300px) {
+    .campaign p {
+        font-size: 45px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .campaign p {
+        font-size: 35px;
+    }
+}
+@media screen and (max-width:768px) {
+    .campaign {
+        margin: 59px 0;
+    }
+    .campaign p {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:640px) {
+    .campaign p br {
+        display: none;
+    }
+    .campaign strong {
+        margin-top: 9px;
+    }
+} /* //campaign media */
+
+.adoption {
+    background: #2E324D;
+    color: #EAC5BC;
+    padding: 137px 0 118px 0;
+    text-align: center;
+}
+.adoption h2 {
+    font-family: 'TTTtangsbudaejjigaeB';
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 1.4;
+    letter-spacing: -0.05em;
+    margin-bottom: 71px;
+}
+.adoption .list ul li {
+    width: 297px;
+}
+.adoption .list ul li a {
+    display: block;
+    position: relative; /*strong 정렬 기준 */
+}
+.adoption .list ul li a .photo {
+    overflow: hidden;
+    border-radius: 50%;
+    font-size: 0;
+    line-height: 0;
+}
+.adoption .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+.adoption .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.adoption .list ul li a strong {
+    position: absolute;
+    left: 11%;
+    bottom: 4.62em; /* 74px / 16px(font size) = 4.625 */
+    font-family: 'TTTtangsbudaejjigaeB';
+    font-weight: 700;
+    line-height: 3.65;
+    width: 3.52em;
+    height: 3.52em; /* 원형을 구현하기 위해선 너비와 높이가 들어가야 함. */
+    border-radius: 50%;
+    color: #2E324D;
+}
+.adoption .list ul li a strong.cate01 {
+    background-color: #EAC5BC;
+}
+.adoption .list ul li a strong.cate02 {
+    background-color: #8CA1E4;
+}
+.adoption .list ul li a p {
+    margin-top: 13px;
+    letter-spacing: -0.05em;
+}
+.adoption .btn_wrap {
+    margin-top: 71px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adoption .btn_wrap button {
+    width: 49px;
+    height: 49px;
+    font-size: 0;
+    line-height: 0;
+    margin-right: 10px;
+    position: relative; /* before 정렬 기준 */
+}
+.adoption .btn_wrap button::before {
+    position: absolute; /* button 기준 정렬 */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* 정렬 기준이 되는 영역의 상하 좌우 중앙값 */
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+.adoption .btn_wrap button.prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='그룹_159' data-name='그룹 159' transform='translate(-846 -3131)'%3E%3Cg id='타원_87' data-name='타원 87' transform='translate(846 3131)' fill='none' stroke='%23eac5bc' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3Cpath id='keyboard_arrow_down_24dp_FILL0_wght200_GRAD0_opsz24' d='M285.819-593.79a1.6,1.6,0,0,1-.583-.1,1.545,1.545,0,0,1-.524-.36l-8.589-8.59a.985.985,0,0,1-.294-.674.913.913,0,0,1,.294-.711.96.96,0,0,1,.693-.313.959.959,0,0,1,.692.313l8.312,8.311,8.311-8.311a.984.984,0,0,1,.674-.294.913.913,0,0,1,.711.294.96.96,0,0,1,.313.692.96.96,0,0,1-.313.693l-8.589,8.59a1.544,1.544,0,0,1-.524.36A1.6,1.6,0,0,1,285.819-593.79Z' transform='translate(269.335 2869.672) rotate(90)' fill='%23eac5bc'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.adoption .btn_wrap button.prev:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='그룹_161' data-name='그룹 161' transform='translate(-846 -3193)'%3E%3Cg id='타원_87' data-name='타원 87' transform='translate(846 3193)' fill='%23eac5bc' stroke='%23eac5bc' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3Cpath id='keyboard_arrow_down_24dp_FILL0_wght200_GRAD0_opsz24' d='M285.819-593.79a1.6,1.6,0,0,1-.583-.1,1.545,1.545,0,0,1-.524-.36l-8.589-8.59a.985.985,0,0,1-.294-.674.913.913,0,0,1,.294-.711.96.96,0,0,1,.693-.313.959.959,0,0,1,.692.313l8.312,8.311,8.311-8.311a.984.984,0,0,1,.674-.294.913.913,0,0,1,.711.294.96.96,0,0,1,.313.692.96.96,0,0,1-.313.693l-8.589,8.59a1.544,1.544,0,0,1-.524.36A1.6,1.6,0,0,1,285.819-593.79Z' transform='translate(269.335 2931.672) rotate(90)' fill='%232e324d'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.adoption .btn_wrap button.next::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='그룹_160' data-name='그룹 160' transform='translate(-905 -3131)'%3E%3Cg id='타원_86' data-name='타원 86' transform='translate(905 3131)' fill='none' stroke='%23eac5bc' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3Cpath id='keyboard_arrow_down_24dp_FILL0_wght200_GRAD0_opsz24' d='M9.991,0a1.6,1.6,0,0,0-.583.1,1.545,1.545,0,0,0-.524.36L.295,9.053A.985.985,0,0,0,0,9.727a.913.913,0,0,0,.294.711.96.96,0,0,0,.693.313.959.959,0,0,0,.692-.313L9.991,2.127,18.3,10.438a.984.984,0,0,0,.674.294.913.913,0,0,0,.711-.294.923.923,0,0,0,0-1.385L11.1.463A1.544,1.544,0,0,0,10.574.1,1.6,1.6,0,0,0,9.991,0Z' transform='translate(936.875 3145.5) rotate(90)' fill='%23eac5bc'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.adoption .btn_wrap button.next:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49'%3E%3Cg id='그룹_162' data-name='그룹 162' transform='translate(-905 -3193)'%3E%3Cg id='타원_86' data-name='타원 86' transform='translate(905 3193)' fill='%23eac5bc' stroke='%23eac5bc' stroke-width='2'%3E%3Ccircle cx='24.5' cy='24.5' r='24.5' stroke='none'/%3E%3Ccircle cx='24.5' cy='24.5' r='23.5' fill='none'/%3E%3C/g%3E%3Cpath id='keyboard_arrow_down_24dp_FILL0_wght200_GRAD0_opsz24' d='M9.991,0a1.6,1.6,0,0,0-.583.1,1.545,1.545,0,0,0-.524.36L.295,9.053A.985.985,0,0,0,0,9.727a.913.913,0,0,0,.294.711.96.96,0,0,0,.693.313.959.959,0,0,0,.692-.313L9.991,2.127,18.3,10.438a.984.984,0,0,0,.674.294.913.913,0,0,0,.711-.294.923.923,0,0,0,0-1.385L11.1.463A1.544,1.544,0,0,0,10.574.1,1.6,1.6,0,0,0,9.991,0Z' transform='translate(936.875 3207.5) rotate(90)' fill='%232e324d'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.adoption .btn_wrap .more {
+    width: 106px;
+    height: 36px;
+    line-height: 31px; /* 왼쪽 좌우 버튼과 동일 높이로 코딩하기 위해 */
+    border: 2px solid #EAC5BC;
+    border-radius: 18px;
+    padding: 0;
+    position: relative; /* after 정렬 기준 */
+}
+.adoption .btn_wrap .more:hover {
+    border-color: #EAC5BC;
+    background-color: #EAC5BC;
+    color: #2E324D;
+}
+.adoption .btn_wrap .more::after {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 11px;
+    height: 12px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.916' height='13.756' viewBox='0 0 12.916 13.756'%3E%3Cg id='그룹_120' data-name='그룹 120' transform='translate(-1050 -1681.5)'%3E%3Cline id='선_3' data-name='선 3' y2='11.756' transform='translate(1056.458 1682.5)' fill='none' stroke='%23eac5bc' stroke-linecap='round' stroke-width='2'/%3E%3Cline id='선_4' data-name='선 4' x1='10.916' transform='translate(1051 1688.378)' fill='none' stroke='%23eac5bc' stroke-linecap='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.adoption .btn_wrap .more:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.916' height='13.756' viewBox='0 0 12.916 13.756'%3E%3Cg id='그룹_163' data-name='그룹 163' transform='translate(-1050 -1681.5)'%3E%3Cline id='선_3' data-name='선 3' y2='11.756' transform='translate(1056.458 1682.5)' fill='none' stroke='%232e324d' stroke-linecap='round' stroke-width='2'/%3E%3Cline id='선_4' data-name='선 4' x1='10.916' transform='translate(1051 1688.378)' fill='none' stroke='%232e324d' stroke-linecap='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+@media screen and (max-width:768px) {
+    .adoption .btn_wrap button {
+        display: none;
+    }
+    .adoption .btn_wrap .more {
+        font-size: 14px;
+        width: 90px;
+        height: 30px;
+        line-height: 25px;
+        border-radius: 11px;
+        padding: 0;
+    }
+    .adoption .btn_wrap .more::after {
+        position: absolute;
+        right: 6px;
+        top: 6px;
+    }
+}
+@media screen and (max-width:640px) {
+    .adoption h2 {
+        font-size: 30px;
+        margin-bottom: 23px;
+    }
+    .adoption .list ul li {
+        width: 207px;
+    }
+    .adoption .list ul li a strong {
+        font-size: 11px;
+    }
+}
 footer {
     margin-top: 1000px;
 }
