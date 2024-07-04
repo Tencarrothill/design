@@ -185,4 +185,17 @@ $(document).ready(function(){
         },
     });//adoption swiper
 
+    /* footer .family_site 열고 닫기 :
+        footer .family_site button.open 을 클릭하면 family_site에 class:on 을 주고
+        footer .family_site button.close을 클릭하면 family_site에 class:on 삭제.
+    */
+   $('footer .family_site button.open').on('click', function(){
+        $('footer .family_site').addClass('on')
+   })
+   $('footer .family_site button.close').on('click', function(){
+        $('footer .family_site').removeClass('on')
+   })
+
+
+
 })//document .ready
