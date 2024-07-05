@@ -1,0 +1,144 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+header .logo a {
+    display: block;
+    width: 107px;
+    height: 51px;
+    font-size: 0;
+    line-height: 0;
+    position: relative; /* before 정렬 기준 */
+}
+header .logo a::before {
+    position: absolute; /* a 기준 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../imges/logo.svg) no-repeat center center / contain;
+    content: "";
+}
+/* gnb메뉴 오픈 시 */
+header.menu_over {
+    color: #1d1d1d;
+}
+header.menu_over::before {
+    position: absolute; /* header 기준 정렬. header 이미 absolute 갖고 있음 */
+    left: 0;
+    top: 0;
+    /* z-index: -1;  */
+    /* 정렬 기준 요소의 모든 내부요소보다 아래에 배치(position 값이 없는 요소까지 포함해서) */
+    width: 100%;
+    height: 245px;
+    background-color: #fff;
+    content: "";
+}
+header.menu_over::after {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 1px;
+    background-color: #ededed;
+    content: "";
+}
+header.menu_over .logo a::before {
+    background: url(../imges/logo_black.svg) no-repeat center center / contain;
+}
+@media screen and (min-width:1025px) { /* width 1025 이상 - gnb 열린상태 */
+    header .gnb button {
+        display: none; /* ver. pc에서 숨김 */
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        display: flex;
+    }
+    header .gnb .gnb_wrap ul.depth1>li {
+        width: 196px;
+        text-align: center;
+        position: relative; /* depth2의 정렬 기준 */
+    }
+    header .gnb .gnb_wrap ul.depth1>li>a {
+        line-height: 100px; /* header height와 동일. 글자를 위아래 가운데 주기 위해 */
+        display: block; /* li width와 동일하게 */
+        font-weight: 900;
+        font-size: 22px;
+    }
+    header .gnb .gnb_wrap ul.depth1>li.on>a {
+        color: #FF5E3A;
+    }
+    header .gnb .gnb_wrap ul.depth1>li.on>a span {
+        position: relative; /* after 정렬 기준 */
+    }
+    header .gnb .gnb_wrap ul.depth1>li.on>a span::after {
+        position: absolute;
+        left: 0;
+        bottom: -39px;
+        z-index: 10;
+        width: 100%;
+        height: 1px;
+        background-color: #FF5E3A;
+        content: "";
+    }
+    header .gnb .gnb_wrap ul.depth2 {
+        display: none; /* hover했을 때만 보이게 할 것 */
+        position: absolute; /* 2차메뉴는 1차메뉴 하단에  헤더 밖에 배치되기 때문에 무조건 앱솔루트. 
+        detth1 기준 정렬 */
+        left: 0;
+        top: 100px; /* 1차메뉴 a의 높이 만큼 */
+        width: 100%; /* li width와 같게 하기 위해. 가운데 정렬 되게 하기 위해. */
+        padding-top: 18px; /* depth1 a 와 depth2 사이의 여백 필요시, 반드시 depth2 ul한테 padding으로 */
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth2 {
+        display: block;
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth2>li>a {
+        display: block; /* depth2, depth1의 a와 너비가 같아짐. */
+        line-height: 1.5;
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth2>li>a:hover {
+        font-weight: 900;
+        color: #FF5E3A;
+    }
+} /* gnb media 1025 */
+
+/* 1300 이하 ~ 1025에서 상단 메뉴 글자 크기 너비 변경 */
+@media screen and (min-width:1025px) and (max-width:1300px) {
+    header .gnb .gnb_wrap ul.depth1>li {
+        width: 160px;
+    }
+    header .gnb .gnb_wrap ul.depth1>li>a {
+        font-size: 20px;
+    }
+}/* gnb media 1300 */
+
+.visual {
+    color: #fff;
+    background: url(../imges/visual_bg.png) no-repeat center center / cover;
+    height: 100vh; /*browser 높이와 딱 맞게 */
+    margin-bottom: 100vh;
+}
+.visual h2 {
+ font-weight: 900;
+ font-size: 60px;
+ text-align: center; 
+ padding-top: 428px;
+}
+.visual h2 br {
+    display: none;
+}
