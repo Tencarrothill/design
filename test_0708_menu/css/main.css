@@ -1,0 +1,263 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+header {
+    position: absolute; /* body 기준 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+header .logo {
+    margin-top: 25px;
+}
+header .logo a {
+    display: block;
+    width: 107px;
+    height: 51px;
+    font-size: 0;
+    line-height: 0;
+    position: relative; /* before 정렬 기준 */
+}
+header .logo a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='107' height='51' viewBox='0 0 107 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_8)'%3E%3Cpath d='M17.7665 51C29.0723 51 38.0562 45.1857 38.4597 34.5784C38.7627 27.3363 32.6305 22.7967 27.8604 20.4003C24.7478 18.8361 22.1063 17.4429 22.1063 15.5044C22.1063 14.2798 23.3182 13.261 24.7313 13.261C27.0533 13.261 28.9705 15.5044 29.7789 17.6475L42.7002 11.1192C41.487 6.62986 36.1377 0 26.2449 0C13.9296 0 5.04759 7.24216 5.45114 16.9323C5.75413 24.276 11.5083 28.3563 16.2516 30.8043C19.1783 32.3337 21.5003 33.5583 21.5003 35.394C21.5003 36.8218 20.4908 37.4341 19.0777 37.4341C16.7557 37.4341 14.6361 35.7001 13.1225 32.4367L0 38.9636C1.11009 43.5533 5.75413 51 17.7665 51ZM73.0825 50.0815H103.365L107 28.5596L91.9591 36.1079L97.7132 0.918455H81.2592L73.0825 50.0815ZM39.2668 50.0815H69.5498L73.1843 28.5596L58.1434 36.1079L63.8975 0.918455H47.4435L39.2668 50.0815Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_8'%3E%3Crect width='107' height='51' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    content: "";
+}
+/* 769 이상 - pc ver. menu
+    768 이하 - mobile ver. menu */
+@media screen and (min-width:1024px) { /* 1024px 이상에서만 적용 */
+    header .gnb button {
+        display: none; /* mobile ver.에서만 보임 */
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        display: flex;
+    }
+    header .gnb .gnb_wrap ul.depth1>li {
+        width: 196px;
+        text-align: center;
+        position: relative; /* depth2 정렬 기준 */
+    }
+    header .gnb .gnb_wrap ul.depth1>li>a {
+        display: block; /* li의 너비와 동일 */
+        line-height: 100px; /* header 높이와 동일 */
+        font-size: 22px;
+        font-weight: 900;
+    }
+    header .gnb .gnb_wrap ul.depth2 {
+        display: none; /* 마우스오버 시 나타남 */
+        position: absolute; /* depth1의 li 기준 정렬. header 영역에서 벗어나는 요소이기 때문에 absolute 처리해야함 */
+        left: 0;
+        top: 100px; /* header 높이 만큼 */
+        width: 100%; /* li 너비와 동일 */
+        padding-top: 16px; /* depth1의 a와 depth2 사이의 여백은 반드시 padding으로 준다 */
+    }
+    header .gnb .gnb_wrap ul.depth2>li>a {
+        display: block; /* a size 가 li 와 같게 됨 */
+        line-height: 2;        
+    }
+    header .gnb .gnb_wrap ul.depth1>li.on>a span {
+        color: #FF5E3A;
+        position: relative; /* after 정렬 기준 */
+    }
+    header .gnb .gnb_wrap ul.depth1>li.on>a span:after {
+        position: absolute;
+        left: 0;
+        bottom: -39px;
+        z-index: 10;
+        width: 100%;
+        height: 2px;
+        background-color: #FF5E3A;
+        content: "";
+    }
+    header .gnb .gnb_wrap ul.depth2>li>a:hover,
+    header .gnb .gnb_wrap ul.depth2>li>a:focus {
+        font-weight: 900;
+        color: #FF5E3A;
+    }
+    
+    /* 메뉴에 마우스 오버 시 */
+    header.menu_over {
+        color: #1d1d1d;
+    }
+    header.menu_over::before {
+        position: absolute; /* header 기준 정렬. header에 absolute 있음 */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 290px;
+        background-color: #fff;
+        content: "";
+    }
+    header.menu_over::after {
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        content: "";
+    }
+    header.menu_over .logo a::before {
+        background-image: url("data:image/svg+xml,%3Csvg width='107' height='51' viewBox='0 0 107 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_53)'%3E%3Cpath d='M17.7665 51C29.0723 51 38.0562 45.1857 38.4597 34.5784C38.7627 27.3363 32.6305 22.7967 27.8604 20.4003C24.7478 18.8361 22.1063 17.4429 22.1063 15.5044C22.1063 14.2798 23.3182 13.261 24.7313 13.261C27.0533 13.261 28.9705 15.5044 29.7789 17.6475L42.7002 11.1192C41.487 6.62986 36.1377 0 26.2449 0C13.9296 0 5.04759 7.24216 5.45114 16.9323C5.75413 24.276 11.5083 28.3563 16.2516 30.8043C19.1783 32.3337 21.5003 33.5583 21.5003 35.394C21.5003 36.8218 20.4908 37.4341 19.0777 37.4341C16.7557 37.4341 14.6361 35.7001 13.1225 32.4367L0 38.9636C1.11009 43.5533 5.75413 51 17.7665 51ZM73.0825 50.0815H103.365L107 28.5596L91.9591 36.1079L97.7132 0.918455H81.2592L73.0825 50.0815ZM39.2668 50.0815H69.5498L73.1843 28.5596L58.1434 36.1079L63.8975 0.918455H47.4435L39.2668 50.0815Z' fill='%231D1D1D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_53'%3E%3Crect width='107' height='51' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth2 {
+        display: block;
+    }
+}/* //header media 1024이상 */
+@media screen and (max-width:1300px) and (min-width:1024px) { /* 1300~ 1024 까지 */
+    header .gnb .gnb_wrap ul.depth1>li {
+        width: 156px;
+    }
+    header .gnb .gnb_wrap ul.depth1>li>a {
+        font-size: 19px;
+        letter-spacing: -0.02em;
+    }
+}/* header media */
+@media screen and (max-width:1024px) { /* 1024이하 */    
+    header .gnb button {
+        position: absolute; /* header 기준 정렬 */
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 100%; /* header 높이와 같이 */
+        font-size: 0;
+        line-height: 0;
+    }
+    header .gnb button::before {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+    }
+    header .gnb button.gnb_open::before {
+        width: 20px;
+        height: 15px;
+        background-image: url("data:image/svg+xml,%3Csvg width='22' height='18' viewBox='0 0 22 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1H21' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M1 8.69232H21' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M1 16.3846H21' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+    }
+    header .gnb button.gnb_close {
+        display: none;
+    }
+    header .gnb button.gnb_close::before {
+        width: 20px;
+        height: 15px;
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.11536L13 13.1154' stroke='%231D1D1D' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M1 13.5L13.5 1' stroke='%231D1D1D' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+    }
+    header .gnb .gnb_wrap {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh; /* header 높이보다 더 크고 브라우저의 높이만하게 
+        100%러 주면 header의 높이와 동일해짐 */
+        background-color: #fff;
+        color: #1d1d1d;
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        margin-top: 100px; /* header의 높이 만큼 */
+    }
+    header .gnb .gnb_wrap ul.depth1>li {
+        border-bottom: 1px solid #3d3d3d;
+    }
+    header .gnb .gnb_wrap ul.depth1>li:first-child {
+        border-top: 1px solid #3d3d3d;
+    }
+    header .gnb .gnb_wrap ul.depth1>li>a {
+        font-size: 18px;
+        font-weight: 900;
+        display: block;
+        line-height: 45px;
+        padding: 0 20px;
+        position: relative;
+    }
+    header .gnb .gnb_wrap ul.depth1>li>a::after {
+        position: absolute;
+        right: 13px;
+        top: 12px;
+        width: 20px;
+        height: 20px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.77368 1.06525L8.77368 14.6417' stroke='%231D1D1D' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M1.7678 8.07107H15.9099' stroke='%231D1D1D' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+        content: "";
+    }
+    header .gnb .gnb_wrap ul.depth1>li.open>a {
+        color: #FF5E3A;
+        font-weight: 900;
+    }
+    header .gnb .gnb_wrap ul.depth1>li.open>a::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='17' height='15' viewBox='0 0 17 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.7678 7.07107H15.9099' stroke='%23FF5E3A' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+    }
+    header .gnb .gnb_wrap ul.depth2 {
+        display: none; /* depth2(2차메뉴) 숨김 */
+        background-color: #E1E1E1;
+        padding: 12px 36px;
+    }
+    header .gnb .gnb_wrap ul.depth1>li.open ul.depth2 {
+        display: block;
+    }
+    header .gnb .gnb_wrap ul.depth2>li>a {
+        display: block; /* li width 동일값 주기위해 */
+        line-height: 1.7;
+    }
+    /* gnb(메뉴) 열렸을 때 */
+    header.menu_open .gnb button.gnb_open {
+        display: none;
+    }
+    header.menu_open .gnb button.gnb_close {
+        display: block;
+    }
+    header.menu_open .gnb .gnb_wrap {
+        display: block;
+    }
+
+} /* media */
+@media screen and (max-width:768px) { /* 768 이하에서 */
+    header {
+        height: 50px;
+    }
+    header .logo {
+        margin-top: 16px;
+    }
+    header .logo a {
+        width: 41px;
+        height: 20px;
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        margin-top: 50px; /* = header height */
+    }
+} /* header media 768 */
+
+.visual {
+    height: 100vh; /* browser heigth와 동일 */
+    margin-bottom: 100vh;
+    background: url(../imges/visual_bg.png) no-repeat center center / cover;
+}
+.visual h2 {
+    font-weight: 900;
+    font-size: 60px;
+    color: #fff;
+    text-align: center; 
+    padding-top: 428px;
+}
