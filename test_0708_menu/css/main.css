@@ -175,6 +175,8 @@ header .logo a::before {
     }
     header .gnb .gnb_wrap ul.depth1 {
         margin-top: 100px; /* header의 높이 만큼 */
+        height: calc(100vh - 100px); /* browser height에 상단 여백값을 뺀 값 */
+        overflow-y: auto; /* ul 내부 li의 길이가 지정한 높이보다 짧을 때(=넘치면), 스크롤 바 생성 */
     }
     header .gnb .gnb_wrap ul.depth1>li {
         border-bottom: 1px solid #3d3d3d;
@@ -246,6 +248,7 @@ header .logo a::before {
     }
     header .gnb .gnb_wrap ul.depth1 {
         margin-top: 50px; /* = header height */
+        height: calc(100vh - 50px); /* browser height에 상단 여백값을 뺀 값 */
     }
 } /* header media 768 */
 

@@ -47,4 +47,30 @@ $(document).ready(function(){
             $('header .gnb .gnb_wrap ul.depth1>li').removeClass('on')
         }//if
     })
-})
+
+    /* 모바일에서 detph1을 클릭하면 
+        - depth1에 걸린 link 작동 금지 시켜야함.
+        - depth2가 열려야함. (조건 : li.open)
+            닫힌 depth1을 클릭 시, 열리고
+            열린 depth1을 클릭 시, 닫힘. -> 덩시에 여러 개의 depth1이 열릴 수 있음. */
+    $("header .gnb .gnb_wrap ul.depth1>li>a").on("click", function(e){
+        if(pc_mobile == 'mobile'){
+            e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
+            $(this).parent().toggleClass('open') /* toggleClass : 클래스가 없으면 추가하고, 있으면 삭제*/
+        }//if
+    });
+
+    /* 메뉴 열기 클릭 시, header.menu_open
+        메뉴 닫기 클릭 시, header에서 class:menu_open 삭제
+        header .gnb button.gnb_open - 메뉴 열기
+        header .gnb button.gnb_close - 메뉴 닫기 */
+    $('header .gnb button.gnb_open').on('click', function(){
+        $('header').addClass('menu_open')
+        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+    })
+    $('header .gnb button.gnb_close').on('click', function(){
+        $('header').removeClass('menu_open')
+        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+    })
+
+})//document
