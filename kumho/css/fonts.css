@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 300;
+    font-style: normal;
+	src: local('S-CoreDream Light'), url(../fonts/SCoreDreamLight.woff2) format('woff2'), url(../fonts/SCoreDreamLight.woff) format('woff');
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 900;
+    font-style: normal;
+	src: local('S-CoreDream Blakc'), url(../fonts/SCoreDreamBlack.woff2) format('woff2'), url(../fonts/SCoreDreamBlack.woff) format('woff');
+}
