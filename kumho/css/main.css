@@ -1,6 +1,7 @@
 @import url(default.css);
 @import url(fonts.css);
 @import url(common.css);
+@import url(layout.css);
 
 .visual h2 {
     display: none;
@@ -32,4 +33,118 @@
 }
 .visual ul li p {
     font-size: 26px;
+}
+.visual .btn_wrap {
+    position: absolute; /* swiper 기준 정렬 */
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, 0); /* 정렬 기준 (swiper)의 너비 왼쪽 50%부터(left:50%) 정렬. btn_wrap 너비의
+    절반을 왼쪽으로 이동 (transform) -> 가운데 정렬이 됨. */
+    z-index: 10;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.visual .btn_wrap .paging {
+    width: auto; /* swiper가 부여한 width:100% 삭제하기 위한 명령 */
+    display: flex;
+}
+.visual .btn_wrap .paging .swiper-pagination-bullet {
+    /* 현재 선택되지 않은 불릿 */
+    width: 232px;
+    height: 10px;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    position: relative; /* before 정렬 기준 */
+    margin-right: 20px;
+}
+.visual .btn_wrap .paging .swiper-pagination-bullet:last-child {
+    margin-right: 0;
+}
+.visual .btn_wrap .paging .swiper-pagination-bullet-active::before {
+    /* 현재 선택된 불릿 */
+    position: absolute; /* bullet 기준 정렬 */
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #fff;
+    content: "";
+    animation-name: visual_count;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; /* 애니메이션 종료 후 마지막 유지, 애니메이션 반복 횟수가 제한되었을 때 사용 */
+    animation-timing-function: linear;
+}
+@keyframes visual_count {
+    0% {width: 0;}
+    100% {width: 100%;}
+}
+.visual .btn_wrap button {
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    line-height: 0;
+    position: relative; /* before 정렬 기준 */
+    margin-left: 2px;
+}
+.visual .btn_wrap button::before {
+    position: absolute; /* button 기준 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.visual .btn_wrap button.btn_prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_39_200' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_39_200)'%3E%3Cpath d='M7.64453 21.6347V8.3653H9.51953V21.6347H7.64453ZM22.3558 21.6347L12.4039 15L22.3558 8.3653V21.6347ZM20.4808 18.125V11.875L15.7742 15L20.4808 18.125Z' fill='white' fill-opacity='0.5'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap button.btn_next::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_39_197' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_39_197)'%3E%3Cpath d='M20.4808 21.6347V8.3653H22.3558V21.6347H20.4808ZM7.64453 21.6347V8.3653L17.5964 15L7.64453 21.6347ZM9.51953 18.125L14.2261 15L9.51953 11.875V18.125Z' fill='white' fill-opacity='0.5'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap button.btn_stop::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_39_194' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_39_194)'%3E%3Cpath d='M8.125 21.875V8.125H21.875V21.875H8.125ZM10 20H20V10H10V20Z' fill='white' fill-opacity='0.5'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap button.btn_play {
+    display: none; /* 현재 play중이라 일시정지버튼만 나옴 */
+}
+.visual .btn_wrap button.btn_play::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_39_191' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_39_191)'%3E%3Cpath d='M10.625 22.62V7.38L22.5959 15L10.625 22.62ZM12.5 19.1875L19.0866 15L12.5 10.8125V19.1875Z' fill='white' fill-opacity='0.5'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+@media screen and (max-width:1300px) {
+
+}
+@media screen and (max-width:1024px) {}
+
+@media screen and (max-width:768px) { /* mobile ver. */
+    .visual ul li {
+        height: 537px;
+        min-height: auto;
+    }
+    .visual ul li h3 {
+        font-size: 30px;
+        margin-bottom: 12px;
+        margin-top: 228px;
+    }
+    .visual ul li p {
+        font-size: 16px;
+    }
+    .visual .btn_wrap button.btn_prev,
+    .visual .btn_wrap button.btn_next {
+        display: none;
+    }
+    .visual .btn_wrap .paging .swiper-pagination-bullet {
+        /* 현재 선택되지 않은 불릿 */
+        width: 99px;
+        height: 5px;
+        margin-right: 9px;
+    }
+}
+@media screen and (max-width:500px) {
+    .visual .btn_wrap button {
+        display: none;
+    }
 }

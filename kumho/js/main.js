@@ -20,6 +20,22 @@ $('document').ready(function(){
         },
 
     });
-    visual_swiper.autoplay.stop();  /* 일시정지 기능 */
-    visual_swiper.autoplay.start();  /* 재생 기능 */
+    /* 정지버튼 클릭 시 ( .visual .btn_wrap button.btn_stop )
+        1. 팝업 정지
+        2. 정지버튼 숨기고 재생버튼 나타남
+
+        재생버튼 클릭 시 .visual .btn_wrap button.btn_play
+        1. 팝업 다시 시작
+        2. 재생버튼 숨기고 정지버튼 나타남 */
+
+    $('.visual .btn_wrap button.btn_stop').on('click', function(){
+        visual_swiper.autoplay.stop();  /* 일시정지 기능 */
+        $(this).hide() //숨김
+        $('.visual .btn_wrap button.btn_play').show() //보임
+    })
+    $('.visual .btn_wrap button.btn_play').on('click', function(){
+        visual_swiper.autoplay.start();  /* 재생 기능 */
+        $(this).hide() //숨김
+        $('.visual .btn_wrap button.btn_stop').show() //보임
+    })
 })
