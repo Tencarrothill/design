@@ -38,4 +38,4 @@ $('document').ready(function(){
         $(this).hide() //숨김
         $('.visual .btn_wrap button.btn_stop').show() //보임
     })
-})
+})//document.ready

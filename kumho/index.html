@@ -7,6 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>금호건설</title>
@@ -16,13 +17,14 @@
         <!-- 하단 스크롤시 메뉴 고정. header에 마우스 오버시 header 디자인 변경됨 -> fixed
             메뉴에 마우스오버시 하위 메뉴 등장 -> menu_over
             mobile ver.에서 메뉴 오픈시 -> menu_open -->
-        <header class="fixed menu_over">
+        <header class="menu_open">
             <h1 class="logo"><a href="index.html">금호건설</a></h1>
             <nav class="gnb">
                 <button class="gnb_open">메뉴열기</button>
                 <div class="gnb_wrap">
                     <ul class="depth1">
-                        <li class="on"> <!-- depth1에 마우스오버시, class:on -->
+                        <li class=""> <!-- pc ver. 에서 depth1에 마우스오버시, class:on
+                            mobile ver.에서는 depth1 클릭시, li:class=open -->
                             <a href="#n"><span>회사소개</span></a>
                             <ul class="depth2">
                                 <li><a href="#n"><span>기업정보</span></a></li>
@@ -81,7 +83,7 @@
             </nav>
             <div class="tnb">
                 <a href="#n" class="lang">ENG</a>
-                <a href="https://www.artera.co.kr/main" class="artera">ARTERA</a>
+                <a href="https://www.artera.co.kr/main" target="_blank" class="artera">ARTERA</a>
             </div><!--tob navigation bar-->
         </header>
         <main class="container">
