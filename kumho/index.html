@@ -9,6 +9,7 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> <!-- browser 상단 타이틀 왼쪽 아이콘 등록 -->
     <link rel="stylesheet" href="css/main.css">
     <title>금호건설</title>
 </head>
@@ -17,7 +18,7 @@
         <!-- 하단 스크롤시 메뉴 고정. header에 마우스 오버시 header 디자인 변경됨 -> fixed
             메뉴에 마우스오버시 하위 메뉴 등장 -> menu_over
             mobile ver.에서 메뉴 오픈시 -> menu_open -->
-        <header class="menu_open">
+        <header class="">
             <h1 class="logo"><a href="index.html">금호건설</a></h1>
             <nav class="gnb">
                 <button class="gnb_open">메뉴열기</button>
@@ -116,8 +117,110 @@
                     </div><!--btn_wrap-->
                 </div><!--swiper-->
             </section><!--visual-->
-            <section class="biz"></section><!--biz-->
-            <section class="news"></section><!--news-->
+            <section class="biz">
+                <div class="tit">
+                    <div class="wrapper">
+                        <h2><span>BUSINESS</span></h2>
+                        <p>글로벌 넘버원에 도전합니다</p>
+                    </div><!--wrapper-->
+                </div><!--tit-->
+                <div class="list">
+                    <ul>
+                        <!-- jquery에서 마우스오버한 li:class=on 추가
+                            마우스오버 안한 li:class=off -->
+                        <li class="biz1">
+                            <a href="#n">
+                                <div class="inner">
+                                    <strong>주택사업</strong>
+                                    <h3>HOUSING</h3>
+                                    <p>금호는 전국 곳곳에서 신주거단지 조성으로 <br> 고객의 높은 신뢰를 얻어왔습니다</p>
+                                </div><!--inner-->
+                            </a>
+                        </li>
+                        <li class="biz2">
+                            <a href="#n">
+                                <div class="inner">
+                                    <strong>건축사업</strong>
+                                    <h3>ARCHITECTURE</h3>
+                                    <p>빌딩의 개발에서 도시의 개발로 이어지는 <br> 금호건설의 건축사업입니다</p>
+                                </div><!--inner-->
+                            </a>
+                        </li>
+                        <li class="biz3">
+                            <a href="#n">
+                                <div class="inner">
+                                    <strong>토목사업</strong>
+                                    <h3>CIVIL</h3>
+                                    <p>도시와 국토의 핏줄을 잇는 토목기술은 <br> 한마디로 공간과 공간을 잇는 예술입니다</p>
+                                </div><!--inner-->
+                            </a>
+                        </li>
+                        <li class="biz4">
+                            <a href="#n">
+                                <div class="inner">
+                                    <strong>환경/플랜트사업</strong>
+                                    <h3>PLANT<br>ENVIRONMENT</h3>
+                                    <p>산업발전의 기틀을 다지는 플랜트 사업입니다</p>
+                                </div><!--inner-->
+                            </a>
+                        </li>
+                    </ul>
+                </div><!--list-->
+            </section><!--biz-->
+            <section class="news">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>NOTICE</h2>
+                        <p>여러분들과 금호소식을 나눕니다</p>
+                    </div><!--tit-->
+                    <div class="list">
+                        <div class="swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024.07.04</span>
+                                        <h3>금호건설 ‘청주테크노폴리스 아테라’ 청약 평균 47.4대1</h3>
+                                        <p>[이뉴스투데이 주다솔 기자] 금호건설 ‘청주테크노폴리스 아테라’ 청약이 평균 47.4 대 1을 기록한 것으로 나타났다. 4일 한국부동산원 청약홈에 따르면, 지난 3일 청주테크노폴리스 아테라 1순위 청약 접수를 받은 결과 521가구(특별공급 제외) 모집에 2만4692건이 접수되며 평균 47.4대1의 경쟁률을 나타냈다.</p>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024.07.03</span>
+                                        <h3>금호건설, ‘아테라 익스테리어 디자인’ 개발</h3>
+                                        <p>금호건설이 신규 주거 브랜드 ‘아테라’(ARTERA)에 적용하기 위한 ‘아테라 익스테리어 디자인’ 개발을 완료했다고 3일 밝혔다.아테라 익스테리어 디자인은 건물 외부 색채와 입면, 단지 출입구, 동 출입구, 지하주차장, 계단실, 엘리베이터실 디자인 등으로 구성했다.</p>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024.06.13</span>
+                                        <h3>금호건설, 조경 특화 브랜드 '아트시스' 출시</h3>
+                                        <p>(서울=연합뉴스) 권혜진 기자 = 금호건설은 13일 자체 개발한 조경 특화 브랜드 '아트시스'를 선보이고 이달 분양하는 충북 청주시 '청주테크노폴리스 아테라'를 시작으로 금호건설이 시공하는 '아테라' 브랜드 전 사업장에 적용한다고 밝혔다.</p>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024.05.30</span>
+                                        <h3>금호건설, 새 주거 브랜드 ‘아테라’ 공식 홈페이지 1일 공개</h3>
+                                        <p>금호건설이 20여년 만에 새롭게 선보인 주거 브랜드 ‘아테라’(ARTERA)의 공식 홈페이지를 오는 6월 1일 공개한다고 30일 밝혔다. 아테라 공식 홈페이지는 ‘당신의 삶을 비추는 아름다움’이라는 브랜드 슬로건처럼 아테라만의 우아하고 세련된 이미지를 담아 고객들을 맞이할 계획이다.</p>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024.05.27</span>
+                                        <h3>금호건설 “하반기 ‘아테라’ 4500가구 공급…지난해 2배”</h3>
+                                        <p>[이코노미스트 이병희 기자] 금호건설이 올 하반기 전국에 총 4500여 가구를 공급할 예정이라고 27일 밝혔다. 해당 단지는 수도권 3곳 1669가구, 충청도 2곳 2029가구, 강원도 2곳 806가구 등이다. 지난해 같은 기간과 비교 하면 2배 수준이다. 다음달에는 충북 청주에 ‘청주테크노폴리스 아테라’를 분양한다.</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!--swiper-->
+                        <div class="btn_wrap">
+                            <button class="prev">이전 기사보기</button>
+                            <button class="next">다음 기사보기</button>
+                            <a href="#n" class="more">전체보기</a>
+                        </div><!--btn_wrap-->
+                    </div><!--list-->
+                </div>
+            </section><!--news-->
             <section class="service"></section><!--service-->
         </main><!--container-->
         <footer></footer>
