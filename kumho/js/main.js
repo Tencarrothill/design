@@ -60,4 +60,23 @@ $('document').ready(function(){
             $('.biz .list ul li').removeClass('on')
             $('.biz .list ul li').removeClass('off')
         })
+        const news_swiper = new Swiper('.news .swiper', { 
+	slidesPerView: 'auto', 
+        spaceBetween: 16, 
+        breakpoints: {
+            768: {    
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+        },
+        navigation: {
+            nextEl: '.news .btn_wrap .next',
+            prevEl: '.news .btn_wrap .prev',
+        },
+        scrollbar: {
+            el: ".news .swiper-scrollbar",
+            hide: false,
+            draggable: true,
+          }
+    });
 })//document.ready
