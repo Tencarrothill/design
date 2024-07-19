@@ -431,5 +431,144 @@ header.fixed .logo a::before {
 } /* media 768 */
 
 footer {
-    height: 200vh;
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 68px 0 138px 0;
 }
+footer .wrapper {
+    position: relative; /* family_site and utube 정렬 기준 */
+}
+footer .utube {
+    position: absolute;
+    right: 194px;
+    top: -7px;
+}
+footer .utube a {
+    position: relative;
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='38' height='38' viewBox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='19' cy='19' r='19' fill='%23FF0000'/%3E%3Cg clip-path='url(%23clip0_0_1)'%3E%3Cpath d='M31 16.3268C31 13.3816 28.6398 11 25.7359 11H12.2641C9.36022 11 7 13.3883 7 16.3268V22.6665C7 25.6117 9.36022 27.9933 12.2641 27.9933H25.7293C28.6398 27.9933 30.9934 25.605 30.9934 22.6665V16.3268H31ZM23.0773 19.9763L17.0376 23.002C16.7989 23.1294 15.9967 22.955 15.9967 22.6867V16.4811C15.9967 16.206 16.8055 16.0316 17.0442 16.1657L22.8254 19.3457C23.0707 19.4866 23.3227 19.8421 23.0773 19.9763Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_0_1'%3E%3Crect width='24' height='17' fill='white' transform='translate(7 11)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+footer .family_site {
+    position: absolute;
+    right: 0;
+    top: -9px;
+    width: 181px;
+}
+footer .family_site button {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #2d2d2d;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    text-align: left;
+    padding-left: 19px;
+    position: relative; /* after 정렬 기준 */
+}
+footer .family_site button::after {
+    position: absolute;
+    right: 16px;
+    top: 6px;
+    width: 24px;
+    height: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_39_484' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_39_484)'%3E%3Cpath d='M11.25 12.75H5.5V11.25H11.25V5.5H12.75V11.25H18.5V12.75H12.75V18.5H11.25V12.75Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+footer .family_site button.family_close::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_135_66' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='25' height='25'%3E%3Crect x='0.192383' y='0.404297' width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_135_66)'%3E%3Cpath d='M5.69238 13.1543V11.6543H18.6924V13.1543H5.69238Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .family_site ul {
+    display: none;
+    position: absolute; /* family_site 기준 정렬 */
+    left: 0;
+    bottom: 40px;
+    width: 100%;
+    background-color: #2d2d2d;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 12px 35px 11px 22px;
+}
+footer .family_site ul li a {
+    display: block;
+    line-height: 1.8;
+}
+footer .family_site button.family_close {
+    display: none;
+}
+footer .family_site.open button.family_close {
+    display: block;
+}
+footer .family_site.open button.family_open {
+    display: none;
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin-right: 47px;
+    position: relative; /* after 정렬 기준 */
+}
+footer .f_nav ul li::after {
+    position: absolute; /* li 기준 정렬 */
+    right: -25px;
+    top: 5px;
+    width: 1px;
+    height: 9px;
+    background-color: rgba(255, 255, 255, 0.3);
+    content: "";
+}
+footer .f_nav ul li:last-child::after {
+    display: none;
+}
+footer .copyright {
+    margin-top: 34px;
+    color: rgba(255, 255, 255, 0.8);
+}
+@media screen and (max-width:1024px) {
+    footer {
+        padding: 31px 0 57px 0;
+    }
+    footer .utube {
+        position: relative;
+        right: auto;
+        top: auto;
+        text-align: center;
+    }
+    footer .utube a {
+        display: inline-block;
+    }
+    footer .family_site {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: auto;
+        margin: 37px 0 47px 0;
+    }
+    footer .family_site ul li a {
+        display: block;
+        line-height: 1.8;
+    }
+    footer .f_nav ul {
+        flex-wrap: wrap; /* 2 lines 허용 */
+    }
+    footer .f_nav ul li {
+        margin-right: 39px;
+    }
+    footer .f_nav ul li::after {
+        right: -19px;
+        top: 8px;
+        width: 1px;
+        height: 1px;
+    }
+    footer .copyright {
+        margin-top: 24px;
+    }
+} /* media.footer 1024 */
