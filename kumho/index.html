@@ -14,13 +14,17 @@
     <title>금호건설</title>
 </head>
 <body>
+    <div class="skipnav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_menu">대메뉴 바로가기</a>
+    </div><!--skipnav-->
     <div id="wrap">
         <!-- 하단 스크롤시 메뉴 고정. header에 마우스 오버시 header 디자인 변경됨 -> fixed
             메뉴에 마우스오버시 하위 메뉴 등장 -> menu_over
             mobile ver.에서 메뉴 오픈시 -> menu_open -->
         <header class="">
             <h1 class="logo"><a href="index.html">금호건설</a></h1>
-            <nav class="gnb">
+            <nav class="gnb" id="skip_menu">
                 <button class="gnb_open">메뉴열기</button>
                 <div class="gnb_wrap">
                     <ul class="depth1">
@@ -87,7 +91,7 @@
                 <a href="https://www.artera.co.kr/main" target="_blank" class="artera">ARTERA</a>
             </div><!--tob navigation bar-->
         </header>
-        <main class="container">
+        <main class="container" id="skip_contents"><!--skipnav 클릭시 이동되는 위치 -->
             <section class="visual">
                 <h2>Visual Pop-up</h2> <!-- css에서 display none 처리 될테지만 이 section 전체를 아우르는 제목이다. -->
                 <div class="swiper">

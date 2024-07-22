@@ -28,7 +28,7 @@ $('document').ready(function(){
         resize_chk()
     }) //$(window).resize
 
-    $('header').on('mouseenter', function(){
+    $('header').on('mouseenter foncusin', function(){
         $(this).addClass('fixed')
     })
     $('header').on('mouseleave', function(){
@@ -52,7 +52,7 @@ $('document').ready(function(){
         scroll_chk()
     })
 
-    $('header .gnb .gnb_wrap ul.depth1>li').on('mouseenter', function(){
+    $('header .gnb .gnb_wrap ul.depth1>li').on('mouseenter focusin', function(){
         // = 대입 연산자(넣어라), == 비교 연산자(같다)
         if(pc_mobile == 'pc'){
             $('header').addClass('menu_over')
@@ -60,13 +60,14 @@ $('document').ready(function(){
             $(this).addClass('on')
         }
     })
-    $('header').on('mouseleave', function(){
+    $('header .gnb .gnb_wrap ul.depth1>li:last-child>ul.depth2>li:last-child>a').on('focusout', function(){
         // = 대입 연산자(넣어라), == 비교 연산자(같다)
         if(pc_mobile == 'pc'){
             $('header').removeClass('menu_over')
             $('header .gnb .gnb_wrap ul.depth1>li').removeClass('on')
         }
     })
+    
 
     /* mobile menu 클릭시
         1. a 링크값 삭제 (이동 못하게 막아야 함)
