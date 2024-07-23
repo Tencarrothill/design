@@ -596,3 +596,143 @@ footer .copyright {
         margin-top: 24px;
     }
 } /* media.footer 1024 */
+
+/* sub page layout coding */
+.sub_visual {
+    height: 620px;
+    background: url(../imges/common/sub_visual01.png) no-repeat center center / cover ;
+    color: #fff;
+}
+/* 1차 메뉴 마다 배경이미지가 다름. 기본적으로 하나의 이미지는 미리 적용시켜놓는게 좋음. */
+.sub_visual.bg1 {
+    background-image: url(../imges/common/sub_visual01.png);
+}
+.sub_visual.bg2 {
+    background-image: url(../imges/common/sub_visual02.png);
+}
+.sub_visual.bg3 {
+    background-image: url(../imges/common/sub_visual03.png);
+}
+.sub_visual.bg4 {
+    background-image: url(../imges/common/sub_visual04.png);
+}
+.sub_visual.bg5 {
+    background-image: url(../imges/common/sub_visual05.png);
+}
+.sub_visual strong {
+    display: block;
+    font-size: 45px;
+    font-weight: 900;
+    padding: 428px 0 12px 0;
+}
+.sub_visual p {
+    font-size: 26px;
+}
+.sub_menu {
+    background-color: #1d1d1d;
+    color: #fff;
+    height: 81px;
+}
+.sub_menu .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.sub_menu .lnb ul {
+    display: flex;
+}
+.sub_menu .lnb ul li a {
+    display: block;
+    line-height: 81px;
+    padding: 0 26.5px;
+    font-size: 20px;
+}
+.sub_menu .lnb ul li:first-child a {
+    padding-left: 0;
+}
+.sub_menu .lnb ul li.active a,
+.sub_menu .lnb ul li a:hover {
+    font-weight: 900;
+    position: relative; /* after 정렬 기준 */
+    color: #DC0B13;
+}
+.sub_menu .lnb ul li.active a::after,
+.sub_menu .lnb ul li a:hover::after {
+    position: absolute; /* a 기준 정렬 */
+    right: 13px;
+    top: 18px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #DC0B13;
+    content: "";
+}
+.sub_menu .breadcrumb ol {
+    display: flex;
+}
+.sub_menu .breadcrumb ol li {
+    margin-right: 21px;
+    position: relative; /* after 정렬 기준 */
+}
+.sub_menu .breadcrumb ol li::after {
+    position: absolute; /* li 기준 정렬 */
+    right: -14px;
+    top: 35px;
+    width: 4px;
+    height: 9px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='5' height='9' viewBox='0 0 5 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 8.8075V0L4.40375 4.40375L0 8.8075Z' fill='white'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.sub_menu .breadcrumb ol li:last-child {
+    margin-right: 0;
+}
+.sub_menu .breadcrumb ol li:last-child::after {
+    display: none;
+}
+.sub_menu .breadcrumb ol li a {
+    display: block;
+    line-height: 81px;
+}
+.sub_menu .breadcrumb ol li.home a {
+    font-size: 0;
+    line-height: 0;
+    width: 24px;
+    height: 76px;
+    position: relative; /* before 정렬 기준 */
+}
+.sub_menu .breadcrumb ol li.home a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_143_481' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_143_481)'%3E%3Cpath d='M4.5 20.5V9.24999L12 3.60574L19.5 9.24999V20.5H13.9038V13.8077H10.0963V20.5H4.5Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.sub_menu .breadcrumb ol li.now a {
+    position: relative; /* before 기준 정렬 */
+}
+/* .sub_menu .breadcrumb ol li.now a::before {
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    width: 100%;
+    height: 1px;
+    background-color: #DC0B13 ;
+    content: "";
+} */
+.sub_contents .sub_title h2 {
+    font-size: 22px;
+    font-weight: 900;
+    color: #DC0B13;
+    margin: 161px 0 10px 0;
+}
+.sub_contents .sub_title p {
+    color: #1d1d1d;
+    font-size: 40px;
+}
