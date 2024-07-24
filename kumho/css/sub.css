@@ -2,3 +2,32 @@
 @import url(fonts.css);
 @import url(common.css);
 @import url(layout.css);
+
+/*
+    각각의 서브 컨텐츠 페이지의 컨텐츠를 코딩...
+    !!제일 중요한 것은 절대 이름이 겹치면 안됨!!
+    규칙 : cts_[pagename] 로 감싸서 겹치지 않게 하기.
+*/
+
+/* 회사소개 - ceo인사말 */
+.cts_ceo {
+    margin: 85px 0 77px 0;
+}
+.cts_ceo .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.cts_ceo .txt_wrap {
+    width: 41%;
+}
+.cts_ceo .photo .inner {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0; 
+    width: 48.1%;
+}
+.cts_ceo .photo .inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
