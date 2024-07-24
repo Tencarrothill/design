@@ -60,6 +60,13 @@ $('document').ready(function(){
             $(this).addClass('on')
         }
     })
+    $('header').on('mouseleave', function(){
+        // = 대입 연산자(넣어라), == 비교 연산자(같다)
+        if(pc_mobile == 'pc'){
+            $('header').removeClass('menu_over')
+            $('header .gnb .gnb_wrap ul.depth1>li').removeClass('on')
+        }
+    })
     $('header .gnb .gnb_wrap ul.depth1>li:last-child>ul.depth2>li:last-child>a').on('focusout', function(){
         // = 대입 연산자(넣어라), == 비교 연산자(같다)
         if(pc_mobile == 'pc'){

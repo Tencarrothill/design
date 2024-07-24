@@ -22,11 +22,14 @@
                 <button class="gnb_open">메뉴열기</button>
                 <div class="gnb_wrap">
                     <ul class="depth1">
-                        <li class="">
+                        <!-- 서브페이지에서 현재 선택된(열린) 메뉴(depth1)의 디자인 변경 
+                            모바일에서 메뉴를 여너는 클래스명 open, pc에서 사용할 active -->
+                        <li class="open active">
                             <a href="info.html"><span>회사소개</span></a>
                             <ul class="depth2">
+                                <!-- 현재 선택된 메뉴의 디자인 변경 -->
                                 <li><a href="info.html"><span>기업정보</span></a></li>
-                                <li><a href="ceo.html"><span>CEO인사말</span></a></li>
+                                <li class="active"><a href="ceo.html"><span>CEO인사말</span></a></li>
                                 <li><a href="history.html"><span>연혁</span></a></li>
                                 <li><a href="org.html"><span>조직도</span></a></li>
                                 <li><a href="tech.html"><span>기술혁신</span></a></li>
