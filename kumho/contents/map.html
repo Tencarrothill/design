@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/sub.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"> <!-- browser 상단 타이틀 왼쪽 아이콘 등록 -->
+    <link rel="stylesheet" href="../css/sub.css">
+    <title>CEO인사말 | 회사소개 | 찾아오시는길</title>
+</head>
+<body>
+    <div class="skipnav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_menu">대메뉴 바로가기</a>
+    </div><!--skipnav-->
+    <div id="wrap">
+        <header class="">
+            <h1 class="logo"><a href="../index.html">금호건설</a></h1>
+            <nav class="gnb" id="skip_menu">
+                <button class="gnb_open">메뉴열기</button>
+                <div class="gnb_wrap">
+                    <ul class="depth1">
+                        <!-- 서브페이지에서 현재 선택된(열린) 메뉴(depth1)의 디자인 변경 
+                            모바일에서 메뉴를 여너는 클래스명 open, pc에서 사용할 active -->
+                        <li class="open active">
+                            <a href="info.html"><span>회사소개</span></a>
+                            <ul class="depth2">
+                                <!-- 현재 선택된 메뉴의 디자인 변경 -->
+                                <li><a href="info.html"><span>기업정보</span></a></li>
+                                <li><a href="ceo.html"><span>CEO인사말</span></a></li>
+                                <li><a href="history.html"><span>연혁</span></a></li>
+                                <li><a href="org.html"><span>조직도</span></a></li>
+                                <li><a href="tech.html"><span>기술혁신</span></a></li>
+                                <li class="active"><a href="map.html"><span>찾아오시는길</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="esg01.html"><span>ESG</span></a>
+                            <ul class="depth2">
+                                <li><a href="esg01.html"><span>윤리경영</span></a></li>
+                                <li><a href="esg02.html"><span>품질경영</span></a></li>
+                                <li><a href="esg03.html"><span>안전경영</span></a></li>
+                                <li><a href="esg04.html"><span>환경경영</span></a></li>
+                                <li><a href="esg05.html"><span>상생경영</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="biz01.html"><span>사업분야</span></a>
+                            <ul class="depth2">
+                                <li><a href="biz01.html"><span>건축사업</span></a></li>
+                                <li><a href="biz02.html"><span>토목사업</span></a></li>
+                                <li><a href="biz03.html"><span>주택사업</span></a></li>
+                                <li><a href="biz04.html"><span>플랜트/환경사업</span></a></li>
+                                <li><a href="biz05.html"><span>사업실적검색</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ir01.html"><span>IR</span></a>
+                            <ul class="depth2">
+                                <li><a href="ir01.html"><span>기업지배구조</span></a></li>
+                                <li><a href="ir02.html"><span>경영정보</span></a></li>
+                                <li><a href="ir03.html"><span>재무정보</span></a></li>
+                                <li><a href="ir04.html"><span>주가정보</span></a></li>
+                                <li><a href="ir05.html"><span>IR Contact</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="pr01.html"><span>홍보센터</span></a>
+                            <ul class="depth2">
+                                <li><a href="pr01.html"><span>금호뉴스</span></a></li>
+                                <li><a href="pr02.html"><span>분양뉴스</span></a></li>
+                                <li><a href="pr03.html"><span>CI/BI</span></a></li>
+                                <li><a href="pr04.html"><span>PR갤러리</span></a></li>
+                                <li><a href="pr05.html"><span>금호역사관</span></a></li>
+                                <li><a href="pr06.html"><span>채용/면접 Tip</span></a></li>
+                                <li><a href="https://kumhoenc.recruiter.co.kr/appsite/company/index" target="_blank" title="새창열림"><span>인재채용</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--gnb_wrap-->
+                <button class="gnb_close">메뉴닫기</button>
+            </nav>
+            <div class="tnb">
+                <a href="#n" class="lang">ENG</a>
+                <a href="https://www.artera.co.kr/main" target="_blank" class="artera">ARTERA</a>
+            </div><!--tob navigation bar-->
+        </header>
+        <main class="container">
+            <div class="sub_visual bg1">
+                <div class="wrapper">
+                    <!-- 만약 sub visual에 1차메뉴명이나, 현재 메뉴명을 입력했을 시, heading tag 사용.
+                        그냥 슬로건을 입력했을 시, heading tag 사용 안함. -->
+                    <strong>KUMHO E&C</strong>
+                    <p>금호건설은 사람과 자연이 어우러지는 간설철학을 펼쳐 나아갑니다</p>
+                </div><!--wrapper-->
+            </div><!--sub_visual-->
+            <div class="sub_menu">
+                <div class="wrapper">
+                    <nav class="lnb">
+                        <ul>
+                            <!-- 현재 선택된 메뉴는 class=active가 부여됨. -->
+                            <li><a href="info.html"><span>기업정보</span></a></li>
+                            <li><a href="ceo.html"><span>CEO인사말</span></a></li>
+                            <li><a href="history.html"><span>연혁</span></a></li>
+                            <li><a href="org.html"><span>조직도</span></a></li>
+                            <li><a href="tech.html"><span>기술혁신</span></a></li>
+                            <li class="active"><a href="map.html"><span>찾아오시는길</span></a></li>
+                        </ul>
+                    </nav><!--lnb, local navigation bar 또는 snb, sub navigation bar -->
+                    <div class="breadcrumb">
+                        <ol>
+                            <li class="home"><a href="../index.html">홈</a></li>
+                            <li><a href="info.html">회사소개</a></li>
+                            <li class="now"><a href="map.html">찾아오시는길</a></li>
+                        </ol>
+                    </div><!--breadcrumb-->
+                </div><!--wrapper-->
+            </div><!--sub_menu-->
+            <div class="sub_contents" id="skip_contents">
+                <!-- skip nav에서 본문 바로가기 클릭 시, 이쪽으로 이동됨. -->
+                <div class="wrapper">
+                    <div class="sub_title">
+                        <h2>CONTACT US</h2> <!-- 현재 메뉴명 -->
+                        <p>찾아오시는 길을 안내드립니다</p>
+                    </div><!--sub_title-->
+                </div><!--wrapper-->
+                <div class="cts_map"> <!-- 각 페이지의 콘텐츠. class naming rule : [cts(contents)]_[page html file name] -->
+                    <div class="wrapper">
+                        <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.3528606131867!2d126.98334461057664!3d37.570307882411846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2e9a951d917%3A0x1729339b08f32a27!2z6riI7Zi46rG07ISkIOuzuOyCrA!5e0!3m2!1sko!2skr!4v1722219346539!5m2!1sko!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                        <div class="build_wrap">
+                            <button class="map_btn"><a href="https://www.google.co.kr/maps/place/%EA%B8%88%ED%98%B8%EA%B1%B4%EC%84%A4+%EB%B3%B8%EC%82%AC/data=!4m14!1m7!3m6!1s0x357ca2e9a951d917:0x1729339b08f32a27!2z6riI7Zi46rG07ISkIOuzuOyCrA!8m2!3d37.5713241!4d126.9833768!16s%2Fg%2F11r98w1vq4!3m5!1s0x357ca2e9a951d917:0x1729339b08f32a27!8m2!3d37.5713241!4d126.9833768!16s%2Fg%2F11r98w1vq4?entry=ttu">Google Maps에서 길찾기</a></button>
+                            <div class="build">
+                                <h3>금호건설 본사</h2>
+                                <div class="adress">
+                                    <strong>주소</strong>
+                                    <span>서울특별시 종로구 우정국로 26 센트로폴리스 A동</span>
+                                </div><!--adress-->
+                                <div class="tel">
+                                    <strong>대표전화</strong>
+                                    <span>건축 : 02-6303-0344 (해피콜센터 080-000-0082) <br>
+                                        토목 : 02-6303-0917 <br>
+                                        분양 : 02-6303-0645 <br>
+                                        기타문의 : 02-6303-0102</span>
+                                    <span class="build_artera">아테라 홈페이지 바로가기</span>
+                                </div><!--tel-->
+                            </div><!--build-->
+                        </div><!--build_wrap-->
+                        <div class="transport">
+                            <h3>대중교통 이용방법</h3>
+                            <ul>
+                                <li>
+                                    <strong>지하철 이용 시</strong>
+                                    <div class="square">
+                                        <div class="icon bg1"></div>
+                                        <p>지하철 1호선 종각역<br>3-1번출구 방면</p>
+                                    </div><!--square-->
+                                </li>
+                                <li>
+                                    <strong>간선버스 이용 시</strong>
+                                    <div class="square">
+                                        <div class="icon bg2"></div>
+                                        <p class="bus_n">151 162 172 401 406 704 101 103 143 150 160 201 260 262 270 271 273 370 470 501 720 721 741 
+                                            N15 N26 N37 N62</p>
+                                    </div><!--square-->
+                                </li>
+                                <li>
+                                    <strong>지선버스 이용 시</strong>
+                                    <div class="square">
+                                        <div class="icon bg3"></div>
+                                        <p>7022번 버스 이용</p>
+                                    </div><!--square-->
+                                </li>
+                            </ul>
+                        </div><!--transport-->
+                    </div><!--wrapper-->
+                </div><!--cts_ceo-->
+            </div><!--sub_contents-->
+        </main><!--container-->
+        <footer>
+            <div class="wrapper">
+                <div class="utube"><a href="https://www.youtube.com/@kumhoenc" target="_blank" title="새창열림"></a></div>
+                <!-- 열렸을 때 class=open 추가-->
+                <div class="family_site ">
+                    <button class="family_open">그룹사 바로가기</button>
+                    <ul>
+                        <li><a href="https://www.kumhobuslines.co.kr/fr/main/main" target="_blank" title="새창열림">금호고속</a></li>
+                        <li><a href="https://www.usquare.co.kr/index.html" target="_blank" title="새창열림">U-square</a></li>
+                        <li><a href="http://www.kumhoarts.com/" target="_blank" title="새창열림">금호문화재단</a></li>
+                        <li><a href="https://flyasiana.com/C/KR/KO/index" target="_blank" title="새창열림">아시아나항공</a></li>
+                        <li><a href="https://www.asianaidt.com/kor/" target="_blank" title="새창열림">아시아나DT</a></li>
+                        <li><a href="https://airbusan.com/mc/common/home" target="_blank" title="새창열림">에어부산</a></li>
+                        <li><a href="http://www.asianaairport.com/kr/" target="_blank" title="새창열림">아시아나에어포트</a></li>
+                        <li><a href="https://www.asianasabre.co.kr/" target="_blank" title="새창열림">아시아나세이버</a></li>
+                        <li><a href="https://flyairseoul.com/CW/ko/main.do" target="_blank" title="새창열림">에어서울</a></li>
+                    </ul>
+                    <button class="family_close">그룹사 바로가기</button>   
+                </div><!--family_site-->
+                <div class="f_nav">
+                    <ul>
+                        <li>
+                            <a href="#n">제보실</a>
+                        </li>
+                        <li>
+                            <a href="#n">고객센터</a>
+                        </li>
+                        <li>
+                            <a href="#n">OB사랑방</a>
+                        </li>
+                        <li>
+                            <a href="#n">Contact us</a>
+                        </li>
+                        <li>
+                            <a href="#n">개인정보처리방침</a>
+                        </li>
+                    </ul>
+                </div><!--f_nav-->
+                <div class="copyright">ⓒ KUMHO E&C. ALL RIGHTS RESERVED.</div>
+            </div><!--wrapper-->
+        </footer>
+    </div><!--wrap-->
+</body>
+</html>
