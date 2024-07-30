@@ -166,6 +166,12 @@
     content: "";
 }
 /* div 중에 role="tabpanel" 속성을 가진 div 선택 */
+.cts_history .tab_area .tab_cts div[role="tabpanel"] {
+    display: none;
+}
+.cts_history .tab_area .tab_cts div[role="tabpanel"].active {
+    display: block;
+}
 .cts_history .tab_area .tab_cts div[role="tabpanel"] .history_tit {
     height: 309px;
     background-position: center center;
