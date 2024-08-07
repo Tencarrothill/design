@@ -1,0 +1,17 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+
+h1 {
+    font-family: 'ghanachoco';
+    font-size: var(--tit-size);
+}
+p {
+    font-size: 1rem;
+}
+@media screen and (max-width:640px) {
+    h1 {
+        font-size: var(--tit-m-size);
+    }
+}
