@@ -3,15 +3,58 @@
 @import url(common.css);
 @import url(layout.css);
 
-h1 {
-    font-family: 'ghanachoco';
-    font-size: var(--tit-size);
+.visual_popup .popup_item {
+    height: 800px;
+    overflow: hidden;
 }
-p {
-    font-size: 1rem;
+.visual_popup .popup_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-@media screen and (max-width:640px) {
-    h1 {
-        font-size: var(--tit-m-size);
+.visual_popup .popup_item img.mb {
+    display: none;
+}
+.visual_popup .popup .slick-dots {
+    position: absolute; /* popup 기준 정렬(slick이 부여한) */
+    display: flex;
+    gap: 4px;
+    bottom: 37px;
+    left: 50%;
+    transform: translate(-50%, 0); /* 좌우의 가운데 정렬값 */
+}
+.visual_popup .popup .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    width: 25px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.visual_popup .popup .slick-dots li.slick-active button {
+    width: 45px;
+    background-color: #fff;
+}
+
+@media screen and (max-width:1300px) {
+    .visual_popup .popup_item {
+        height: 600px;
     }
-}
+}/* media 1300 */
+@media screen and (max-width:1024px) {
+    .visual_popup .popup_item {
+        height: 500px;
+    }
+}/* media 1024 */
+@media screen and (max-width:768px) {
+    .visual_popup .popup_item {
+        height: auto;
+        overflow: hidden;
+    }
+    .visual_popup .popup_item img.pc {
+        display: none;
+    }
+    .visual_popup .popup_item img.mb {
+        display: block;
+    }
+}/* media 768 */
