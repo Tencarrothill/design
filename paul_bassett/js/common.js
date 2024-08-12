@@ -66,4 +66,30 @@ $('document').ready(function(){
         $('header').removeClass('menu_over')
         $('header .header_sub .gnb .gnb_wrap ul.depth1>li').removeClass('on')
     })
+
+    /* 
+        모바일 메뉴
+        header .header_sub .gnb .gnb_wrap ul.depth1>li>a 을 클릭했을 때
+        1차 메뉴 a의 href값을 무력화 (즉, 클릭해도 해당 페이지 이동을 막음)
+        li:class="open" 추가하고, 열린 메뉴 클릭 시 닫히고, 닫힌 메뉴 클릭시 열리게 해야함. (동시에 여러 개의 메뉴가 열릴 수 있음)
+    */ 
+    $('header .header_sub .gnb .gnb_wrap ul.depth1>li>a').on('click', function(e){
+        if(pc_m == 'm'){ //모바일에서만 적용
+            e.preventDefault();
+            $(this).parent().toggleClass('open')
+        }
+    })
+
+    $('header .header_sub .gnb .gnb_open').on('click', function(){
+        $('header').addClass('menu_open')
+    })
+    $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+    //하단콘텐츠 스크롤 금지
+
+    $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+    //해제
+    $('header .header_sub .gnb .gnb_close').on('click', function(){
+        $('header').removeClass('menu_open')
+    })
+    
 })//document.ready
