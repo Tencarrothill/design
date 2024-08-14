@@ -9,6 +9,8 @@
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <script src="js/slick.min.js"></script> <!-- slick을 돌아가게 하는 값 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="css/slick.css">
     <title>폴바셋</title>
 </head>
@@ -342,7 +344,7 @@
             </section><!--sns-->
         </main>
         <aside class="quick">
-            <button title="퀵메뉴 열기" class="open">QUICK</button>
+            <button title="퀵메뉴 열기" class="open">QUICK</button> 
             <div class="quick_wrap">
                 <ul>
                     <!-- 다른 페이지 이동은 a, jquery 작동은 button -->
@@ -383,8 +385,8 @@
                 <div class="wrapper">
                     <div class="f_info">
                         <span>엠즈씨드(주) 대표이사 : 권익범</span>
-                        <address>주소 : 서울특별시 강남구 도산대로 75길 22 (청담동)</address>
-                        <span>사업자등록번호 211-88-95935</span>
+                        <address>주소 : 서울특별시 강남구 도산대로 75길 22 (청담동)</address><br>
+                       <span>사업자등록번호 211-88-95935</span>
                         <span>대표번호 1899-8829</span>
                         <span>개인정보관리책임자 : 정보문</span>
                     </div><!--f_info-->
@@ -393,5 +395,12 @@
             </div><!--f_sub-->
         </footer>
     </div><!--wrap-->
+    <script>
+        AOS.init({
+            offset: 0, 
+            duration: 500,
+            easing: 'ease',
+        });
+    </script>
 </body>
 </html>

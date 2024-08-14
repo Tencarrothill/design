@@ -352,8 +352,270 @@ header .header_sub .logo a::before {
 
 }/* media 1024 */
 
+.quick {
+    position: fixed;
+    right: 16px;
+    bottom: 100px;
+    z-index: 90;
+    /* header의 z-index = 100 -> 메뉴가 위... */
+}
+.quick .open,
+.quick .close {
+    display: none;
+}
+.quick .quick_wrap {
+    background-color: var(--color-main-brown);
+    border-radius: 38px;
+    color: var(--color-main-beige);
+    width: 76px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.35);
+    position: relative; /* before 정렬 기준 */
+}
+.quick .quick_wrap::before {
+    position: absolute;
+    left: 20px;
+    top: -30px;
+    width: 39px;
+    height: 17px;
+    background: url(../imges/main/quick_crown.png) no-repeat center center / contain;
+    content: "";
+    
+}
+.quick .quick_wrap ul li a {
+    text-align: center;
+    display: block;
+    letter-spacing: -0.03em;
+    padding: 32px 6px;
+}
+.quick .quick_wrap ul li a:hover {
+    font-weight: 700;
+    color: var(--color-main-pink);
+    letter-spacing: -0.05em;
+}
+.quick .quick_wrap ul li .top {
+    display: block;
+    width: 100%; /* display: block만으로 정렬이 안 되어서 이 값을 부여했다 */
+    padding: 32px 0;
+}
+.quick .quick_wrap ul li .top span {
+    position: relative;
+}
+.quick .quick_wrap ul li .top span:hover {
+    font-weight: 700;
+    color: var(--color-main-pink);
+    letter-spacing: -0.03em;
+}
+.quick .quick_wrap ul li .top span::before {
+    position: absolute;
+    left: 6px;
+    top: -20px;
+    width: 16px;
+    height: 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23cbb8a7'%3E%3Cpath d='M450-180v-485.08L222.15-437.23 180-480l300-300 300 300-42.15 42.77L510-665.08V-180h-60Z'/%3E%3C/svg%3E");
+    content: "";
+}
+.quick .quick_wrap ul li .top span:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23875258'%3E%3Cpath d='M450-180v-485.08L222.15-437.23 180-480l300-300 300 300-42.15 42.77L510-665.08V-180h-60Z'/%3E%3C/svg%3E");
+}
+.quick .open {
+    display: block;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background-color: var(--color-main-pink);
+    color: var(--color-main-beige);
+    letter-spacing: -0.03em;
+    padding-top: 15px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.35);
+    position: relative; /* before 정렬 기준 */
+}
+.quick .open::before {
+    position: absolute;
+    left: 50%;
+    top: 22px;
+    transform: translate(-50%, 0);
+    width: 42px;
+    height: 16px;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='6' viewBox='0 0 42 6'%3E%3Ccircle id='타원_1' data-name='타원 1' cx='3' cy='3' r='3' fill='%23cbb8a7'/%3E%3Ccircle id='타원_2' data-name='타원 2' cx='3' cy='3' r='3' transform='translate(18)' fill='%23cbb8a7'/%3E%3Ccircle id='타원_3' data-name='타원 3' cx='3' cy='3' r='3' transform='translate(18)' fill='%23cbb8a7'/%3E%3Ccircle id='타원_4' data-name='타원 4' cx='3' cy='3' r='3' transform='translate(36)' fill='%23cbb8a7'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.quick .quick_wrap {
+    display: none;
+}
+.quick.open .open {
+    display: none;
+}
+.quick.open .quick_wrap {
+    display: block;
+}
+.quick.open .close {
+    display: block;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background-color: var(--color-main-pink);
+    font-size: 0;
+    line-height: 0;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.35);
+    position: relative;
+    margin-top: 20px;
+}
+.quick.open .close::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23cbb8a7'%3E%3Cpath d='M256-213.85 213.85-256l224-224-224-224L256-746.15l224 224 224-224L746.15-704l-224 224 224 224L704-213.85l-224-224-224 224Z'/%3E%3C/svg%3E");
+    content: "";
+}
+@media screen and (max-width:768px) {
+    
+}
 
 footer {
-    margin-top: 1000px;
+    margin-top: 150px;
+    color: var(--color-main-beige);
+}
+footer .f_top {
+    background-color: var(--color-main-pink);
+    padding: 16px 0;
+}
+footer .f_top .f_sns ul {
+    display: flex;
+    justify-content: center;
+}
+footer .f_top .f_sns ul li a {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    position: relative; /* before 정렬 기준 */
+}
+footer .f_top .f_sns ul li a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 36px;
+    height: 27px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+footer .f_top .f_sns ul li.face a::before {
+    left: -90px;
+    top: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='37' height='37' viewBox='0 0 37 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_61_2)'%3E%3Cpath d='M26.94 0H9.13C4.09 0 0 4.09 0 9.13V26.94C0 31.98 4.09 36.07 9.13 36.07H15.25V23.19H10.73V18.04H15.25V14.12C15.25 9.66 17.91 7.19 21.98 7.19C23.93 7.19 25.97 7.54 25.97 7.54V11.92H23.72C21.51 11.92 20.82 13.29 20.82 14.7V18.04H25.76L24.97 23.19H20.82V36.07H26.93C31.97 36.07 36.06 31.98 36.06 26.94V9.13C36.06 4.09 31.97 0 26.93 0H26.94Z' fill='%23CBB8A7'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_61_2'%3E%3Crect width='36.07' height='36.07' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+footer .f_top .f_sns ul li.insta a::before {
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.2399 6.35986C26.0899 6.35986 25.1499 7.29986 25.1499 8.44986C25.1499 9.59986 26.0899 10.5399 27.2399 10.5399C28.3899 10.5399 29.3299 9.59986 29.3299 8.44986C29.3299 7.29986 28.3899 6.35986 27.2399 6.35986Z' fill='%23CBB8A7'/%3E%3Cpath d='M17.9599 9.04004C13.1199 9.04004 9.18994 12.98 9.18994 17.81C9.18994 22.64 13.1299 26.58 17.9599 26.58C22.7899 26.58 26.7299 22.64 26.7299 17.81C26.7299 12.98 22.7899 9.04004 17.9599 9.04004ZM17.9599 23.43C14.8599 23.43 12.3399 20.91 12.3399 17.81C12.3399 14.71 14.8599 12.19 17.9599 12.19C21.0599 12.19 23.5799 14.71 23.5799 17.81C23.5799 20.91 21.0599 23.43 17.9599 23.43Z' fill='%23CBB8A7'/%3E%3Cpath d='M24.92 35.63H10.7C4.8 35.63 0 30.83 0 24.93V10.71C0 4.8 4.8 0 10.7 0H24.92C30.82 0 35.62 4.8 35.62 10.7V24.92C35.62 30.82 30.82 35.62 24.92 35.62V35.63ZM10.7 3.35C6.65 3.35 3.35 6.65 3.35 10.7V24.92C3.35 28.97 6.65 32.27 10.7 32.27H24.92C28.97 32.27 32.27 28.97 32.27 24.92V10.7C32.27 6.65 28.97 3.35 24.92 3.35H10.7Z' fill='%23CBB8A7'/%3E%3C/svg%3E%0A");
+}
+footer .f_top .f_sns ul li.you a::before {
+    left: 50px;
+    top: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='37' height='26' viewBox='0 0 37 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36.2 7.94C36.2 3.55 32.64 0 28.26 0H7.94C3.56 0 0 3.56 0 7.94V17.39C0 21.78 3.56 25.33 7.94 25.33H28.25C32.64 25.33 36.19 21.77 36.19 17.39V7.94H36.2ZM24.25 13.38L15.14 17.89C14.78 18.08 13.57 17.82 13.57 17.42V8.17C13.57 7.76 14.79 7.5 15.15 7.7L23.87 12.44C24.24 12.65 24.62 13.18 24.25 13.38Z' fill='%23CBB8A7'/%3E%3C/svg%3E%0A");
+}
+footer .f_top .f_nav ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+footer .f_top .f_nav ul li a {
+    margin: 0 7px;
+    position: relative;
+}
+footer .f_top .f_nav ul li a::after {
+    position: absolute;
+    right: -9px;
+    top: 7px;
+    width: 3px;
+    height: 3px;
+    background-color: rgba(203,184,167,0.5);
+    content: "";
+}
+footer .f_top .f_nav ul li:last-child a::after {
+    display: none;
+}
+footer .f_sub {
+    background-color: var(--color-main-brown);
+    padding: 47px 0 56px 0;
+    text-align: center;
+}
+footer .f_sub .f_info {
+    padding-bottom: 34px;
+}
+footer .f_sub .f_info span,
+footer .f_sub .f_info address {
+    display: inline-block;
+    margin: 0 0 5px 5px;
+}
+footer .f_sub .copyright {
+    color: rgba(203,184,167,0.6);
+}
+@media screen and (max-width:1024px) {
+    footer {
+        margin-top: 34px;
+    }
+    footer .f_top {
+        background-color: var(--color-main-brown);
+        padding: 11px 0;
+    }
+    footer .f_top .f_sns ul li a::before {
+        width: 29px;
+        height: 20px;
+    }
+    footer .f_top .f_sns ul li.face a::before {
+        left: -50px;
+    }
+    footer .f_top .f_sns ul li.you a::before {
+        left: 25px;
+    }
+    footer .f_top .f_nav ul {
+        margin-top: 33px;
+        flex-wrap: wrap; /* 두 줄 허용 */
+        border-width: 1px 0 0 1px;
+        border-color: #cbb8a7;
+        border-style: solid;
+    }
+    footer .f_top .f_nav ul li {
+        width: 25%;
+        border-width: 0 1px 1px 0;
+        border-color: #cbb8a7;
+        border-style: solid;
+    }
+    footer .f_top .f_nav ul li a {
+        display: block;
+        margin: 0;
+        padding: 7px 0;
+        text-align: center;
+    }
+    footer .f_top .f_nav ul li a::after {
+        display: none;
+    }
+    footer .f_sub {
+        padding: 43px 0 46px 0;
+    }
+    footer .f_sub .f_info {
+        padding-bottom: 13px;
+    }
+}
+@media screen and (max-width:640px) {
+    footer .f_top .f_nav ul li {
+        width: 50%;
+    }
 }
 

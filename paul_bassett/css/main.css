@@ -115,10 +115,6 @@
     text-overflow: ellipsis;
     margin: 0 20px;
 }
-.quick {
-    display: none;
-}
-
 .menu .list .popup .popup_item {
     position: relative; /* before 정렬 기준 */
     margin: 0 12px;

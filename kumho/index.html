@@ -10,6 +10,8 @@
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> <!-- browser 상단 타이틀 왼쪽 아이콘 등록 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>금호건설</title>
 </head>
@@ -121,7 +123,7 @@
                     </div><!--btn_wrap-->
                 </div><!--swiper-->
             </section><!--visual-->
-            <section class="biz">
+            <section class="biz" data-aos="fade-up">
                 <div class="tit">
                     <div class="wrapper">
                         <h2><span>BUSINESS</span></h2>
@@ -171,7 +173,7 @@
                     </ul>
                 </div><!--list-->
             </section><!--biz-->
-            <section class="news">
+            <section class="news" data-aos="fade-up">
                 <div class="wrapper">
                     <div class="tit">
                         <h2><span>NOTICE</span></h2>
@@ -228,7 +230,7 @@
                     </div><!--list-->
                 </div>
             </section><!--news-->
-            <section class="service">
+            <section class="service" data-aos="fade-up">
                 <div class="wrapper">
                     <div class="tit">
                         <h2><span>KUMHO</span></h2>
@@ -307,5 +309,12 @@
             </div><!--wrapper-->
         </footer>
     </div><!--wrap-->
+    <script>
+        AOS.init({
+            offset: 150, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+            duration: 500, // 애니메이션 효과가 작동되는 시간
+            easing: 'ease', // 가속도
+        });
+    </script>
 </body>
 </html>
