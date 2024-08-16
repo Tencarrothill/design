@@ -1,0 +1,145 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+.boost {
+    margin: 100vh 2vw 0 2vw;
+}
+.boost .tit .item {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 3vw;
+    position: relative;
+    white-space: nowrap; /* 무조건 1줄 */
+}
+.boost .tit .item .grey_txt {
+    color: #ccc;
+}
+.boost .tit .item .bl_txt {
+    color: #1d1d1d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+.boost.active .tit .item .bl_txt {
+    width: 100%;
+}
+.boost .photo {
+    margin-top: 30px;
+    overflow: hidden;
+    height: 491px;
+}
+.boost .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.life {
+    margin-top: 122px;
+    text-align: center;
+}
+.life .tit strong {
+    display: block;
+    font-size: 32px;
+}
+.life .tit h2 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 80px;
+    margin-bottom: 42px;
+}
+.life .photo_wrap .photo { /* jquery로 너비 제어 */
+    overflow: hidden;
+    border-radius: 45px;
+    width: 400px;
+    height: 491px;
+    display: inline-block; /* text-align:center로 정렬하기 위해 */
+    transition: 1s;
+}
+.life.end .photo_wrap .photo {
+    border-radius: 0;
+}
+.life .photo_wrap .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hanhwa {
+    margin: 500px 0 0 0;
+}
+.hanhwa p {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1;
+    overflow: hidden;
+    margin: 30px 0;
+    color: #1d1d1d;
+    transition: 1s;
+}
+.hanhwa p span {
+    display: block;
+    transform: translate(0, 100%);
+    transition: 1s;
+}
+.hanhwa.active p span {
+    transform: translate(0, 0);
+}
+
+
+body {
+    background-color: #fff;
+    transition: 1s;
+}
+body.bl_bg {
+    background-color: #1d1d1d;
+    color: #fff;
+}
+body.bl_bg .hanhwa p {
+    color: #fff;
+}
+
+
+.nature {
+    margin: 255px 0 0 0;
+}
+.nature .wrapper {
+    position: relative;
+}
+.nature h2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* color: #fff; */
+    font-family: 'Monserrat';
+    font-weight: 700;
+    font-size: 100px;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    transition: 1s;
+    transform: translateY(0);
+}
+.nature .photo {
+    margin-left: 419px;
+    overflow: hidden;
+    border-radius: 42px;
+}
+.nature .photo img {
+    width: 1005;
+    height: 100%;
+    object-fit: cover;
+}
+.paper {
+    margin-top: 300px;
+}
+.paper .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.paper h2 {
+    font-size: 60px;
+    font-weight: 700;
+}
