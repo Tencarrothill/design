@@ -1,0 +1,70 @@
+html, body {
+    font-family: 'Paperlogy';
+    /* font 여러 개 선언이란, 첫번째 폰트를 1순위로 적용한다.
+    만약 그게 지원 안되면 2순위 폰트를 적용한다. 따라서, 영문만 지원하는 폰트를 1순위로 쓰고,
+    2순위로 한글 지원 폰트를 선언한다. 그러면 영문, 숫자, 특수문자는 영문 폰트 적용,
+    한글은 한글 폰트 적용. */
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: 1.4;
+    color: #3d3d3d;
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+    word-wrap: break-word; /* 만약 단어가 엄청 길면 강제 줄바꿈 실행 명령 */
+}
+/* 홈페이지의 넓이 제한, 가운데 정렬 기능을 수행함 .*/
+/* 홈페이지 전체를 감싸는 요소 - 가로 스크롤 바가 생겼을 때 배경이 짤리는 현상을 막음 */
+#wrap {
+    min-width: 1260px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 명령 */
+}
+/* 1260px 나의 wrapper의 사이즈에 좌우 여백 20px씩 더한 사이즈가 1300px임. 이 사이즈부터 반응형을
+하겠다는 선언임. */
+@media screen and (max-width:1300px) {
+    #wrap {
+        min-width: 100%; 
+    }
+    .wrapper {
+        /* 너비가 빠져야함 */
+        width: auto;
+        margin: 0 20px; /* 좌우에 20px씩 부여함 */
+    }
+}/*media1300*/
+@media screen and (max-width:1024px) {
+    html, body {
+        font-size: 14px;
+    }
+}/*media 1024 */
+@media screen and (max-width:640px){ /*이 사이즈 이하부터 모바일 반응형 시작 */
+    html, body {
+        font-size: 13px;
+    }
+}/*media640*/
+
+::selection {
+    background-color: #f3d7a1;
+    color: #1d1d1d;
+}
+
+/* 클릭하는 요소 a button - focus가 되었을 때 스타일 변경 */
+/* a:focus, button:focus {
+    outline: 3px dashed #3333ff;
+} */
+
+/* rem 변환
+    기본 글자 크기가 15px 일 때,
+    70px - 4.11rem
+    55px - 3.23rem
+    25px - 1.47rem
+    22px - 1.29rem
+    20px - 1.17rem
+    17px - 1rem
+    15px - 0.88rem */
+
+:root {
+    --txt-size-tit : 6.66rem;
+}
