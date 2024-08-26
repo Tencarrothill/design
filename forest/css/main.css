@@ -369,11 +369,8 @@
 .forest .list ul li {
     width: 297px;
 }
-.forest .list ul li:nth-child(odd) { /* 홀수 */
+.forest .list ul li:nth-child(odd) { /* 홀수. 짝수는 even */
     transform: translateY(56px);
-}
-.forest .list ul li:nth-child(even) { /* 짝수 */
-    
 }
 .forest .list ul li a {
     display: block;
@@ -489,6 +486,9 @@
     }
 }
 @media screen and (max-width:1024px) {
+    .forest {
+        padding-bottom: 70px;
+    }
     .forest .wrapper {
         display: block;
     }
@@ -501,18 +501,19 @@
         margin-bottom: 15px;
     }
     .forest .list {
-        width: 320px;
+        max-width: 100%;
+        width: auto;
         margin-top: 28px;
     }
     .forest .list ul {
         display: block;
     }
     .forest .list ul li {
-        width: 695px;
-        margin-bottom: 9px;
+        width: auto;
+        margin-bottom: 15px;
     }
     .forest .list ul li:nth-child(odd) { /* 홀수 */
-        transform: translateY(0px);
+        transform: translateY(0);
     }
     .forest .list ul li a {
         height: 47px;
@@ -532,14 +533,6 @@
         left: -46px;
         width: 27px;
         height: 27px;
-    }
-    
-    
-}
-@media screen and (max-width:768px) {
-    .forest .list ul li {
-        width: 320px;
-        margin-bottom: 9px;
     }
 }/* //forest media */
 
