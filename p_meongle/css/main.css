@@ -1,0 +1,40 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+
+.visual {
+    margin: 0 2%;
+    color: #fff;
+}
+.visual h2 {
+    display: none;
+}
+.visual .swiper ul li {
+    height: 874px;
+    border-radius: 39px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.visual .swiper ul li.popup01 {
+    background-image: url(../imges/visual01.png);
+}
+.visual .swiper ul li.popup02 {
+    background-image: url(../imges/visual02.png);
+}
+.visual .swiper ul li.popup03 {
+    background-image: url(../imges/visual03.png);
+}
+.visual .swiper ul li.popup04 {
+    background-image: url(../imges/visual04.png);
+}
+.visual .swiper ul li h3 {
+    font-size: 3.75rem;
+    font-weight: 800;
+    margin-top: 149px;
+}
+
+footer {
+    margin-top: 500px;
+}

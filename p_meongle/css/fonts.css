@@ -1,0 +1,12 @@
+@font-face {
+	font-family: 'Paperlogy';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Paperlogy Regular'), url(../fonts/Paperlogy-4Regular.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'Paperlogy';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Paperlogy ExtraBold'), url(../fonts/Paperlogy-8ExtraBold.woff2) format('woff2');
+}

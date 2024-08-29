@@ -1,0 +1,128 @@
+/* header나 footer 처럼 페이지에 공통으로 배치되는 요소의 css를 layout.css로 분리 */
+
+.skipnav {
+    position: absolute;
+    left: 0;
+    top: -100px; /* focus 될 때 만 나타나야 하기 때문에 상단에 숨겨져 있어야 함. */
+    width: 100%;
+    height: 50px;
+    z-index: 9999999999;
+}
+.skipnav a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #DC0B13;
+    color: #fff;
+    text-align: center;
+}
+.skipnav a:focus {
+    top: 100px; /* a가 포커스되면 올라간만큼 다시 내려줌. */
+}
+
+header {
+    position: relative;
+    height: 130px;
+    color: var(--color-main-tit);
+}
+header .logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+}
+header .logo a {
+    display: block;
+    width: 139px;
+    height: 56px;
+    font-size: 0;
+    line-height: 0;
+    background: url(../imges/logo.png) no-repeat center center / contain;    
+}
+header .gnb .gnb_open,
+header .gnb .gnb_close {
+    display: none;
+}
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 23px;
+}
+header .gnb .gnb_wrap ul.depth1>li {
+    position: relative; /* depth2 정렬 기준 */
+}
+header .gnb .gnb_wrap ul.depth1>li>a {
+    display: block;
+    font-size: 1.37rem;
+    padding: 10px 25px;
+    text-align: center;
+}
+header .tnb {
+    position: absolute;
+    right: 18%;
+    top: 19px;
+}
+header .tnb a {
+    display: block;
+    border: 1px solid #1d1d1d;
+    padding: 4px 19px;
+    border-radius: 18px;
+}
+header .tnb .lang {
+    position: relative; /* a-before의 정렬 기준 */
+}
+header .tnb .lang>a {
+    padding-left: 43px;
+}
+header .tnb .lang>a::before {
+    position: absolute;
+    left: 18px;
+    top: 7px;
+    width: 18px;
+    height: 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.00325 18C7.75875 18 6.58867 17.7638 5.493 17.2915C4.3975 16.8192 3.4445 16.1782 2.634 15.3685C1.8235 14.5588 1.18192 13.6067 0.70925 12.512C0.236417 11.4175 0 10.2479 0 9.00325C0 7.75875 0.236167 6.58867 0.7085 5.493C1.18083 4.3975 1.82183 3.4445 2.6315 2.634C3.44117 1.8235 4.39333 1.18192 5.488 0.70925C6.5825 0.236417 7.75208 0 8.99675 0C10.2412 0 11.4113 0.236167 12.507 0.708501C13.6025 1.18083 14.5555 1.82183 15.366 2.6315C16.1765 3.44117 16.8181 4.39333 17.2908 5.488C17.7636 6.5825 18 7.75208 18 8.99675C18 10.2412 17.7638 11.4113 17.2915 12.507C16.8192 13.6025 16.1782 14.5555 15.3685 15.366C14.5588 16.1765 13.6067 16.8181 12.512 17.2908C11.4175 17.7636 10.2479 18 9.00325 18ZM8 16.95V15C7.45 15 6.97917 14.8042 6.5875 14.4125C6.19583 14.0208 6 13.55 6 13V12L1.2 7.2C1.15 7.5 1.10417 7.8 1.0625 8.1C1.02083 8.4 1 8.7 1 9C1 11.0167 1.6625 12.7833 2.9875 14.3C4.3125 15.8167 5.98333 16.7 8 16.95ZM14.9 14.4C15.2333 14.0333 15.5333 13.6375 15.8 13.2125C16.0667 12.7875 16.2875 12.3458 16.4625 11.8875C16.6375 11.4292 16.7708 10.9583 16.8625 10.475C16.9542 9.99167 17 9.5 17 9C17 7.357 16.549 5.8565 15.647 4.4985C14.7452 3.1405 13.5295 2.1615 12 1.5615V2C12 2.55 11.8042 3.02083 11.4125 3.4125C11.0208 3.80417 10.55 4 10 4H8V6C8 6.28333 7.90417 6.52083 7.7125 6.7125C7.52083 6.90417 7.28333 7 7 7H5V9H11C11.2833 9 11.5208 9.09583 11.7125 9.2875C11.9042 9.47917 12 9.71667 12 10V13H13C13.4333 13 13.825 13.1292 14.175 13.3875C14.525 13.6458 14.7667 13.9833 14.9 14.4Z' fill='%231C1B1F'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+header .tnb .booking>a {
+    display: block;
+    margin-top: 10px;
+}
+/* 헤더 메뉴에 마우스 오버 */
+header .gnb .gnb_wrap ul.depth1>li:hover>a {
+    font-weight: 800;
+    color: var(--color-main-blue);
+}
+header .gnb .gnb_wrap ul.depth1>li .depth2 {
+    display: none;
+    position: absolute; /* depth1-li 기준 정렬*/
+    left: 0;
+    top: 63px;
+    z-index: 100;
+    width: 100%;
+    border: 1px solid #3d3d3d;
+    background-color: #fff;
+    text-align: center;
+    padding: 11px 18px;
+    border-radius: 13px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+}
+header .gnb .gnb_wrap ul.depth1>li.facility .depth2 {
+    width: 177px;
+}
+header .gnb .gnb_wrap ul.depth1>li .depth2>li>a {
+    display: block;
+    line-height: 2;
+}
+header .gnb .gnb_wrap ul.depth1>li .depth2>li:hover>a {
+    font-weight: 900;
+    color: var(--color-main-blue);
+}
+header .gnb .gnb_wrap ul.depth1>li.on .depth2 {
+    display: block;
+}
+/* //헤더 메뉴에 마우스 오버 */
