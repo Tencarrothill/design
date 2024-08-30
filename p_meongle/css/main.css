@@ -103,10 +103,32 @@
         font-weight: 800;
         margin-top: 149px;
     }
-}
+}/* //visual media 1300 */
+@media screen and (max-width:880px) {
+    .visual .swiper {
+        border: 0;
+        border-radius: 0;
+    }
+    .visual .swiper ul li {
+        height: 420px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .visual .swiper ul li h3 {
+        text-align: center;
+        margin-top: 259px;
+        font-size: 2.12rem;
+    }
+    .visual .btn_wrap,
+    .visual button {
+        display: none;
+    }
+}/* //visual media 880 */
+
 
 
 
 footer {
-    margin-top: 500px;
+    margin-top: 5000px;
 }

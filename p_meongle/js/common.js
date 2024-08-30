@@ -44,5 +44,22 @@ $('documnet').ready(function(){
     reszie_chk() // document 로딩완료 시 1번 실행
     $(window).resize(function(){
         reszie_chk()
+    })//header fixed
+
+    $('header .gnb .gnb_wrap ul.depth1>li>a').on('click', function(e){
+        if(pc_m == 'm'){ //모바일에서만 적용
+            e.preventDefault();
+            $(this).parent().toggleClass('on')
+        }
+    })//모바일 메뉴 depth2 열고 닫기
+
+    $('header .gnb .gnb_open').on('click', function(){
+        $('header').addClass('m_open')
+        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
     })
+    $('header .gnb .gnb_close').on('click', function(){
+        $('header').removeClass('m_open')
+        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+    })// 모바일 메뉴 열기/닫기 버튼 작동
+    
 })//document
