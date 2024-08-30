@@ -77,7 +77,6 @@ header .gnb .gnb_close::before {
 header .gnb .gnb_wrap ul.depth1 {
     display: flex;
     justify-content: center;
-    margin-top: 23px;
 }
 header .gnb .gnb_wrap ul.depth1>li {
     position: relative; /* depth2 정렬 기준 */
@@ -86,6 +85,7 @@ header .gnb .gnb_wrap ul.depth1>li>a {
     display: block;
     font-size: 1.37rem;
     padding: 10px 25px;
+    line-height: 65px;
     text-align: center;
 }
 header .tnb {
@@ -153,17 +153,25 @@ header .gnb .gnb_wrap ul.depth1>li:hover>a {
 }
 header .gnb .gnb_wrap ul.depth1>li .depth2 {
     display: none;
-    position: absolute; /* depth1-li 기준 정렬*/
+    position: absolute;
+    left: 50%;
+    top: 65px;
+    transform: translate(-50%, 0);
+    text-align: center;
+    padding: 30px 24px;
+}
+header .gnb .gnb_wrap ul.depth1>li .depth2::before {
+    position: absolute;
     left: 0;
-    top: 63px;
-    z-index: 100;
+    top: 20px;
     width: 100%;
+    height: calc(100% - 37px);
+    z-index: -1;
     border: 1px solid #3d3d3d;
     background-color: #fff;
-    text-align: center;
-    padding: 11px 18px;
     border-radius: 13px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+    content: "";
 }
 header .gnb .gnb_wrap ul.depth1>li.facility .depth2 {
     width: 177px;
@@ -171,6 +179,7 @@ header .gnb .gnb_wrap ul.depth1>li.facility .depth2 {
 header .gnb .gnb_wrap ul.depth1>li .depth2>li>a {
     display: block;
     line-height: 2;
+    white-space: nowrap; /* 무조건 한 줄 */
 }
 header .gnb .gnb_wrap ul.depth1>li .depth2>li:hover>a {
     font-weight: 900;
@@ -311,15 +320,30 @@ header.m_open .gnb .gnb_wrap ul.depth1>li>a {
     line-height: 3;
     white-space: nowrap;
 }
-header.m_open .gnb .gnb_wrap ul.depth1>li.on ul.depth2 {
+header.m_open .gnb .gnb_wrap ul.depth1>li .depth2 {
+    display: none;
     position: relative;
-    left: 48px;
+    left: 0;
     top: 0;
-    background-color: transparent;
-    border: 0;
-    box-shadow: none;
+    transform: translate(0, 0);
     text-align: left;
-    padding: 0;
+    padding: 0 0 0 34px;
+}
+header.m_open .gnb .gnb_wrap ul.depth1>li.on .depth2 {
+    display: block;
+}
+header.m_open .gnb .gnb_wrap ul.depth1>li .depth2::before {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    border: 0px;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    content: "";
 }
 header.m_open .gnb .gnb_wrap ul.depth1>li.on ul.depth2>li>a {
     color: rgba(255,255,255,0.6);

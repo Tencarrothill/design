@@ -1,7 +1,7 @@
 $('document').ready(function(){
     const visual_swiper = new Swiper('.visual .swiper', {
 		autoplay: {
-			delay: 4000,
+			delay: 40000,
 			disableOnInteraction: true,
 		},
 		loop: true,

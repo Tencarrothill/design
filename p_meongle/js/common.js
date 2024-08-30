@@ -1,16 +1,8 @@
 $('documnet').ready(function(){
-    $('header .gnb .gnb_wrap ul.depth1>li').on('mouseenter focusin', function(){
-        $('header .gnb .gnb_wrap ul.depth1>li').removeClass('on')
-        $(this).addClass('on')
-    })
-    $('header .gnb .gnb_wrap ul.depth2').on('mouseleave', function(){
-        $('header .gnb .gnb_wrap ul.depth1>li').removeClass('on')
-    })// header에 마우스 오버
-
     let scrolling
     let scroll_top //header 고정 시작 값
     let window_w
-    let mobile_size = 1024
+    let mobile_size = 880
     let pc_m
 
     function scroll_chk(){
@@ -46,6 +38,18 @@ $('documnet').ready(function(){
         reszie_chk()
     })//header fixed
 
+    $('header .gnb .gnb_wrap ul.depth1>li').on('mouseenter focusin', function(){
+        if(pc_m == 'pc'){
+            $('header .gnb .gnb_wrap ul.depth1>li').removeClass('on')
+            $(this).addClass('on')
+        }
+    })
+    $('header').on('mouseleave', function(){
+        if(pc_m == 'pc'){
+            $('header .gnb .gnb_wrap ul.depth1>li').removeClass('on')
+        }
+    })
+
     $('header .gnb .gnb_wrap ul.depth1>li>a').on('click', function(e){
         if(pc_m == 'm'){ //모바일에서만 적용
             e.preventDefault();
@@ -54,12 +58,16 @@ $('documnet').ready(function(){
     })//모바일 메뉴 depth2 열고 닫기
 
     $('header .gnb .gnb_open').on('click', function(){
-        $('header').addClass('m_open')
-        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+        if(pc_m == 'm'){
+            $('header').addClass('m_open')
+            $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+        }
     })
     $('header .gnb .gnb_close').on('click', function(){
-        $('header').removeClass('m_open')
-        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+        if(pc_m == 'm'){
+            $('header').removeClass('m_open')
+            $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+        }
     })// 모바일 메뉴 열기/닫기 버튼 작동
     
 })//document
