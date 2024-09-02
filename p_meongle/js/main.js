@@ -68,4 +68,20 @@ $('document').ready(function(){
 		$('.guide .tab_detail ul li.facile06').addClass('on')
 	})
 
+	let happydog_top
+	let window_h
+
+	function scroll_chk(){
+		window_h = $(window).height() //browser height
+		happydog_top = $('.happydog').offset().top
+		if(scrolling > (happydog_top - window_h + (window_h/3))){
+			$('.happydog').addClass('active')
+		}
+	}
+	scroll_chk() //로딩완료 시 1번 실행
+    $(window).scroll(function(){ //스크롤할 때 마다 1번 실행
+        scroll_chk()
+    })
+
+
 })//document

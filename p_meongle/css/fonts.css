@@ -10,3 +10,9 @@
 	font-display: swap;
 	src: local('Paperlogy ExtraBold'), url(../fonts/Paperlogy-8ExtraBold.woff2) format('woff2');
 }
+@font-face {
+    font-family: 'JSArirangHON-Regular';
+    src: local('JSArirangHON-Regular'), url(../fonts/JSArirangHON-RegularA1.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

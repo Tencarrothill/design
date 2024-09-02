@@ -575,6 +575,83 @@
     }
 }/* //guide_media_880*/
 
+.happydog {
+    margin: 293px 2% 0 2%;
+    display: none;
+}
+.happydog h2 {
+    display: none;
+}
+.happydog .inner {
+    display: flex;
+    position: relative; /* video 정렬 기준 */
+}
+.happydog .inner .tit .item {
+    font-size: 3.12rem;
+    font-weight: 800;
+    white-space: nowrap;
+    position: relative; /* .txt_bl 정렬 기준 */
+}
+.happydog .inner .tit .item .txt_bl {
+    color: var(--color-main-tit);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+.happydog.active .inner .tit .item .txt_bl {
+    width: 100%;
+}
+.happydog .inner .tit .item .txt_gr {
+    color: #b2b2b2;
+}
+.happydog .inner .video video {
+    position: absolute; /* item 기준 정렬 */
+}
+.happydog .inner .video .happydog01 {
+    right: 31%;
+    top: -106px;
+}
+.happydog .inner .video .happydog02 {
+    right: 14%;
+    top: 124px;
+}
+.happydog .inner .video .happydog03 {
+    right: -9%;
+    top: -152px;
+}
+.final {
+    position: relative;
+    margin-top: 362px;
+    
+}
+.final .slogan {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    font-family: 'JSArirangHON-Regular';
+    font-size: 5.62rem;
+    -webkit-text-stroke: 1px #1d1d1d;
+    color: transparent;
+    white-space: nowrap;
+}
+.final .slogan p {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    animation-name: slogan_move;
+    /* transform: translate(0, 0); */
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes slogan_move {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(-50%, 0);}
+}
 
 
 
