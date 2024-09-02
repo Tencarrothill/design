@@ -809,7 +809,7 @@ footer .copyright {
     .sub_menu .wrapper {
         /* 만약 모바일에서 메뉴의 수가 많아서 한 번에 안 보일 때, 가로스크롤바가 생성되야 함 
             -> 메뉴를 감싸는 요소(=flex 준 요소. 여기서는 wrapper)를 건드려야 함. */
-        overflow-x: auto; /* 내붕소가 감싸는 요소보다 더 넓어지면 가로스크롤바 생성하는 명령 */
+        overflow-x: auto; /* 내부요소가 감싸는 요소보다 더 넓어지면 가로스크롤바 생성하는 명령 */
         position: relative; /* after 정렬 기준 */
     }
     .sub_menu .wrapper::-webkit-scrollbar {
