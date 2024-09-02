@@ -37,6 +37,35 @@ $('document').ready(function(){
             draggable: true,
           }
 		
-	});
+	});//reservation_swiper
+
+	$('.guide .tab_menu button').on('click', function(){
+		$('.guide .tab_menu button').removeClass('on')
+		$(this).addClass('on')
+	})
+	$('.guide .tab_menu button.facile01').on('click', function(){
+		$('.guide .tab_detail ul li').removeClass('on')
+		$('.guide .tab_detail ul li.facile01').addClass('on')
+	})
+	$('.guide .tab_menu button.facile02').on('click', function(){
+		$('.guide .tab_detail ul li').removeClass('on')
+		$('.guide .tab_detail ul li.facile02').addClass('on')
+	})
+	$('.guide .tab_menu button.facile03').on('click', function(){
+		$('.guide .tab_detail ul li').removeClass('on')
+		$('.guide .tab_detail ul li.facile03').addClass('on')
+	})
+	$('.guide .tab_menu button.facile04').on('click', function(){
+		$('.guide .tab_detail ul li').removeClass('on')
+		$('.guide .tab_detail ul li.facile04').addClass('on')
+	})
+	$('.guide .tab_menu button.facile05').on('click', function(){
+		$('.guide .tab_detail ul li').removeClass('on')
+		$('.guide .tab_detail ul li.facile05').addClass('on')
+	})
+	$('.guide .tab_menu button.facile06').on('click', function(){
+		$('.guide .tab_detail ul li').removeClass('on')
+		$('.guide .tab_detail ul li.facile06').addClass('on')
+	})
 
 })//document
