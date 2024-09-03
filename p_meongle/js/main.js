@@ -68,22 +68,42 @@ $('document').ready(function(){
 		$('.guide .tab_detail ul li.facile06').addClass('on')
 	})//guide_button
 
-	/* 
 	let happydog_top
 	let window_h
 
 	function scroll_chk(){
-		window_h = $(window).height() //browser height
+		window_h = $(window).height()
 		happydog_top = $('.happydog').offset().top
-		if(scrolling > (happydog_top - window_h + (window_h/3))){
+		if(scrolling > (boost_top - window_h + (window_h/3))){
 			$('.happydog').addClass('active')
 		}
 	}
-	scroll_chk() //로딩완료 시 1번 실행
-    $(window).scroll(function(){ //스크롤할 때 마다 1번 실행
-        scroll_chk()
-    })
-	*/
+	
+	
+
+	let object_item = $('.video_wrap ul li'); /* 좌우로 배치되는 요소 */
+	let object_wrap = $('.video_wrap'); /* 좌우로 배치되는 요소를 감싸는 요소 */
+	gsap.registerPlugin(ScrollTrigger);
+	gsap.fromTo(
+	object_item,
+	{
+		x: () => window.innerWidth + 100, 
+	},
+	{
+		x: function(index){
+			return index * (object_item.width() / 2) /* 오른쪽에서 나타난 이후의 위치 (현재 li넓이의 절반이 겹치게 되어 있음) */
+		},
+		stagger: 0.5,
+		scrollTrigger: {
+		pin: object_wrap,
+		markers: false,
+		scrub: true,
+		start: "top 20%",   /* 좌우로 스크롤 되는 동안 object_wrap의 위치 */
+		end: "+=1000",      /* 다음 요소가 나타나는데 걸리는 시간 (애니메이션 시간) */
+		invalidateOnRefresh: true
+		}
+	}
+	);//scrollTrigger
 
 	const review_swiper = new Swiper('.review .swiper', { /* 팝업을 감싼는 요소의 class명 */
 		slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */

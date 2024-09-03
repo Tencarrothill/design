@@ -69,5 +69,18 @@ $('documnet').ready(function(){
             $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
         }
     })// 모바일 메뉴 열기/닫기 버튼 작동
+
+    $('footer .f_top .faq').on('mouseenter', function(){
+        $('footer .f_top .map').addClass('inactive')
+    })
+    $('footer .f_top .faq').on('mouseleave', function(){
+        $('footer .f_top .map').removeClass('inactive')
+    })
+    $('footer .f_top .map').on('mouseenter', function(){
+        $('footer .f_top .faq').addClass('inactive')
+    })
+    $('footer .f_top .map').on('mouseleave', function(){
+        $('footer .f_top .faq').removeClass('inactive')
+    })
     
 })//document
