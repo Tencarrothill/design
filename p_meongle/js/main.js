@@ -66,8 +66,9 @@ $('document').ready(function(){
 	$('.guide .tab_menu button.facile06').on('click', function(){
 		$('.guide .tab_detail ul li').removeClass('on')
 		$('.guide .tab_detail ul li.facile06').addClass('on')
-	})
+	})//guide_button
 
+	/* 
 	let happydog_top
 	let window_h
 
@@ -82,6 +83,27 @@ $('document').ready(function(){
     $(window).scroll(function(){ //스크롤할 때 마다 1번 실행
         scroll_chk()
     })
+	*/
+
+	const review_swiper = new Swiper('.review .swiper', { /* 팝업을 감싼는 요소의 class명 */
+		slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+		spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
+		breakpoints: {
+			1024: {  /* 1024px 이상이 되면 적용 */
+				spaceBetween: 24,
+			},
+		},
+		centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+		loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+		
+		
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: true,
+		},
+		
+		
+	});
 
 
 })//document
