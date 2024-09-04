@@ -330,7 +330,7 @@
     .reservation .list ul li .btn a {
         border-radius: 4px;
         width: 104px;
-        padding: 6px 0;
+        padding: 3px 0;
     }
     .reservation .more {
         left: 50%;
@@ -907,6 +907,11 @@
         height: 11px;
     }
 }/* //review_media_880 */
+@media screen and (max-width:368px) {
+    .review .more {
+        top: 85px;
+    }
+}
 
 .social {
     margin: 100px 2% 0 2%;
