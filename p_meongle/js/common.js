@@ -81,6 +81,12 @@ $('documnet').ready(function(){
     })
     $('footer .f_top .map').on('mouseleave', function(){
         $('footer .f_top .faq').removeClass('inactive')
-    })
+    })// footer
+
+    $('.chat .chat_wrap ul li .top').on('click', function(){
+		$("html, body").animate({
+		  scrollTop : 0
+		}, 500);
+	});
     
 })//document

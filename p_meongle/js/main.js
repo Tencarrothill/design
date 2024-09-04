@@ -70,14 +70,23 @@ $('document').ready(function(){
 
 	let happydog_top
 	let window_h
+	let scrolling
 
 	function scroll_chk(){
 		window_h = $(window).height()
+		scrolling = $(window).scrollTop()
 		happydog_top = $('.happydog').offset().top
-		if(scrolling > (boost_top - window_h + (window_h/3))){
+		if(scrolling > (happydog_top - window_h + (window_h/3))){
 			$('.happydog').addClass('active')
 		}
 	}
+	scroll_chk() //browser loading 완료 후 1번
+    $(window).scroll(function(){ //browser가 스크롤 될 때 마다
+        scroll_chk()
+    })
+    $(window).resize(function(){ //browser가 리사이즈 될 때 마다
+        scroll_chk()
+    })
 	
 	
 

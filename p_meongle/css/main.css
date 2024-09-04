@@ -573,7 +573,7 @@
 }/* //guide_media_880*/
 
 .happydog {
-    margin: 85px 2% 0 2%;
+    margin: 293px 2% 0 2%;
 }
 .happydog h2 {
     display: none;
@@ -604,38 +604,75 @@
 }
 
 
-.happydog_video .video_wrap ul {
+.happydog .happydog_video .video_wrap ul {
     position: relative; /* li 정렬 기준 */
     height: 400px;
 }
-.happydog_video .video_wrap ul li {
+.happydog .happydog_video .video_wrap ul li {
     position: absolute;
     left: 0;
     top: 0;
+    border-radius: 10px;
 }
-.happydog_video .video_wrap ul li.happydog01 {
+.happydog .happydog_video .video_wrap ul li.happydog01 {
     top: 87px;
 }
-.happydog_video .video_wrap ul li.happydog03 {
-    top: 166px;
+.happydog .happydog_video .video_wrap ul li.happydog02 {
+    left: 330px;
 }
-
-
-
-
-
-
-
-
+.happydog .happydog_video .video_wrap ul li.happydog03 {
+    left: 660px;
+    top: 222px;
+}
+@media screen and (max-width:1024px) {
+    .happydog {
+        margin-top: 150px;
+    }
+    .happydog .happydog_video .video_wrap ul li video {
+        width: 412px;
+    }
+    .happydog .happydog_video .video_wrap ul li.happydog01 {
+        top: 0;
+    }
+    .happydog .happydog_video .video_wrap ul li.happydog02 {
+        left: 30px;
+        top: 90px;
+    }
+    .happydog .happydog_video .video_wrap ul li.happydog03 {
+        left: 90px;
+        top: -50px;
+    }
+}/* happdog_media_1024 */
+@media screen and (max-width:880px) {
+    .happydog {
+        margin-top: 77px;
+    }
+    .happydog .tit {
+        font-size: 1.87rem;
+    }
+    .happydog .happydog_video .video_wrap ul li video {
+        width: 217px;
+    }
+    .happydog .happydog_video .video_wrap ul li.happydog01 {
+        top: 0;
+    }
+    .happydog .happydog_video .video_wrap ul li.happydog02 {
+        left: 0;
+        top: 0;
+    }
+    .happydog .happydog_video .video_wrap ul li.happydog03 {
+        left: 0;
+        top: 0;
+    }
+}
 
 .final .loop {
     position: relative;
-    margin-top: 513px;
+    margin-top: 100px;
     font-family: 'JSArirangHON-Regular';
     font-size: 5.62rem;
     -webkit-text-stroke: 1px #1d1d1d;
-    color: transparent;
-    
+    color: transparent;   
 }
 .final .loop span {
     position: absolute;
@@ -653,9 +690,15 @@
     0% {transform: translate(0, 0);}
     100% {transform: translate(-25.2%, 0);}
 }
+@media screen and (max-width:880px) {
+    .final .loop {
+        margin-top: -300px;
+        font-size: 2.81rem;  
+    }
+}
 
 .review {
-    margin: 792px 2% 0 2%;
+    margin: 453px 2% 0 2%;
     position: relative; /* more 정렬 기준 */
 }
 .review h2 {
@@ -792,7 +835,7 @@
 }/* //review_media_1300 */
 @media screen and (max-width:880px) {
     .review {
-        margin: 600px 4% 0 4%;
+        margin: 187px 4% 0 4%;
     }
     .review .tit {
         text-align: center;
@@ -866,7 +909,7 @@
 }/* //review_media_880 */
 
 .social {
-    margin: 222px 2% 0 2%;
+    margin: 100px 2% 0 2%;
 }
 .social h2 {
     display: none;

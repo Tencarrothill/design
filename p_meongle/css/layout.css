@@ -207,6 +207,9 @@ header.fixed .logo {
     display: block;
     margin-top: 7px;
 }
+header.fixed .gnb {
+    white-space: nowrap;
+}
 header.fixed .gnb .gnb_wrap ul.depth1 {
     display: flex;
     justify-content: flex-end;
@@ -421,6 +424,48 @@ header.m_open .h_sns .h_sns02::before {
 }
 /* //header m_open */
 
+.chat {
+    position: fixed;
+    right: 2%;
+    bottom: 4%;
+    z-index: 90;
+}
+.chat .chat_wrap ul li a {
+    font-size: 0;
+    line-height: 0;
+    position: relative; /* before 기준 정렬 */
+}
+.chat .chat_wrap ul li a::before {
+    position: absolute;
+    right: 2%;
+    bottom: 32px;
+    width: 50px;
+    height: 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25' cy='25' r='24.75' fill='white' stroke='black' stroke-width='0.5'/%3E%3Cpath d='M38.9312 15.622V15.6139L36.1665 13.0584C35.5668 12.4105 34.7097 12 33.7599 12H15.296C13.481 12.004 12 13.481 12 15.3V35.6554C12 36.2228 12.1046 36.6414 12.3139 36.9432C12.3863 37.0478 12.4749 37.1364 12.5755 37.2088L15.2235 39.6516C15.2638 39.6959 15.3081 39.7361 15.3563 39.7723L15.3805 39.7925C15.4248 39.8206 15.465 39.8528 15.5133 39.881C15.6702 39.9615 15.8433 40.0017 16.0324 40.0017C16.5234 40.0017 16.954 39.716 17.0345 39.6597L20.1293 36.4925C20.7853 35.6997 22.552 35.5226 23.1798 35.5186H36.5488C38.3678 35.5186 39.8448 34.0376 39.8448 32.2226V17.8837C39.8448 17.0023 39.4906 16.2095 38.9232 15.622H38.9312ZM35.9492 15.6863V29.6349C35.9492 30.8462 34.9632 31.8322 33.7518 31.8322H20.3868C20.1011 31.8322 17.5899 31.8725 16.5194 33.1683L15.8996 33.8042L14.801 34.935L13.5735 36.1947C13.481 36.251 13.3321 36.3154 13.2355 36.3154H13.2234C13.2234 36.3154 13.0987 36.1987 13.0987 35.6514V15.3C13.0987 14.0887 14.0846 13.1027 15.296 13.1027H33.7518C34.7137 13.1027 35.5226 13.7265 35.8204 14.5877C35.8968 14.8131 35.9492 15.0505 35.9492 15.3V15.6863Z' fill='%231D1D1D'/%3E%3Cpath d='M19.2562 18.8936C18.3467 18.8936 17.6143 19.63 17.6143 20.5355V23.9844C17.6143 24.8899 18.3467 25.6264 19.2562 25.6264C20.1657 25.6264 20.8982 24.8899 20.8982 23.9844V20.5355C20.8982 19.63 20.1617 18.8936 19.2562 18.8936Z' fill='%231D1D1D'/%3E%3Cpath d='M29.4858 18.8936C28.5803 18.8936 27.8398 19.63 27.8398 20.5355V23.9844C27.8398 24.8899 28.5763 25.6264 29.4858 25.6264C30.3953 25.6264 31.1278 24.8899 31.1278 23.9844V20.5355C31.1278 19.63 30.3913 18.8936 29.4858 18.8936Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.chat .chat_wrap ul li .top {
+    font-size: 0;
+    line-height: 0;
+    position: relative; /* before 기준 정렬 */
+}
+.chat .chat_wrap ul li .top::before {
+    position: absolute;
+    right: 2%;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25' cy='25' r='24.75' fill='white' stroke='black' stroke-width='0.5'/%3E%3Cpath d='M32.9613 22.4616L31.8825 23.5232L25.7497 17.3905L25.7497 35.5L24.2497 35.5L24.2497 17.3905L18.117 23.5232L17.0381 22.4616L24.9997 14.5L32.9613 22.4616Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+
+
 footer {
     margin-top: 182px;
     color: rgba(255,255,255,0.8);
@@ -565,6 +610,9 @@ footer .f_sub .copy {
     }
 }/* //footer_media_1300 */
 @media screen and (max-width:880px) {
+    footer {
+        margin-top: 75px;
+    }
     footer .f_top {
         height: 369px;
     }

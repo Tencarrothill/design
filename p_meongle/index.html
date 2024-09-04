@@ -12,6 +12,10 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <!--//scrolltrigger-->
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- //AOS -->
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
@@ -92,7 +96,7 @@
                     </div>
                 </div>
             </section><!--visual-->
-            <section class="reservation">
+            <section class="reservation" data-aos="fade-up">
                 <h2>글램핑장 예약</h2>
                 <div class="tit">
                     <h3>글램핑장 예약</h3>
@@ -163,7 +167,7 @@
                 </div><!--list-->
                 <div class="more"><a href="#n"><span>전체보기</span></a></div>
             </section><!--reservation-->
-            <section class="guide">
+            <section class="guide" data-aos="fade-up">
                 <h2>공간 안내</h2>
                 <div class="inner">
                     <div class="tit">
@@ -246,28 +250,28 @@
                     </ul>
                 </div><!--tab_detail-->
             </section><!--guide-->
-            <section class="happydog active">
+            <section class="happydog">
                 <h2>happydog</h2>
-                    <div class="tit">
-                        <div class="item">
-                            <span class="txt_bl">멍글멍글펫글램핑에서</span>
-                            <span class="txt_gr">멍글멍글펫글램핑에서</span>
-                        </div><!--item-->
-                        <div class="item">
-                            <span class="txt_bl">마음껏 자연을 누리는 아이들</span>
-                            <span class="txt_gr">마음껏 자연을 누리는 아이들</span>
-                        </div><!--item-->
-                    </div><!--tit-->
+                <div class="tit">
+                    <div class="item">
+                        <span class="txt_bl">멍글멍글펫글램핑에서</span>
+                        <span class="txt_gr">멍글멍글펫글램핑에서</span>
+                    </div><!--item-->
+                    <div class="item">
+                        <span class="txt_bl">마음껏 자연을 누리는 아이들</span>
+                        <span class="txt_gr">마음껏 자연을 누리는 아이들</span>
+                    </div><!--item-->
+                </div><!--tit-->
+                <div class="happydog_video">
+                    <div class="video_wrap">
+                        <ul>
+                            <li class="happydog01"><video src="imges/happydog01.mp4" muted autoplay playsinline loop></video></li>
+                            <li class="happydog02"><video src="imges/happydog02.mp4" muted autoplay playsinline loop></video></li>
+                            <li class="happydog03"><video src="imges/happydog03.mp4" muted autoplay playsinline loop></video></li>
+                        </ul>
+                    </div><!--video_wrap-->
+                </div>
             </section><!--happydog-->
-            <section class="happydog_video">
-                <div class="video_wrap">
-                    <ul>
-                        <li class="happydog01"><video src="imges/happydog01.mp4" muted autoplay playsinline loop></video></li>
-                        <li class="happydog02"><video src="imges/happydog02.mp4" muted autoplay playsinline loop></video></li>
-                        <li class="happydog03"><video src="imges/happydog03.mp4" muted autoplay playsinline loop></video></li>
-                    </ul>
-                </div><!--video_wrap-->
-            </section>
             <div class="final">
                 <div class="loop"><span>Meongle Meongle Pet  Glamping Meongle Meongle Pet Glamping  Meongle Meongle Pet  Glamping Meongle Meongle Pet Glamping</span></div>
             </div><!--final-->
@@ -451,7 +455,14 @@
                 </div><!--list-->
             </section><!--social-->
         </main>
-        <aside></aside>
+        <aside class="chat">
+            <div class="chat_wrap">
+                <ul>
+                    <li><a href="#n">navertoktok</a></li>
+                    <li><button class="top"><span>top</span></button></li>
+                </ul>
+            </div>
+        </aside>
         <footer>
             <div class="f_top">
                 <div class="wrapper">
@@ -487,5 +498,12 @@
             </div>
         </footer>
     </div><!--wrap-->
+    <script>// 반드시 콘텐츠 하단에 배치해야 한다.
+        AOS.init({
+        offset: 150, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+        duration: 500, // 애니메이션 효과가 작동되는 시간
+        easing: 'ease', // 가속도
+        });
+    </script>
 </body>
 </html>
