@@ -78,6 +78,8 @@ $('document').ready(function(){
 		happydog_top = $('.happydog').offset().top
 		if(scrolling > (happydog_top - window_h + (window_h/3))){
 			$('.happydog').addClass('active')
+		}else{
+			$('.happydog').removeClass('active')
 		}
 	}
 	scroll_chk() //browser loading 완료 후 1번
@@ -91,7 +93,7 @@ $('document').ready(function(){
 	
 
 	let object_item = $('.video_wrap ul li'); /* 좌우로 배치되는 요소 */
-	let object_wrap = $('.video_wrap'); /* 좌우로 배치되는 요소를 감싸는 요소 */
+	let object_wrap = $('.happydog'); /* 좌우로 배치되는 요소를 감싸는 요소 */
 	gsap.registerPlugin(ScrollTrigger);
 	gsap.fromTo(
 	object_item,
@@ -100,14 +102,14 @@ $('document').ready(function(){
 	},
 	{
 		x: function(index){
-			return index * (object_item.width() / 2) /* 오른쪽에서 나타난 이후의 위치 (현재 li넓이의 절반이 겹치게 되어 있음) */
+			return index * (object_item.width() / 1.8) /* 오른쪽에서 나타난 이후의 위치 (현재 li넓이의 절반이 겹치게 되어 있음) */
 		},
 		stagger: 0.5,
 		scrollTrigger: {
 		pin: object_wrap,
 		markers: false,
 		scrub: true,
-		start: "top 20%",   /* 좌우로 스크롤 되는 동안 object_wrap의 위치 */
+		start: "center center ",   /* 좌우로 스크롤 되는 동안 object_wrap의 위치 */
 		end: "+=1000",      /* 다음 요소가 나타나는데 걸리는 시간 (애니메이션 시간) */
 		invalidateOnRefresh: true
 		}

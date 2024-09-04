@@ -574,6 +574,8 @@
 
 .happydog {
     margin: 293px 2% 0 2%;
+    display: flex;
+    align-items: center;
 }
 .happydog h2 {
     display: none;
@@ -582,6 +584,7 @@
     color: var(--color-main-tit);
     font-size: 3.12rem;
     font-weight: 800;
+    width: 672px;
 }
 .happydog .tit .item {
     position: relative;
@@ -603,7 +606,9 @@
     width: 100%;
 }
 
-
+.happydog .happydog_video {
+    width: calc(100% - 672px);
+}
 .happydog .happydog_video .video_wrap ul {
     position: relative; /* li 정렬 기준 */
     height: 400px;
@@ -612,57 +617,81 @@
     position: absolute;
     left: 0;
     top: 0;
-    border-radius: 10px;
-}
-.happydog .happydog_video .video_wrap ul li.happydog01 {
-    top: 87px;
+    width: 52%;
+    min-width: 400px;
+    border-radius: 24px;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
 }
 .happydog .happydog_video .video_wrap ul li.happydog02 {
-    left: 330px;
+    top: 137px;
 }
 .happydog .happydog_video .video_wrap ul li.happydog03 {
-    left: 660px;
-    top: 222px;
+    top: -42px;
+}
+.happydog .happydog_video .video_wrap ul li video {
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width:1300px) {
+    .happydog .tit {
+        width: 580px;
+    }
+    .happydog .happydog_video .video_wrap ul li {
+        min-width: 350px;
+    }
+    .happydog .happydog_video .video_wrap ul li.happydog02 {
+        left: -20%;
+    }
+    .happydog .happydog_video .video_wrap ul li.happydog03 {
+        left: -30%;
+    }
 }
 @media screen and (max-width:1024px) {
     .happydog {
-        margin-top: 150px;
-    }
-    .happydog .happydog_video .video_wrap ul li video {
-        width: 412px;
-    }
-    .happydog .happydog_video .video_wrap ul li.happydog01 {
-        top: 0;
-    }
-    .happydog .happydog_video .video_wrap ul li.happydog02 {
-        left: 30px;
-        top: 90px;
-    }
-    .happydog .happydog_video .video_wrap ul li.happydog03 {
-        left: 90px;
-        top: -50px;
-    }
-}/* happdog_media_1024 */
-@media screen and (max-width:880px) {
-    .happydog {
-        margin-top: 77px;
+        margin-top: 0;
     }
     .happydog .tit {
-        font-size: 1.87rem;
+        font-size: 2.68rem;
+        width: 460px;
     }
-    .happydog .happydog_video .video_wrap ul li video {
-        width: 217px;
+}
+/* happdog_media_1024 */
+@media screen and (max-width:880px) {
+    .happydog {
+        margin: 77px 4% 0 4%;
+        display: block;
     }
-    .happydog .happydog_video .video_wrap ul li.happydog01 {
-        top: 0;
+    .happydog .tit {
+        font-size: 2.18rem;
+    }
+    .happydog .happydog_video .video_wrap ul li {
+        border-radius: 0;
+        top: 36px;
     }
     .happydog .happydog_video .video_wrap ul li.happydog02 {
         left: 0;
-        top: 0;
+        top: 36px;
     }
     .happydog .happydog_video .video_wrap ul li.happydog03 {
         left: 0;
-        top: 0;
+        top: 36px;
+    }
+}
+/* happdog_media_880 */
+@media screen and (max-width:575px) {
+    .happydog .happydog_video .video_wrap ul li {
+        border-radius: 0;
+        top: 36px;
+    }
+    .happydog .happydog_video .video_wrap ul li.happydog02 {
+        left: -120px;
+        top: 36px;
+    }
+    .happydog .happydog_video .video_wrap ul li.happydog03 {
+        left: -120px;
+        top: 36px;
     }
 }
 
@@ -690,9 +719,14 @@
     0% {transform: translate(0, 0);}
     100% {transform: translate(-25.2%, 0);}
 }
+@media screen and (max-width:1024px) {
+    .final .loop {
+        margin-top: 0;
+    }
+}
 @media screen and (max-width:880px) {
     .final .loop {
-        margin-top: -300px;
+        margin-top: -200px;
         font-size: 2.81rem;  
     }
 }
@@ -833,6 +867,11 @@
         top: 119px;
     }
 }/* //review_media_1300 */
+@media screen and (max-width:1300px) {
+    .review {
+        margin: 263px 2% 0 2%;
+    }
+}
 @media screen and (max-width:880px) {
     .review {
         margin: 187px 4% 0 4%;
@@ -970,6 +1009,7 @@
 }
 .social .list ul {
     display: flex;
+    justify-content: center;
     margin-bottom: 24px;
 }
 .social .list ul li {

@@ -12,7 +12,7 @@ $('documnet').ready(function(){
             scroll_top = 0
         }
         scrolling = $(window).scrollTop()
-        console.log(scrolling)
+       // console.log(scrolling)
         if(scrolling > scroll_top){
             $('header').addClass('fixed')
         }else{
@@ -25,13 +25,13 @@ $('documnet').ready(function(){
     })
     function reszie_chk(){
         window_w = $(window).width()
-        console.log(window_w)
+        //console.log(window_w)
         if(window_w > mobile_size){
             pc_m = 'pc'
         }else{
             pc_m = 'm'
         }
-        console.log(pc_m)
+        //console.log(pc_m)
     }
     reszie_chk() // document 로딩완료 시 1번 실행
     $(window).resize(function(){

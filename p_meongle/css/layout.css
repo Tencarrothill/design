@@ -464,7 +464,25 @@ header.m_open .h_sns .h_sns02::before {
     background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25' cy='25' r='24.75' fill='white' stroke='black' stroke-width='0.5'/%3E%3Cpath d='M32.9613 22.4616L31.8825 23.5232L25.7497 17.3905L25.7497 35.5L24.2497 35.5L24.2497 17.3905L18.117 23.5232L17.0381 22.4616L24.9997 14.5L32.9613 22.4616Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
     content: "";
 }
-
+@media screen and (max-width:1300px) {
+    .chat .chat_wrap ul li a::before {
+        bottom: 69px;
+    }
+    .chat .chat_wrap ul li .top::before {
+        bottom: 35px;
+    }
+}
+@media screen and (max-width:880px) {
+    .chat .chat_wrap ul li a::before {
+        width: 40px;
+        height: 40px;
+        bottom: 62px;
+    }
+    .chat .chat_wrap ul li .top::before {
+        width: 40px;
+        height: 40px;
+    }
+}
 
 footer {
     margin-top: 182px;
