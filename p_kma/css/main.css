@@ -1,0 +1,39 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+
+
+.fp_nav {
+    display: none;
+}
+
+.visual {
+    background: url(../imges/visual_bg.png) no-repeat center center / cover;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.visual .tit {
+    padding-bottom: 540px;
+}
+.visual h2 {
+    font-family: "DM Serif Display";
+    font-size: 100px;
+}
+.visual p {
+    font-size: 20px;
+}
+.visual .shortcut {
+    background-color: var(--color-main-brown);
+    height: 88px;
+}
+
+
+
+.story {
+    background-color: #3176B5;
+}
+.moreinfo {
+    background-color: #3176B5;
+}
