@@ -1,12 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 @font-face {
     font-family: 'NEXON Lv1 Gothic';
     src: local('NEXON Lv1 Gothic'), url('../fonts/NEXON\ Lv1\ Gothic\ OTF.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-	font-family: "DM Serif Display", serif;
-	src: local('DM Serif Display'), url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
-	font-weight: 400;
-	font-style: normal;
-  }

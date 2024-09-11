@@ -1,4 +1,5 @@
 $('document').ready(function(){
+    
     const myFullpage = new fullpage('#fullpage', {  /* html에서 페이지 전체를 감싸는 요소 */
 
         navigation: true, /* 오른쪽에 각 페이지의 paging */
@@ -25,21 +26,27 @@ $('document').ready(function(){
         responsiveWidth: 640 /* fullpage를 적용시키지 않을 모바일 사이즈 */
     });//fulpage
 
-    let visual_top
-    let visual_w
+    gsap.from(".visual .tit", {duration: 3, text: ""})
+    
+
+    let story_top
+    let story_w
     let window_h
     let scrolling
 
     function scroll_chk(){
-        visual_top = $('.visual').offset().top
-        if(scrolling > (visual_top - window_h + (window_h/5))){
-            visual_w = (scrolling - (visual_top - window_h))*1.2 + 400
-            if(visual_w > $(window).width()){
-                visual_w = $(window).width() //너비가 브라우저 너비를 초과하지 않도록
-                $('.visual').addClass('end')
+        window_h = $(window).height() //browser height
+        scrolling = $(window).scrollTop()// scroll 된 값 
+        story_top = $('.story').offset().top
+        //console.log(widnw_h, scrolling, story_top)
+        if(scrolling > (story_top - window_h + (window_h/5))){
+            story_w = (scrolling - (story_top - window_h))*1.2 + 400
+            if(story_w > $(window).width()){
+                story_w = $(window).width() //너비가 브라우저 너비를 초과하지 않도록
+                $('.story').addClass('end')
             }
-            console.log(visual_w)
-            $('.visual .photo_wrap .photo').width(visual_w)
+            //console.log(life_w)
+            $('.story .photo_wrap .photo').width(story_w)
         }
     }
     scroll_chk() //browser loading 완료 후 1번
