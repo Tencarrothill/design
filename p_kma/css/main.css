@@ -8,19 +8,69 @@
     display: none;
 }
 
+
 .visual {
-    background: url(../imges/visual_bg.png) no-repeat center center / cover;
+    /* background: url(../imges/visual_bg.png) no-repeat center center / cover; */
     text-align: center;
-    color: #fff;
+    color: #1d1d1d;
     position: relative; /* shortcut 정렬 기준 */
+    
+}
+.visual .photo {
+    /* display: inline-block; */
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    width: 502px;
+    height: 538px;
+    animation-name: visual_expand;
+    animation-duration: 2.5s;
+    animation-iteration-count: initial;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.visual .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 321px 321px 0 0;
+    animation-name: visual_border;
+    animation-duration: 2.5s;
+    animation-iteration-count: initial;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+@keyframes visual_expand {
+    0% {}
+    50% {width: 502px; height: 538px;}
+    100% {width: 100%; height: 100%;}
+}
+@keyframes visual_border {
+    0% {}
+    50% {border-radius: 321px 321px 0 0;}
+    100% {border-radius: 0;}
 }
 .visual .tit {
+    position: absolute;
+    left: 50%;
+    top: 118px;
+    transform: translate(-50%, 0);
     margin-bottom: 540px;
-    height: 150px;
+    animation-name: visual_tit_color;
+    animation-duration: 2.5s;
+    animation-iteration-count: initial;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 .visual h2 {
     font-family: "DM Serif Display";
     font-size: 100px;
+}
+@keyframes visual_tit_color {
+    0% {}
+    50% {color: #1d1d1d;}
+    100% {color: #fff;}
 }
 .visual p {
     font-size: 20px;
@@ -35,6 +85,7 @@
     display: flex;
     justify-content: space-evenly;
     padding-top: 60px;
+    color: var(--color-main-bg);
 }
 .visual .shortcut a {
     display: block;
@@ -99,34 +150,16 @@
     background-image: url("data:image/svg+xml,%3Csvg width='52' height='38' viewBox='0 0 52 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M39.4547 37.8447C39.4215 37.8447 39.3884 37.8447 39.3553 37.8381C39.0737 37.795 38.8484 37.5764 38.8021 37.2948L36.9767 26.6311C36.9138 26.27 37.1589 25.9288 37.5167 25.8658C37.8778 25.8029 38.219 26.048 38.282 26.4058L39.7694 35.0984L43.9302 26.9193C44.0428 26.6973 44.2714 26.5582 44.5198 26.5582H50.6716V1.32509H1.32509V26.5615H32.9021C33.2665 26.5615 33.5646 26.8597 33.5646 27.2241C33.5646 27.5885 33.2665 27.8866 32.9021 27.8866H0.662547C0.298146 27.8866 0 27.5885 0 27.2241V0.662547C0 0.298146 0.298146 0 0.662547 0H51.3375C51.7019 0 52 0.298146 52 0.662547V27.2241C52 27.5885 51.7019 27.8866 51.3375 27.8866H44.9306L40.0477 37.4836C39.935 37.7089 39.7031 37.8447 39.458 37.8447H39.4547Z' fill='%23F3F1E0'/%3E%3Cpath d='M12.2209 18.9223H10.167V7.09912H18.101V8.84162H12.2209V12.2504H17.0144V13.9764H12.2209V18.9256V18.9223Z' fill='%23F3F1E0'/%3E%3Cpath d='M26.9393 15.9507H22.2717L21.0592 18.9223H18.9424L23.9049 7.09912H25.3061L30.2686 18.9223H28.1518L26.9393 15.9507ZM22.9872 14.2083H26.2238L24.6072 10.2562L22.9905 14.2083H22.9872Z' fill='%23F3F1E0'/%3E%3Cpath d='M38.0339 6.80104C41.3334 6.80104 43.8676 9.32203 43.8676 13.0091C43.8676 14.8609 43.2283 16.4013 42.1881 17.5045L41.8138 17.8457L44.5203 19.5253L43.3674 21.0657L40.0083 18.8859C39.3855 19.1045 38.7329 19.2139 38.0339 19.2139C34.7344 19.2139 32.2002 16.6929 32.2002 13.0058C32.2002 9.31872 34.7378 6.79773 38.0339 6.79773V6.80104ZM38.0339 8.54354C35.9336 8.54354 34.2541 10.3159 34.2541 13.0091C34.2541 15.7024 35.9336 17.4747 38.0339 17.4747C40.1342 17.4747 41.8138 15.7024 41.8138 13.0091C41.8138 10.3159 40.1342 8.54354 38.0339 8.54354Z' fill='%23F3F1E0'/%3E%3C/svg%3E%0A");
     content: "";
 }
-
-
-
-.story {
-    position: relative; /* tit 정렬 기준 */
-    text-align: center;
+/* .visual .shortcut hover */
+.visual .shortcut a:hover {
+    font-weight: 700;
 }
-.story .tit {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 50px;
+.visual .shortcut a::before {
+    transition: 0.3s;
 }
-.story .photo_wrap .photo {
-    overflow: hidden;
-    width: 400px;
-    height: 491px;
-    display: inline-block; /* text-align:center로 정렬하기 위해 */
-    transition: 1s;
+.visual .shortcut a:hover::before {
+    transform: translate(0, -10px);
 }
-.story .photo_wrap .photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 
 .moreinfo {
     background-color: #3176B5;

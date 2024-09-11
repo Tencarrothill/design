@@ -18,7 +18,8 @@ $('document').ready(function(){
         scrollOverflow: false, /* 컨텐츠가 넘쳐도 스크롤 금지 */
 
         afterLoad: function(origin, destination, direction, trigger){
-            if(destination.index == 2){ /* index가 2면 슬라이드는 세번째 슬라이드입니다. index 수는 0/1/2/3 */
+            if(destination.index == 1){ /* index가 2면 슬라이드는 세번째 슬라이드입니다. index 수는 0/1/2/3 */
+                $('header').removeClass('dark')
                 console.log('3번째 슬라이드가 로딩 되었을때');
             }
         },
@@ -26,34 +27,7 @@ $('document').ready(function(){
         responsiveWidth: 640 /* fullpage를 적용시키지 않을 모바일 사이즈 */
     });//fulpage
 
-    gsap.from(".visual .tit", {duration: 3, text: ""})
+    //gsap.from(".visual .tit h2", {duration: 3, text: ""})
     
-
-    let story_top
-    let story_w
-    let window_h
-    let scrolling
-
-    function scroll_chk(){
-        window_h = $(window).height() //browser height
-        scrolling = $(window).scrollTop()// scroll 된 값 
-        story_top = $('.story').offset().top
-        //console.log(widnw_h, scrolling, story_top)
-        if(scrolling > (story_top - window_h + (window_h/5))){
-            story_w = (scrolling - (story_top - window_h))*1.2 + 400
-            if(story_w > $(window).width()){
-                story_w = $(window).width() //너비가 브라우저 너비를 초과하지 않도록
-                $('.story').addClass('end')
-            }
-            //console.log(life_w)
-            $('.story .photo_wrap .photo').width(story_w)
-        }
-    }
-    scroll_chk() //browser loading 완료 후 1번
-    $(window).scroll(function(){ //browser가 스크롤 될 때 마다
-        scroll_chk()
-    })
-    $(window).resize(function(){ //browser가 리사이즈 될 때 마다
-        scroll_chk()
-    })
+    
 })//document.ready

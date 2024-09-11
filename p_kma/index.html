@@ -20,7 +20,7 @@
         <a href="#skip_contents">본문 바로가기</a>
         <a href="#skip_menu">대메뉴 바로가기</a>
     </div><!--skipnav-->
-        <header>
+        <header class="">
             <div class="logo_box">
                 <h1 class="logo"><a href="index.html">Museum News</a></h1>
                 <nav class="gnb">
@@ -73,9 +73,22 @@
                 <li><a href="#moreinfo"><span>Exhibition</span></a></li>
             </ul>
         </aside>
-        <aside class="quick_menu"></aside>
+        <aside class="quick_menu">
+            <button class="quick_open">퀵메뉴 열기</button>
+            <div class="quick_wrap">
+                <ul>
+                    <li class="newsletter">
+                        <a href="#n">뉴스레터</a>
+                        <p>뉴스레터를 구독해보세요</p>
+                    </li>
+                    <li class="top"><button>탑버튼</button></li>
+                </ul>
+            </div>
+            <button  class="quick_close">퀵메뉴 닫기</button>
+        </aside>
         <div id="fullpage">
             <section class="section fp-auto-height-responsive visual">
+                <div class="photo"><img src="imges/visual_bg.png" alt=""></div>
                 <div class="tit">
                     <h2>M u s e u m  N e w s</h2>
                     <p>온갖 박물관 소식, 뮤지엄 뉴스에서 발 빠르게</p>
@@ -87,17 +100,7 @@
                     <a href="#n" class="faq">FAQ</a>
                 </div>
             </section>
-            <section class="section fp-auto-height-responsive story">
-                <div class="inner">
-                    <div class="tit">
-                        <h2>M u s e u m  N e w s</h2>
-                        <p>온갖 박물관 소식, 뮤지엄 뉴스에서 발 빠르게</p>
-                    </div>
-                    <div class="photo_wrap">
-                        <div class="photo"><img src="imges/visual_bg.png" alt=""></div>
-                    </div>
-                </div>
-            </section>
+            <section class="section fp-auto-height-responsive story">story</section>
             <section class="section fp-auto-height-responsive notice">notice</section>
             <section class="section fp-auto-height-responsive moreinfo">moreinfo</section>
             <footer class="section fp-auto-height-responsive fp-auto-height">footer</footer>
