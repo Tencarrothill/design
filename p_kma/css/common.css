@@ -37,12 +37,12 @@ html, body {
 }/*media1300*/
 @media screen and (max-width:1024px) {
     html, body {
-        font-size: 15px;
+        font-size: 14px;
     }
 }/*media 1024 */
 @media screen and (max-width:640px){ /*이 사이즈 이하부터 모바일 반응형 시작 */
     html, body {
-        font-size: 14px;
+        font-size: 13px;
     }
 }/*media640*/
 

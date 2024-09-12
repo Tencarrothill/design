@@ -24,7 +24,7 @@ $('document').ready(function(){
             }
         },
 
-        responsiveWidth: 640 /* fullpage를 적용시키지 않을 모바일 사이즈 */
+        responsiveWidth: 1024 /* fullpage를 적용시키지 않을 모바일 사이즈 */
     });//fulpage
 
     //gsap.from(".visual .tit h2", {duration: 3, text: ""})

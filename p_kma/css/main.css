@@ -67,6 +67,9 @@
     font-family: "DM Serif Display";
     font-size: 100px;
 }
+.visual h2 br {
+    display: none;
+}
 @keyframes visual_tit_color {
     0% {}
     50% {color: #1d1d1d;}
@@ -83,12 +86,19 @@
     height: 88px;
     background-color: var(--color-main-brown);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     padding-top: 60px;
     color: var(--color-main-bg);
 }
+.visual .shortcut .short_top {
+    display: flex;
+}
+.visual .shortcut .short_sub {
+    display: flex;
+}
 .visual .shortcut a {
     display: block;
+    margin-right: 70px;
 }
 .visual .shortcut .network {
     position: relative;
@@ -137,6 +147,7 @@
 }
 .visual .shortcut .faq {
     position: relative;
+    margin-right: 0;
 }
 .visual .shortcut .faq::before {
     position: absolute;
@@ -214,6 +225,91 @@
 @keyframes arrow_moving {
     0% { transform: translate(0, -50%); }
     100% { transform: translate(0, 50%); }
+}
+@media screen and (max-width:1024px) {
+    .visual h2 {
+        font-size: 2.53rem;
+        margin-bottom: 7px;
+    }
+    .visual p {
+        font-size: 14px;
+    }
+    .visual .photo {
+        width: 300px;
+        height: 622px;
+    }
+    .visual .photo img {
+        border-radius: 150px 150px 0 0;
+    }
+    @keyframes visual_expand {
+        0% {}
+        50% {width: 300px; height: 622px;}
+        100% {width: 100%; height: 100%;}
+    }
+    @keyframes visual_border {
+        0% {}
+        50% {border-radius: 150px 150px 0 0;}
+        100% {border-radius: 0;}
+    }
+    .visual .tit {
+        margin-bottom: 0;
+        top: 408px;
+    }
+    .visual .shortcut {
+        display: block;
+        height: 168px;
+        padding-top: 43px;
+    }
+    .visual .shortcut .short_top {
+        justify-content: center;
+        padding: 13px 0 21px 0;
+    }
+    .visual .shortcut .network::before {
+        left: 50%;
+        bottom: 30px;
+        transform: translate(-34%, 0);
+        width: 38px;
+        height: 26px;
+    }
+    .visual .shortcut .bizintro {
+        margin-right: 0;
+    }
+    .visual .shortcut .bizintro::before {
+        left: 50%;
+        bottom: 30px;
+        transform: translate(-34%, 0);
+        width: 34px;
+        height: 33px;
+    }
+    .visual .shortcut a:hover::before {
+        transform: translate(-34%, -10px);
+    }
+    .visual .shortcut .short_sub {
+        justify-content: center;
+    }
+    .visual .shortcut .member::before {
+        bottom: 30px;
+        width: 32px;
+        height: 32px;
+    }
+    .visual .shortcut .faq::before {
+        left: -3px;
+        bottom: 30px;
+        width: 40px;
+        height: 29px;
+    }
+    .visual .scrolldown {
+        right: 50%;
+        transform: translate(50%, 0);
+    }
+    .visual .scrolldown .rotation {
+        width: 200px;
+    }
+}
+@media screen and (max-width:534px) {
+    .visual h2 br {
+        display: block;
+    }
 }
 
 .story .wrapper {
@@ -363,10 +459,21 @@
 
 .notice .wrapper {
     display: flex;
+    justify-content: space-between;
 }
 .notice .tit {
     display: flex;
-    align-items: baseline;
+    margin-bottom: 18px;
+    position: relative; /* after 정렬 기준 */
+}
+.notice .tit::after {
+    position: absolute;
+    left: 0;
+    bottom: -17px;
+    width: 618px;
+    height: 1px;
+    background-color: var(--color-main-brown);
+    content: "";
 }
 .notice .tit h2 {
     color: var(--color-main-brown);
@@ -374,10 +481,137 @@
     font-size: var(--txt-size-tit);
     line-height: 1.1;
 }
+.notice .tit p {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 75px 0 0 25px;
+}
+.notice .post {
+    position: relative; /* more 정렬 기준 */
+}
+.notice .post .list ul li {
+    width: 618px;
+    /* margin-bottom: 57px; */
+}
+.notice .post .list ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* after 정렬 기준 */
+    height: 89px;
+}
+.notice .post .list ul li a::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 618px;
+    height: 1px;
+    border-bottom: 1px solid rgba(71,57,54,0.3);
+    content: "";
+}
+.notice .post .list ul li a .inner {
+    display: flex;
+    align-items: center;
+}
+.notice .post .list ul li a strong {
+    font-family: "DM Serif Display";
+    margin-right: 20px;
+    width: 48px;
+    text-align: center;
+}
+/* post hover */
+.notice .post .list ul li a:hover strong,
+.notice .post .list ul li a:hover p {
+    color: var(--color-main-orange);
+    font-weight: 700;
+}
+.notice .post .list ul li a:hover span {
+    color: var(--color-main-orange);
+}
+/* //post hover */
+.notice .connection {
+    position: relative; /* more 정렬 기준 */
+}
+.notice .connection .list {
+    width: 618px;
+}
 .notice .connection .list ul {
     display: flex;
+    justify-content: space-around;
 }
-
+.notice .connection .list ul li {
+    width: 216px;
+    margin-top: 35px;
+}
+.notice .connection .list ul li a .photo {
+    font-size: 0;
+    line-height: 0;
+    position: relative; /* before 정렬 기준 */
+}
+.notice .connection .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.notice .connection .list ul li a strong {
+    display: block;
+    color: #1d1d1d;
+    margin: 19px 0 11px 0;
+}
+.notice .connection .list ul li a p {
+    line-height: 1.3;
+    height: 2.6em;
+    overflow: hidden;
+}
+/* connection hover */
+.notice .connection .list ul li:hover a .photo::before {
+    position: absolute; /* photo 기준 정렬 */
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    content: "";
+}
+.notice .list ul li:hover a .photo::after {
+    position: absolute; /* photo 기준 정렬 */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='66' height='66' viewBox='0 0 66 66' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_0_1)'%3E%3Ccircle cx='31' cy='31' r='30' fill='%23473936'/%3E%3C/g%3E%3Cg clip-path='url(%23clip0_0_1)'%3E%3Cpath d='M17.7685 31.375C17.7685 31.1837 17.9168 31.0354 18.1081 31.0354H44.6419C44.8332 31.0354 44.9815 31.1837 44.9815 31.375C44.9815 31.5663 44.8332 31.7145 44.6419 31.7145L18.1033 31.7098C17.912 31.7098 17.7637 31.5615 17.7637 31.3702L17.7685 31.375Z' fill='white'/%3E%3Cpath d='M31.3748 44.9815C31.1835 44.9815 31.0353 44.8333 31.0353 44.642L31.04 18.1033C31.0353 17.9168 31.1883 17.7637 31.3748 17.7685C31.5614 17.7733 31.7144 17.9168 31.7096 18.1033L31.7096 44.6467C31.7096 44.838 31.5613 44.9863 31.37 44.9863L31.3748 44.9815Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_0_1' x='0' y='0' width='66' height='66' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='2' dy='2'/%3E%3CfeGaussianBlur stdDeviation='1.5'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_0_1'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_0_1' result='shape'/%3E%3C/filter%3E%3CclipPath id='clip0_0_1'%3E%3Crect width='19.4454' height='19.4454' fill='white' transform='translate(31.375 17.625) rotate(45)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    content: "";
+}
+/* //connection hover */
+.notice .more {
+    position: absolute;
+    right: 10px;
+    top: 54px;
+    font-size: 0;
+    line-height: 0;
+    width: 48px;
+    height: 48px;
+}
+.notice .more::before {
+    position: absolute; /* more 기준 정렬 */
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='23.5' stroke='%23473936'/%3E%3Cpath d='M37.1965 24.255C37.1965 24.4392 37.0518 24.5839 36.8677 24.5839L11.0584 24.5839C10.8742 24.5839 10.7295 24.4392 10.7295 24.255C10.7295 24.0708 10.8742 23.9261 11.0584 23.9261L36.8677 23.9261C37.0518 23.9261 37.1965 24.0708 37.1965 24.255Z' fill='%23473936'/%3E%3Cpath d='M37.374 24.255C37.374 24.3734 37.3082 24.4918 37.1964 24.5444C33.4934 26.4452 31.0795 30.0627 30.7309 34.2064C30.7177 34.3906 30.5533 34.5221 30.3757 34.509C30.1916 34.4958 30.06 34.3314 30.0732 34.1538C30.4415 29.7799 32.9935 25.9717 36.8938 23.959C37.0583 23.8735 37.2556 23.9393 37.3345 24.1037C37.3608 24.1497 37.374 24.2024 37.374 24.255Z' fill='%23473936'/%3E%3Cpath d='M37.374 24.2548C37.374 24.3075 37.3608 24.3601 37.3345 24.4061C37.249 24.5705 37.0517 24.6297 36.8938 24.5508C32.9935 22.5447 30.4415 18.7299 30.0732 14.356C30.0534 14.1784 30.1916 14.014 30.3757 14.0008C30.5533 13.9877 30.7177 14.1192 30.7309 14.3034C31.0795 18.4471 33.4999 22.0646 37.1964 23.9654C37.3082 24.0246 37.374 24.1364 37.374 24.2548Z' fill='%23473936'/%3E%3C/svg%3E%0A");
+    content: "";
+    transition: 0.3s;
+}
+.notice .more:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23CF4D2B'/%3E%3Cpath d='M37.1965 24.255C37.1965 24.4392 37.0518 24.5839 36.8677 24.5839L11.0584 24.5839C10.8742 24.5839 10.7295 24.4392 10.7295 24.255C10.7295 24.0708 10.8742 23.9261 11.0584 23.9261L36.8677 23.9261C37.0518 23.9261 37.1965 24.0708 37.1965 24.255Z' fill='%23F3F1E0'/%3E%3Cpath d='M37.374 24.255C37.374 24.3734 37.3082 24.4918 37.1964 24.5444C33.4934 26.4452 31.0795 30.0627 30.7309 34.2064C30.7177 34.3906 30.5533 34.5221 30.3757 34.509C30.1916 34.4958 30.06 34.3314 30.0732 34.1538C30.4415 29.7799 32.9935 25.9717 36.8938 23.959C37.0583 23.8735 37.2556 23.9393 37.3345 24.1037C37.3608 24.1497 37.374 24.2024 37.374 24.255Z' fill='%23F3F1E0'/%3E%3Cpath d='M37.374 24.2548C37.374 24.3075 37.3608 24.3601 37.3345 24.4061C37.249 24.5705 37.0517 24.6297 36.8938 24.5508C32.9935 22.5447 30.4415 18.7299 30.0732 14.356C30.0534 14.1784 30.1916 14.014 30.3757 14.0008C30.5533 13.9877 30.7177 14.1192 30.7309 14.3034C31.0795 18.4471 33.4999 22.0646 37.1964 23.9654C37.3082 24.0246 37.374 24.1364 37.374 24.2548Z' fill='%23F3F1E0'/%3E%3C/svg%3E%0A");
+}
 
 
 .moreinfo {
