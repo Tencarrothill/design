@@ -58,6 +58,7 @@ html, body {
 
 /* 
     rem 변환
+    50px - 3.33rem
 */
 
 :root {
@@ -66,7 +67,7 @@ html, body {
     --color-main-orange : #CF4D2B;
     --txt-color-w80 : rgba(255, 255, 255, 0.8);
     --txt-color-w60 : rgba(255, 255, 255, 0.6);
-    --txt-size-tit : 3.12rem;
+    --txt-size-tit : 3.33rem;
 }
 /* 
 @media screen and (max-width:1300px) {

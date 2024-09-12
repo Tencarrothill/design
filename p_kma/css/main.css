@@ -160,6 +160,225 @@
 .visual .shortcut a:hover::before {
     transform: translate(0, -10px);
 }
+/* //.visual .shortcut hover */
+.visual .scrolldown {
+    position: absolute; /* visual 기준 정렬 */
+    right: 7%;
+    bottom: 131px;
+    opacity: 0.7;
+}
+.visual .scrolldown .rotation {
+    animation-name: visual_rotation_op;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+@keyframes visual_rotation_op {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.visual .scrolldown .rotation img {
+    width: 100%;
+    animation-name: visual_rotation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes visual_rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg);}
+}
+.visual .scrolldown .arrow {
+    position: absolute; /* scrolldown 기준 정렬 */
+    right: 50%;
+    top: 50%;
+    transform: translate(55%, -50%);
+    animation-name: arrow_moving_op;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+@keyframes arrow_moving_op {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.visual .scrolldown .arrow img {
+    width: 100%;
+    animation-name: arrow_moving;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes arrow_moving {
+    0% { transform: translate(0, -50%); }
+    100% { transform: translate(0, 50%); }
+}
+
+.story .wrapper {
+    position: relative; /* more 정렬 기준 */
+}
+.story .list .swiper {
+    padding-top: 53px;
+}
+.story .tit {
+    display: flex;
+    align-items: baseline;
+    margin: 64px 0 95px 0;
+    position: relative; /* after 정렬 기준 */
+}
+.story .tit::after {
+    position: absolute;
+    left: 0;
+    bottom: -17px;
+    width: 939px;
+    height: 1px;
+    background-color: var(--color-main-brown);
+    content: "";
+}
+.story .tit h2 {
+    color: var(--color-main-brown);
+    font-family: "DM Serif Display";
+    font-size: var(--txt-size-tit);
+    margin-right: 25px;
+}
+.story .tit p {
+    font-size: 18px;
+    font-weight: 300;
+}
+.story .list ul li {
+    width: 404px;
+    padding-right: 24px;
+    transition: 0.3s;
+}
+.story .list ul li a {
+    position: relative; /* ctn 정렬 기준  */
+}
+.story .list ul li a .photo {
+    position: relative; /* photo의 before 정렬 기준 */
+    font-size: 0;
+    line-height: 0;
+}
+.story .list ul li a .photo img {
+    border-radius: 0 0 65px 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.story .list ul li a .ctn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 175px;
+    background-color: var(--color-main-brown);
+    color: var(--color-main-bg);
+    border-radius: 65px 0 65px 0;
+}
+.story .list ul li a .ctn h3 {
+    font-size: 21px;
+    font-weight: 700;
+    padding: 34px 0 17px 35px;
+}
+.story .list ul li a .ctn p {
+    line-height: 1.3;
+    height: 2.6em;
+    overflow: hidden;
+    padding: 0 40px 0 35px;
+}
+/* list hover */
+.story .list ul li:hover a .photo img {
+    box-shadow: 15px 15px 0 rgba(207,77,43,0.8);
+}
+.story .list ul li:hover a .photo::before  {
+    position: absolute; /* photo 기준 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 0 0 65px 0;
+    content: "";
+}
+.story .list ul li:hover a .photo::after {
+    position: absolute; /* photo 기준 정렬 */
+    left: 50%;
+    top: 170px;
+    transform: translate(-50%, 0);
+    width: 60px;
+    height: 60px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='66' height='66' viewBox='0 0 66 66' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_0_1)'%3E%3Ccircle cx='31' cy='31' r='30' fill='%23473936'/%3E%3C/g%3E%3Cg clip-path='url(%23clip0_0_1)'%3E%3Cpath d='M17.7685 31.375C17.7685 31.1837 17.9168 31.0354 18.1081 31.0354H44.6419C44.8332 31.0354 44.9815 31.1837 44.9815 31.375C44.9815 31.5663 44.8332 31.7145 44.6419 31.7145L18.1033 31.7098C17.912 31.7098 17.7637 31.5615 17.7637 31.3702L17.7685 31.375Z' fill='white'/%3E%3Cpath d='M31.3748 44.9815C31.1835 44.9815 31.0353 44.8333 31.0353 44.642L31.04 18.1033C31.0353 17.9168 31.1883 17.7637 31.3748 17.7685C31.5614 17.7733 31.7144 17.9168 31.7096 18.1033L31.7096 44.6467C31.7096 44.838 31.5613 44.9863 31.37 44.9863L31.3748 44.9815Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_0_1' x='0' y='0' width='66' height='66' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='2' dy='2'/%3E%3CfeGaussianBlur stdDeviation='1.5'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_0_1'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_0_1' result='shape'/%3E%3C/filter%3E%3CclipPath id='clip0_0_1'%3E%3Crect width='19.4454' height='19.4454' fill='white' transform='translate(31.375 17.625) rotate(45)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    content: "";
+}
+.story .list ul li:hover {
+    transform: translate(0, -53px);
+}
+/* //list hover */
+.story .list .paging {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 52px;
+}
+.story .list .paging .swiper-pagination-bullet {
+    /* 선택되지 않은 불릿 */
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid var(--color-main-brown);
+    opacity: 1;
+}
+.story .list .paging .swiper-pagination-bullet-active {
+    /* 선택된 불릿 */
+    background-color: var(--color-main-brown);
+}
+.story .more {
+    position: absolute; /* wrapper 기준 정렬 */
+    right: 0;
+    top: 85px;
+    font-size: 0;
+    line-height: 0;
+    width: 48px;
+    height: 48px;
+}
+.story .more::before {
+    position: absolute; /* more 기준 정렬 */
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='23.5' stroke='%23473936'/%3E%3Cpath d='M37.1965 24.255C37.1965 24.4392 37.0518 24.5839 36.8677 24.5839L11.0584 24.5839C10.8742 24.5839 10.7295 24.4392 10.7295 24.255C10.7295 24.0708 10.8742 23.9261 11.0584 23.9261L36.8677 23.9261C37.0518 23.9261 37.1965 24.0708 37.1965 24.255Z' fill='%23473936'/%3E%3Cpath d='M37.374 24.255C37.374 24.3734 37.3082 24.4918 37.1964 24.5444C33.4934 26.4452 31.0795 30.0627 30.7309 34.2064C30.7177 34.3906 30.5533 34.5221 30.3757 34.509C30.1916 34.4958 30.06 34.3314 30.0732 34.1538C30.4415 29.7799 32.9935 25.9717 36.8938 23.959C37.0583 23.8735 37.2556 23.9393 37.3345 24.1037C37.3608 24.1497 37.374 24.2024 37.374 24.255Z' fill='%23473936'/%3E%3Cpath d='M37.374 24.2548C37.374 24.3075 37.3608 24.3601 37.3345 24.4061C37.249 24.5705 37.0517 24.6297 36.8938 24.5508C32.9935 22.5447 30.4415 18.7299 30.0732 14.356C30.0534 14.1784 30.1916 14.014 30.3757 14.0008C30.5533 13.9877 30.7177 14.1192 30.7309 14.3034C31.0795 18.4471 33.4999 22.0646 37.1964 23.9654C37.3082 24.0246 37.374 24.1364 37.374 24.2548Z' fill='%23473936'/%3E%3C/svg%3E%0A");
+    content: "";
+    transition: 0.3s;
+}
+.story .more:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23CF4D2B'/%3E%3Cpath d='M37.1965 24.255C37.1965 24.4392 37.0518 24.5839 36.8677 24.5839L11.0584 24.5839C10.8742 24.5839 10.7295 24.4392 10.7295 24.255C10.7295 24.0708 10.8742 23.9261 11.0584 23.9261L36.8677 23.9261C37.0518 23.9261 37.1965 24.0708 37.1965 24.255Z' fill='%23F3F1E0'/%3E%3Cpath d='M37.374 24.255C37.374 24.3734 37.3082 24.4918 37.1964 24.5444C33.4934 26.4452 31.0795 30.0627 30.7309 34.2064C30.7177 34.3906 30.5533 34.5221 30.3757 34.509C30.1916 34.4958 30.06 34.3314 30.0732 34.1538C30.4415 29.7799 32.9935 25.9717 36.8938 23.959C37.0583 23.8735 37.2556 23.9393 37.3345 24.1037C37.3608 24.1497 37.374 24.2024 37.374 24.255Z' fill='%23F3F1E0'/%3E%3Cpath d='M37.374 24.2548C37.374 24.3075 37.3608 24.3601 37.3345 24.4061C37.249 24.5705 37.0517 24.6297 36.8938 24.5508C32.9935 22.5447 30.4415 18.7299 30.0732 14.356C30.0534 14.1784 30.1916 14.014 30.3757 14.0008C30.5533 13.9877 30.7177 14.1192 30.7309 14.3034C31.0795 18.4471 33.4999 22.0646 37.1964 23.9654C37.3082 24.0246 37.374 24.1364 37.374 24.2548Z' fill='%23F3F1E0'/%3E%3C/svg%3E%0A");
+}
+
+.notice .wrapper {
+    display: flex;
+}
+.notice .tit {
+    display: flex;
+    align-items: baseline;
+}
+.notice .tit h2 {
+    color: var(--color-main-brown);
+    font-family: "DM Serif Display";
+    font-size: var(--txt-size-tit);
+    line-height: 1.1;
+}
+.notice .connection .list ul {
+    display: flex;
+}
+
+
 
 .moreinfo {
     background-color: #3176B5;
