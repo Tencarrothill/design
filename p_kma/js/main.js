@@ -30,12 +30,20 @@ $('document').ready(function(){
     //gsap.from(".visual .tit h2", {duration: 3, text: ""})
 
     const story_swiper = new Swiper('.story .swiper', {
-        slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+        slidesPerView: "1", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
         spaceBetween: 0, /* li와 li사이 - 제일 작은 여백 */
-        breakpoints: {
-            1024: {  /* 1024px 이상이 되면 적용 */
+        breakpoints: { 
+            1025: {  /* 1024px 이상이 되면 적용 */
                 spaceBetween: 0,
                 slidesPerView: 3
+            },
+            881: {  /* 1024px 이상이 되면 적용 */
+                spaceBetween: 0,
+                slidesPerView: 3
+            },
+            581: {  /* 1024px 이상이 되면 적용 */
+                spaceBetween: 0,
+                slidesPerView: 2
             },
         },
         centeredSlides: false, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
@@ -46,7 +54,7 @@ $('document').ready(function(){
             clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
             
         },
-    });
+    });//story_swiper
     
     
 })//document.ready
