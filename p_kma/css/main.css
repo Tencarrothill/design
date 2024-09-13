@@ -778,8 +778,300 @@
         white-space: nowrap;
     }
 }
+.moreinfo .wrapper {
+    position: relative; /* more 정렬 기준 */
+}
+.moreinfo .tit {
+    display: flex;
+    align-items: baseline;
+    margin: 64px 0 146px 0;
+    position: relative; /* after 정렬 기준 */
+}
+.moreinfo .tit::after {
+    position: absolute;
+    left: 0;
+    bottom: -17px;
+    width: 939px;
+    height: 1px;
+    background-color: var(--color-main-brown);
+    content: "";
+}
+.moreinfo .tit h2 {
+    color: var(--color-main-brown);
+    font-family: "DM Serif Display";
+    font-size: var(--txt-size-tit);
+    margin-right: 25px;
+}
+.moreinfo .tit p {
+    font-size: 18px;
+    font-weight: 300;
+}
+.moreinfo .tab {
+    position: relative; /* tab menu 정렬 기준 */
+}
+.moreinfo .tab .tab_menu {
+    position: absolute; /* tab 기준 정렬 */
+    right: 8%;
+    top: -73px;
+    transform: translate(-50%, 0);
+    color: var(--color-main-brown);
+    font-family: "DM Serif Display";
+    font-size: 1.56rem;
+    border: 1px solid var(--color-main-brown);
+    width: 234px;
+    white-space: nowrap;
+}
+.moreinfo .tab .tab_menu:hover {
+    color: var(--color-main-bg);
+    background-color: var(--color-main-brown);
+}
+.moreinfo .tab>ul>li.on .tab_menu {
+    color: var(--color-main-bg);
+    background-color: var(--color-main-brown);
+}
+.moreinfo .tab .exhib>.tab_menu {
+    left: 27%;
+}
+.moreinfo .tab .edu>.tab_menu {
+    left: 50%;
+}
+.moreinfo .tab .tab_detail ul li {
+    width: 297px;
+}
+.moreinfo .tab>ul>li .tab_detail {
+    display: none;
+}
+.moreinfo .tab>ul>li.on .tab_detail {
+    display: block;
+}
+.moreinfo .tab .tab_detail ul li a .photo {
+    font-size: 0;
+    line-height: 0;
+    position: relative; /* before, after 정렬 기준 */
+}
+.moreinfo .tab .tab_detail ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+.moreinfo .tab .tab_detail ul li a .photo_wrap {
+    position: relative;
+}
+.moreinfo .tab .tab_detail ul li a .photo_wrap span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
+    background-color: var(--color-main-brown);
+    color: var(--color-main-bg);
+    font-size: 1.33rem;
+    padding: 4px 12px;
+    text-align: center;
+}
+/* 마우스오버 */
+.moreinfo .tab .tab_detail ul li:hover a .photo::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    content: "";
+    animation-name: radius_anime;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.moreinfo .tab .tab_detail ul li:hover a .photo::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='66' height='66' viewBox='0 0 66 66' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_0_1)'%3E%3Ccircle cx='31' cy='31' r='30' fill='%23473936'/%3E%3C/g%3E%3Cg clip-path='url(%23clip0_0_1)'%3E%3Cpath d='M17.7685 31.375C17.7685 31.1837 17.9168 31.0354 18.1081 31.0354H44.6419C44.8332 31.0354 44.9815 31.1837 44.9815 31.375C44.9815 31.5663 44.8332 31.7145 44.6419 31.7145L18.1033 31.7098C17.912 31.7098 17.7637 31.5615 17.7637 31.3702L17.7685 31.375Z' fill='white'/%3E%3Cpath d='M31.3748 44.9815C31.1835 44.9815 31.0353 44.8333 31.0353 44.642L31.04 18.1033C31.0353 17.9168 31.1883 17.7637 31.3748 17.7685C31.5614 17.7733 31.7144 17.9168 31.7096 18.1033L31.7096 44.6467C31.7096 44.838 31.5613 44.9863 31.37 44.9863L31.3748 44.9815Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_0_1' x='0' y='0' width='66' height='66' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='2' dy='2'/%3E%3CfeGaussianBlur stdDeviation='1.5'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_0_1'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_0_1' result='shape'/%3E%3C/filter%3E%3CclipPath id='clip0_0_1'%3E%3Crect width='19.4454' height='19.4454' fill='white' transform='translate(31.375 17.625) rotate(45)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    content: "";
+}
+@keyframes radius_anime {
+    0% { border-radius: 0; }
+    100% { border-radius: 149px 149px 0 0; }
+}
+.moreinfo .tab .tab_detail ul li:hover a .photo img {
+    border-radius: 149px 149px 0 0;
+}
+/* //마우스오버 */
 
-
-.moreinfo {
-    background-color: #3176B5;
+.moreinfo .tab .tab_detail ul li a .ctn {
+    position: relative; /* before, after 정렬 기준 */
+}
+.moreinfo .tab .tab_detail ul li a .ctn::before {
+    position: absolute;
+    left: 0;
+    top: -11px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-main-brown);
+    content: "";
+}
+.moreinfo .tab .tab_detail ul li a .ctn::after {
+    position: absolute;
+    left: 0;
+    bottom: -13px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-main-brown);
+    content: "";
+}
+.moreinfo .tab .tab_detail ul li a .ctn h3 {
+    color: #1d1d1d;
+    font-size: 1.33rem;
+    font-weight: 700;
+    margin: 33px 0 8px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.moreinfo .tab .tab_detail ul li a .ctn p {
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+}
+.moreinfo .tab>ul>li.enjoy .tab_detail ul li a .ctn p {
+    font-size: 1rem;
+    line-height: 1.3;
+    height: 3.9em;
+    overflow: hidden;
+    margin-top: 3px;
+}
+.moreinfo .tab .tab_detail ul li a .ctn span {
+    display: block;
+    position: relative; /* before 정렬 기준 */
+    margin-bottom: 8px;
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.moreinfo .tab .tab_detail ul li a .ctn span::before {
+    position: absolute;
+    left: 2px;
+    top: -1px;
+    width: 12px;
+    height: 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='18' viewBox='0 0 12 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 18C4.38717 18 3.06733 17.7942 2.0405 17.3825C1.0135 16.971 0.5 16.4397 0.5 15.7885C0.5 15.4782 0.6465 15.181 0.9395 14.897C1.23233 14.6132 1.63392 14.3718 2.14425 14.173L2.93075 14.8405C2.65258 14.9455 2.36508 15.0846 2.06825 15.2578C1.77142 15.4308 1.58583 15.6013 1.5115 15.7693C1.62567 16.1001 2.10967 16.3879 2.9635 16.6327C3.81733 16.8776 4.82633 17 5.9905 17C7.1545 17 8.16758 16.8776 9.02975 16.6327C9.89192 16.3879 10.3801 16.1001 10.4943 15.7693C10.4418 15.5974 10.2501 15.425 9.91925 15.252C9.58842 15.0788 9.27558 14.9397 8.98075 14.8345L9.7615 14.1615C10.318 14.3642 10.7468 14.6074 11.048 14.8913C11.3493 15.1753 11.5 15.4714 11.5 15.7797C11.5 16.4336 10.9865 16.9671 9.9595 17.3803C8.93267 17.7934 7.61283 18 6 18ZM6.025 13.75C7.68783 12.4563 8.93267 11.1907 9.7595 9.953C10.5865 8.71517 11 7.49875 11 6.30375C11 4.55308 10.4615 3.23142 9.3845 2.33875C8.30767 1.44625 7.18267 1 6.0095 1C4.8365 1 3.70833 1.44675 2.625 2.34025C1.54167 3.23375 1 4.55683 1 6.3095C1 7.46083 1.4115 8.65033 2.2345 9.878C3.05767 11.1055 4.32117 12.3962 6.025 13.75ZM6 15C3.98567 13.4703 2.48208 11.9847 1.48925 10.5433C0.496417 9.10175 0 7.68967 0 6.307C0 5.26267 0.180417 4.34908 0.54125 3.56625C0.90225 2.78358 1.37117 2.1275 1.948 1.598C2.525 1.0685 3.17025 0.669834 3.88375 0.402C4.59725 0.134 5.30367 0 6.003 0C6.70233 0 7.40775 0.134 8.11925 0.402C8.83075 0.669834 9.475 1.0685 10.052 1.598C10.6288 2.1275 11.0977 2.78417 11.4587 3.568C11.8196 4.35167 12 5.26358 12 6.30375C12 7.68692 11.5036 9.0995 10.5107 10.5415C9.51792 11.9835 8.01433 13.4697 6 15ZM6.0095 7.7885C6.45067 7.7885 6.82858 7.63433 7.14325 7.326C7.45808 7.01767 7.6155 6.63658 7.6155 6.18275C7.6155 5.72892 7.45725 5.34458 7.14075 5.02975C6.82442 4.71508 6.44417 4.55775 6 4.55775C5.56533 4.55775 5.18742 4.71592 4.86625 5.03225C4.54508 5.34858 4.3845 5.72883 4.3845 6.173C4.3845 6.63333 4.54508 7.01767 4.86625 7.326C5.18742 7.63433 5.5685 7.7885 6.0095 7.7885Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.moreinfo .tab .tab_detail ul li a .ctn span:last-child::before {
+    left: -1px;
+    width: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='19' viewBox='0 0 16 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.6155 18.2307C1.15517 18.2307 0.770833 18.0766 0.4625 17.7682C0.154167 17.4599 0 17.0756 0 16.6152V3.84625C0 3.38592 0.154167 3.00158 0.4625 2.69325C0.770833 2.38492 1.15517 2.23075 1.6155 2.23075H3.3845V0H4.4615V2.23075H11.6155V0H12.6155V2.23075H14.3845C14.8448 2.23075 15.2292 2.38492 15.5375 2.69325C15.8458 3.00158 16 3.38592 16 3.84625V16.6152C16 17.0756 15.8458 17.4599 15.5375 17.7682C15.2292 18.0766 14.8448 18.2307 14.3845 18.2307H1.6155ZM1.6155 17.2307H14.3845C14.5385 17.2307 14.6796 17.1667 14.8077 17.0385C14.9359 16.9103 15 16.7692 15 16.6152V7.84625H1V16.6152C1 16.7692 1.06408 16.9103 1.19225 17.0385C1.32042 17.1667 1.4615 17.2307 1.6155 17.2307ZM1 6.846H15V3.84625C15 3.69225 14.9359 3.55117 14.8077 3.423C14.6796 3.29483 14.5385 3.23075 14.3845 3.23075H1.6155C1.4615 3.23075 1.32042 3.29483 1.19225 3.423C1.06408 3.55117 1 3.69225 1 3.84625V6.846ZM8 11.3845C7.79367 11.3845 7.61383 11.3079 7.4605 11.1547C7.30733 11.0016 7.23075 10.8217 7.23075 10.6152C7.23075 10.4089 7.30733 10.2292 7.4605 10.076C7.61383 9.92283 7.79367 9.84625 8 9.84625C8.20633 9.84625 8.38617 9.92283 8.5395 10.076C8.69267 10.2292 8.76925 10.4089 8.76925 10.6152C8.76925 10.8217 8.69267 11.0016 8.5395 11.1547C8.38617 11.3079 8.20633 11.3845 8 11.3845ZM4 11.3845C3.79367 11.3845 3.61383 11.3079 3.4605 11.1547C3.30733 11.0016 3.23075 10.8217 3.23075 10.6152C3.23075 10.4089 3.30733 10.2292 3.4605 10.076C3.61383 9.92283 3.79367 9.84625 4 9.84625C4.20633 9.84625 4.38617 9.92283 4.5395 10.076C4.69267 10.2292 4.76925 10.4089 4.76925 10.6152C4.76925 10.8217 4.69267 11.0016 4.5395 11.1547C4.38617 11.3079 4.20633 11.3845 4 11.3845ZM12 11.3845C11.7937 11.3845 11.6138 11.3079 11.4605 11.1547C11.3073 11.0016 11.2308 10.8217 11.2308 10.6152C11.2308 10.4089 11.3073 10.2292 11.4605 10.076C11.6138 9.92283 11.7937 9.84625 12 9.84625C12.2063 9.84625 12.3862 9.92283 12.5395 10.076C12.6927 10.2292 12.7693 10.4089 12.7693 10.6152C12.7693 10.8217 12.6927 11.0016 12.5395 11.1547C12.3862 11.3079 12.2063 11.3845 12 11.3845ZM8 15.2308C7.79367 15.2308 7.61383 15.1542 7.4605 15.001C7.30733 14.8478 7.23075 14.668 7.23075 14.4615C7.23075 14.2552 7.30733 14.0753 7.4605 13.922C7.61383 13.7688 7.79367 13.6922 8 13.6922C8.20633 13.6922 8.38617 13.7688 8.5395 13.922C8.69267 14.0753 8.76925 14.2552 8.76925 14.4615C8.76925 14.668 8.69267 14.8478 8.5395 15.001C8.38617 15.1542 8.20633 15.2308 8 15.2308ZM4 15.2308C3.79367 15.2308 3.61383 15.1542 3.4605 15.001C3.30733 14.8478 3.23075 14.668 3.23075 14.4615C3.23075 14.2552 3.30733 14.0753 3.4605 13.922C3.61383 13.7688 3.79367 13.6922 4 13.6922C4.20633 13.6922 4.38617 13.7688 4.5395 13.922C4.69267 14.0753 4.76925 14.2552 4.76925 14.4615C4.76925 14.668 4.69267 14.8478 4.5395 15.001C4.38617 15.1542 4.20633 15.2308 4 15.2308ZM12 15.2308C11.7937 15.2308 11.6138 15.1542 11.4605 15.001C11.3073 14.8478 11.2308 14.668 11.2308 14.4615C11.2308 14.2552 11.3073 14.0753 11.4605 13.922C11.6138 13.7688 11.7937 13.6922 12 13.6922C12.2063 13.6922 12.3862 13.7688 12.5395 13.922C12.6927 14.0753 12.7693 14.2552 12.7693 14.4615C12.7693 14.668 12.6927 14.8478 12.5395 15.001C12.3862 15.1542 12.2063 15.2308 12 15.2308Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+}
+.moreinfo .tab .tab_detail .paging {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 44px;
+}
+.moreinfo .tab .tab_detail .paging .swiper-pagination-bullet {
+    /* 선택되지 않은 불릿 */
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid var(--color-main-brown);
+    opacity: 1;
+}
+.moreinfo .tab .tab_detail .paging .swiper-pagination-bullet-active {
+    /* 선택된 불릿 */
+    background-color: var(--color-main-brown);
+}
+.moreinfo .more {
+    position: absolute; /* wrapper 기준 정렬 */
+    right: 0;
+    top: 85px;
+    font-size: 0;
+    line-height: 0;
+    width: 48px;
+    height: 48px;
+}
+.moreinfo .more::before {
+    position: absolute; /* more 기준 정렬 */
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='23.5' stroke='%23473936'/%3E%3Cpath d='M37.1965 24.255C37.1965 24.4392 37.0518 24.5839 36.8677 24.5839L11.0584 24.5839C10.8742 24.5839 10.7295 24.4392 10.7295 24.255C10.7295 24.0708 10.8742 23.9261 11.0584 23.9261L36.8677 23.9261C37.0518 23.9261 37.1965 24.0708 37.1965 24.255Z' fill='%23473936'/%3E%3Cpath d='M37.374 24.255C37.374 24.3734 37.3082 24.4918 37.1964 24.5444C33.4934 26.4452 31.0795 30.0627 30.7309 34.2064C30.7177 34.3906 30.5533 34.5221 30.3757 34.509C30.1916 34.4958 30.06 34.3314 30.0732 34.1538C30.4415 29.7799 32.9935 25.9717 36.8938 23.959C37.0583 23.8735 37.2556 23.9393 37.3345 24.1037C37.3608 24.1497 37.374 24.2024 37.374 24.255Z' fill='%23473936'/%3E%3Cpath d='M37.374 24.2548C37.374 24.3075 37.3608 24.3601 37.3345 24.4061C37.249 24.5705 37.0517 24.6297 36.8938 24.5508C32.9935 22.5447 30.4415 18.7299 30.0732 14.356C30.0534 14.1784 30.1916 14.014 30.3757 14.0008C30.5533 13.9877 30.7177 14.1192 30.7309 14.3034C31.0795 18.4471 33.4999 22.0646 37.1964 23.9654C37.3082 24.0246 37.374 24.1364 37.374 24.2548Z' fill='%23473936'/%3E%3C/svg%3E%0A");
+    content: "";
+    transition: 0.3s;
+}
+.moreinfo .more:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23CF4D2B'/%3E%3Cpath d='M37.1965 24.255C37.1965 24.4392 37.0518 24.5839 36.8677 24.5839L11.0584 24.5839C10.8742 24.5839 10.7295 24.4392 10.7295 24.255C10.7295 24.0708 10.8742 23.9261 11.0584 23.9261L36.8677 23.9261C37.0518 23.9261 37.1965 24.0708 37.1965 24.255Z' fill='%23F3F1E0'/%3E%3Cpath d='M37.374 24.255C37.374 24.3734 37.3082 24.4918 37.1964 24.5444C33.4934 26.4452 31.0795 30.0627 30.7309 34.2064C30.7177 34.3906 30.5533 34.5221 30.3757 34.509C30.1916 34.4958 30.06 34.3314 30.0732 34.1538C30.4415 29.7799 32.9935 25.9717 36.8938 23.959C37.0583 23.8735 37.2556 23.9393 37.3345 24.1037C37.3608 24.1497 37.374 24.2024 37.374 24.255Z' fill='%23F3F1E0'/%3E%3Cpath d='M37.374 24.2548C37.374 24.3075 37.3608 24.3601 37.3345 24.4061C37.249 24.5705 37.0517 24.6297 36.8938 24.5508C32.9935 22.5447 30.4415 18.7299 30.0732 14.356C30.0534 14.1784 30.1916 14.014 30.3757 14.0008C30.5533 13.9877 30.7177 14.1192 30.7309 14.3034C31.0795 18.4471 33.4999 22.0646 37.1964 23.9654C37.3082 24.0246 37.374 24.1364 37.374 24.2548Z' fill='%23F3F1E0'/%3E%3C/svg%3E%0A");
+}
+@media screen and (max-width:1300px) {
+    .moreinfo .tab .tab_menu {
+        position: absolute; /* tab 기준 정렬 */
+        right: 8%;
+        top: -73px;
+        transform: translate(-50%, 0);
+        color: var(--color-main-brown);
+        font-family: "DM Serif Display";
+        font-size: 1.4rem;
+        border: 1px solid var(--color-main-brown);
+        width: 202px;
+    }
+}/* moreinfo media 1300 */
+@media screen and (max-width:1024px) {
+    .moreinfo .tit {
+        display: block;
+        margin: 63px 0 100px 0;
+    }
+    .moreinfo .tab .tab_menu {
+        position: absolute; /* tab 기준 정렬 */
+        right: auto;
+        left: 20%;
+        top: -64px;
+        transform: translate(0, 0);
+        font-size: 1.2rem;
+        border: 0;
+        width: auto;
+    }
+    .moreinfo .tab .exhib>.tab_menu {
+        left: 0;
+    }
+    .moreinfo .tab .edu>.tab_menu {
+        left: 10%;
+    }
+    .moreinfo .tab .tab_menu:hover {
+        color: var(--color-main-orange);
+        background-color: transparent;
+    }
+    .moreinfo .tab>ul>li.on .tab_menu {
+        color: var(--color-main-orange);
+        background-color: transparent;
+    }
+}/* //moreinfo media 1024 */
+@media screen and (max-width:880px) {
+    .moreinfo .tab .tab_menu {
+        left: 33%;
+    }
+    .moreinfo .tab .edu>.tab_menu {
+        left: 17%;
+    }
+}
+@media screen and (max-width:580px) {
+    .moreinfo .tab .tab_menu {
+        left: 55%;
+    }
+    .moreinfo .tab .edu>.tab_menu {
+        left: 28%;
+    }
 }
