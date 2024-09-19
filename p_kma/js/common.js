@@ -48,11 +48,11 @@ $('document').ready(function(){
         }
     })// 모바일 2차메뉴 여닫기
 
-    /*
+    
     setTimeout(function(){
         $('header').addClass('dark')
     }, 2400)
-    */
+    
 
     $('.quick_menu .quick_open').on('click', function(){
         $('.quick_menu').addClass('open')

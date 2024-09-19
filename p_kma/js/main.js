@@ -20,7 +20,13 @@ $('document').ready(function(){
         afterLoad: function(origin, destination, direction, trigger){
             if(destination.index == 1){ /* index가 2면 슬라이드는 세번째 슬라이드입니다. index 수는 0/1/2/3 */
                 $('header').removeClass('dark')
-                console.log('3번째 슬라이드가 로딩 되었을때');
+                $('header').addClass('scd')
+                //console.log('3번째 슬라이드가 로딩 되었을때');
+            }
+            if(destination.index == 0 ){ /* index가 2면 슬라이드는 세번째 슬라이드입니다. index 수는 0/1/2/3 */
+                
+                $('header').removeClass('scd')
+                //console.log('3번째 슬라이드가 로딩 되었을때');
             }
         },
 
