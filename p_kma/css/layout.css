@@ -607,7 +607,7 @@ footer .f_ctn {
 }
 footer .f_ctn .mnews {
     position: relative; /* shortcut 정렬 기준 */
-    width: 1066px;
+    width: 60%;
     padding-left: 65px;
 }
 footer .f_ctn .mnews::after {
@@ -676,7 +676,7 @@ footer .f_ctn .mnews .shortcut a:last-child {
 footer .f_inner {
     padding-left: 66px;
     position: relative; /* after 정렬 기준 */
-    width: 855px;
+    width: 40%;
 }
 footer .f_inner::after {
     position: absolute;
@@ -689,7 +689,7 @@ footer .f_inner::after {
 }
 footer .f_inner .f_info .address {
     display: flex;
-    margin-top: 72px;
+    padding-top: 72px;
 }
 footer .f_inner .f_info .address strong {
     color: var(--color-main-bg);
@@ -838,7 +838,7 @@ footer .f_inner .f_social .f_logo {
         display: none;
     }
     footer .f_inner .f_info .address {
-        margin-top: 33px;
+        padding-top: 33px;
     }
     footer .f_inner .f_info>a {
         margin: 36px 10px 0 0;
