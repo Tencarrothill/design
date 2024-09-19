@@ -794,6 +794,9 @@ footer .f_inner .f_social .f_logo {
     content: "";
 }
 @media screen and (max-width:1024px) {
+    footer .sponsor {
+        margin-top: 30px;
+    }
     footer {
         margin-top: 0;
     }
@@ -894,5 +897,11 @@ footer .f_inner .f_social .f_logo {
         width: 9px;
         height: 17px;
     }
+}
+.fp-watermark {
+    display: none;
+}
+.fp-responsive .fp-auto-height-responsive.fp-section, .fp-responsive .fp-auto-height-responsive .fp-slide {
+    min-height: 0 !important
 }
 
