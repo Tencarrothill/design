@@ -578,7 +578,9 @@ header.dark .logo_box .gnb .gnb_wrap .depth1>li>.depth2>li:hover>a {
     font-weight: 700;
 }
 
-
+footer .sponsor {
+    overflow: hidden;
+}
 footer .sponsor ul {
     display: flex;
     align-items: center;
@@ -799,6 +801,9 @@ footer .f_inner .f_social .f_logo {
         display: block;
         padding-bottom: 106px;
     }
+    footer .f_ctn .mnews {
+        width: auto;
+    }
     footer .f_ctn .mnews strong {
         display: none;
     }
@@ -824,6 +829,7 @@ footer .f_inner .f_social .f_logo {
     }
     footer .f_inner {
         padding-left: 3%;
+        width: auto;
     }
     footer .f_inner::after {
         display: none;
@@ -844,7 +850,49 @@ footer .f_inner .f_social .f_logo {
         height: 22px;
         right: 0;
         bottom: -83px;
-    }
-    
-    
+    } 
 }
+@media screen and (max-width:880px) {
+    footer .sponsor ul {
+        animation-duration: 50s;
+    }
+    footer .sponsor ul li {
+        margin-right: 40px;
+    }
+    footer .sponsor ul li figure img {
+        width: 120px;
+        height: 70px;
+    }
+}
+@media screen and (max-width:640px) {
+    footer .f_ctn .mnews .shortcut a {
+        font-size: 13px;
+        padding: 6px 48px 6px 13px;
+    }
+    footer .f_ctn .mnews .shortcut a::after {
+        right: 19px;
+        top: 5px;
+        width: 22px;
+        height: 17px;
+    }
+    footer .f_ctn .mnews .copy {
+        bottom: -390px;
+    }
+    footer .f_inner .f_social .f_sns ul li.you a::before {
+        width: 17px;
+        height: 12px;
+    }
+    footer .f_inner .f_social .f_sns ul li.twit a::before {
+        width: 17px;
+        height: 16px;
+    }
+    footer .f_inner .f_social .f_sns ul li.insta a::before {
+        width: 17px;
+        height: 17px;
+    }
+    footer .f_inner .f_social .f_sns ul li.face a::before {
+        width: 9px;
+        height: 17px;
+    }
+}
+

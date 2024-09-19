@@ -1032,6 +1032,9 @@
         display: block;
         margin: 63px 0 100px 0;
     }
+    .moreinfo .tit::after {
+        width: 100%;
+    }
     .moreinfo .tab .tab_menu {
         position: absolute; /* tab 기준 정렬 */
         right: auto;
