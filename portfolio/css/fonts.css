@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@font-face {
+	font-family: 'Paperlogy';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Paperlogy Light'), url(../fonts/Paperlogy-3Light.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'Paperlogy';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Paperlogy Regular'), url(../fonts/Paperlogy-4Regular.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'Paperlogy';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Paperlogy ExtraBold'), url(../fonts/Paperlogy-8ExtraBold.woff2) format('woff2');
+}

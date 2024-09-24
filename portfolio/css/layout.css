@@ -1,0 +1,24 @@
+/* header나 footer 처럼 페이지에 공통으로 배치되는 요소의 css를 layout.css로 분리 */
+
+.skipnav {
+    position: absolute;
+    left: 0;
+    top: -100px; /* focus 될 때 만 나타나야 하기 때문에 상단에 숨겨져 있어야 함. */
+    width: 100%;
+    height: 50px;
+    z-index: 9999999999;
+}
+.skipnav a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #DC0B13;
+    color: #fff;
+    text-align: center;
+}
+.skipnav a:focus {
+    top: 100px; /* a가 포커스되면 올라간만큼 다시 내려줌. */
+}
