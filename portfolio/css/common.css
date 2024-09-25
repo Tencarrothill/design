@@ -31,20 +31,11 @@ html, body {
     }
     .wrapper {
         /* 너비가 빠져야함 */
-        width: auto;
+        width: 1260px;
         margin: 0 20px; /* 좌우에 20px씩 부여함 */
     }
 }/*media1300*/
-@media screen and (max-width:1024px) {
-    html, body {
-        font-size: 15px;
-    }
-}/*media 1024 */
-@media screen and (max-width:640px){ /*이 사이즈 이하부터 모바일 반응형 시작 */
-    html, body {
-        font-size: 14px;
-    }
-}/*media640*/
+
 
 ::selection {
     background-color: #f3d7a1;
